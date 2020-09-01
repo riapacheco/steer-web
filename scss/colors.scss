@@ -1,0 +1,50 @@
+/* ------------------------------ Linear Colors ----------------------------- */
+
+// Base Colors
+$midnight: #1d1f22;
+$pale-midnight: #26282c;
+$pale-midnight-dark: #2e3138;
+$pale-midnight-medium: #33363b;
+$pale-midnight-light: #3d4148;
+
+$soot-grey-dark: #484a55;
+$soot-grey-medium: #5b5d6a;
+$soot-grey-light: #777988;
+
+// Text Colors
+$steel-grey-dark: #9ea5ad;
+$steel-grey-medium: #ced2d6;
+$steel-grey-light: #e5e7ea;
+
+// State Colors
+$color-barrier: #ff554c;
+$color-challenge: #ffcd28;
+$color-opportunity: #2ecc71;
+
+// Blues
+$dark-blue: #146a91;
+$bondi-blue-darkest: #007285;
+$bondi-blue-dark: #00a3bf;
+$bondi-blue-medium: #00b8d9;
+$bondi-blue-light: #00c7e6;
+$bondi-blue-lightest: #79e2f2;
+$bondi-blue-pale: #b3f5ff;
+
+// Yellows
+$canary-yellow-dark: #ff991f;
+$canary-yellow-medium: #ffab00;
+$canary-yellow-light: #ffc400;
+$canary-yellow-lightest: #ffc380;
+$canary-yellow-pale: #fff0b3;
+
+/* -------------------------- Gradients and Shadows ------------------------- */
+
+// Gradients
+$midnight-gradient: linear-gradient(to bottom, $pale-midnight, $midnight);
+$darkest-gradient: linear-gradient(to bottom, $pale-midnight-medium, $pale-midnight-medium, $pale-midnight);
+$dark-gradient: linear-gradient(to bottom right, $pale-midnight-light, $pale-midnight-dark);
+$dark-btn-gradient: linear-gradient(to bottom, $pale-midnight-medium, $pale-midnight);
+$medium-btn-gradient: linear-gradient(to top, $pale-midnight-light, $pale-midnight-dark);
+$dropdown-gradient: linear-gradient(to bottom right, $pale-midnight-dark, rgba(0, 0, 0, 0.5));
+
+$standard-shadow: 5px 6px 15px 0 rgba(0, 0, 0, 0.5);

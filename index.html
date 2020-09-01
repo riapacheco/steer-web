@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" >
+    <title>Steer</title>
+  </head>
+  <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Navigation Begins                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="navigation-section">
+      <div class="nav-content">
+        <div href="#" class="logo-container">
+          <img src="src/img/steer-logo-canary.svg" width=60 />
+        </div>
+        <div class="nav-items-group">
+          <div class="dropdown-container">
+            <a href="#" class="nav-item">Product <i class="ion-ios-arrow-down dropdown-icon"></i></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <div class="dropdown-section-subheading">
+                  Learn
+                </div>
+                <div class="dropdown-section-items">
+                  <a href="#" class="dropdown-item">Overview</a>
+                  <a href="#" class="dropdown-item">Features</a>
+                  <a href="#" class="dropdown-item">Case Study</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nav-item">Resources</a>
+          <a href="#" class="nav-item">Pricing</a>
+        </div>
+      </div>
+
+      <div class="nav-cta-btns">
+        <a href="https://app.steer.software/login?register=true" class="cta-btn login-cta-btn" target=_blank>
+          <div class="btn-label">Login</div>
+        </a>
+        <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+          <div class="btn-label">Sign Up</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- -------------------------- Mobile Navigation -------------------------- -->
+    <div class="header-flex-container">
+      <div class="mobile-nav-header">
+        <div href="#" class="mobile-logo-container">
+          <img src="src/img/steer-logo-canary.svg" width=60 />
+        </div>
+        <a onclick="showMobileNav();removeHam()" class="mobile-menu-btn">
+          <div id="mobileIcon" class="ion-ios-menu mobile-menu-icon"></div>
+        </a>
+      </div>
+    </div>
+    <div class="mobile-navigation-section">
+      <!-- Hidden by Default -->
+      <div id="mobileNavMenu" class="mobile-nav-menu">
+        <div class="mobile-flex-container">
+          <a href="#" class="mobile-menu-item products-mobile-submenu">
+            Product <i class="ion-ios-arrow-down mobile-dropdown-icon"></i>
+          </a>
+          <div class="mobile-submenu-items">
+            <a href="#" class="mobile-submenu-item">Overview</a>
+            <a href="#" class="mobile-submenu-item">Features</a>
+            <a href="#" class="mobile-submenu-item">Case Study</a>
+          </div>
+          <a href="#" class="mobile-menu-item">
+            Resources
+          </a>
+          <a href="#" class="mobile-menu-item">
+            Pricing
+          </a>
+  
+          <div class="mobile-cta-btns">
+            <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
+              <div class="btn-label">Login</div>
+            </a>
+            <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
+              <div class="btn-label">Sign Up</div>
+            </a>
+            <div class="mobile-user-notes">
+              Note: Steer is not yet mobile optimized
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Home Page Hero                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    
+    <div class="homepage-hero">
+      <div class="clipped-hero-image"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          The <span class="emphasis-txt">simple work</span> management tool designed <br class="desktop-break">for that one complicated team member.
+          <div class="hero-cta-btns">
+            <a class="hero-btn hero-signup-btn">
+              Sign Up Now
+            </a>
+            <a class="hero-btn case-study-dl-btn">
+              Download Case Study
+            </a>
+          </div>
+        </div>
+        <div class="hero-screenshot">
+          <img src="https://ik.imagekit.io/enhvtyz2ze/large_images/Priority-card-mockup-_kx4Bx4HsZ.png" alt="" class="hero-img-screenshot" width=900>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- Minor Screenshot Section ----------------------- -->
+    <div class="screenshot-section">
+      <img src="https://ik.imagekit.io/enhvtyz2ze/large_images/Priority-card-mockup-_kx4Bx4HsZ.png" alt="" class="" width=900>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                           Value Propositions                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    
+    <div class="value-prop-section">
+      <div class="value-prop-container">
+
+        <div class="single-value-prop">
+          <i class="ion-ios-stopwatch value-prop-icon"></i>
+          <div class="value-prop-content">
+            <div class="value-prop-title">
+              Fast Work Cycles
+            </div>
+            <div class="value-prop-body">
+              From assignment clarity to syncing features that keep your work setups flat & flexible, nothing will get in the way of you and your team's workflows.
+            </div>
+            <a href="#" class="learn-more-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div class="single-value-prop">
+          <i class="ion-ios-chatboxes value-prop-icon"></i>
+          <div class="value-prop-content">
+            <div class="value-prop-title">
+              Useful Conversations
+            </div>
+            <div class="value-prop-body">
+              With less emails and phone calls surrounding project clarity, fire-fighting, and locating resources, save conversations (and your time) exclusively for what moves the dial forward.
+            </div>
+            <a href="#" class="learn-more-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div class="single-value-prop">
+          <i class="ion-ios-ribbon value-prop-icon"></i>
+          <div class="value-prop-content">
+            <div class="value-prop-title">
+              Better Quality
+            </div>
+            <div class="value-prop-body">
+              Instead of moving cards from left-to-right or checking off task lists, build the work from target metrics or milestone criteria so that you can focus your team's culture on outcomes.
+            </div>
+            <a href="#" class="learn-more-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Quotation Section                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="homepage-quotes-section">
+      <div class="quotes-content-div">
+        <div class="quote-block">
+          “Adopting Steer not only afforded us efficiencies that, compared to previous years, is night and day … but using their tool gave us better ways to pre-plan our releases , so we could get titles out to fans months sooner in advance!” *
+          <div class="quote-source">
+            <span class="quotee">
+              Michael Valdez
+            </span>
+            <span class="position-title">
+              CEO & Founder, Sol Press
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="quotes-img-div"></div>
+    </div>
+    </main>
+
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
+
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Footer Begins                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <footer>
+      <div class="footer-info">
+        <div class="footer-col">
+          <div class="footer-col-subheading">
+            Steer HQ
+          </div>
+          <div class="footer-col-options">
+            <ul class="footer-option-list">
+              <span class="address">
+                10th Floor<br>
+                900 6th AVE SW<br>
+                Calgary, AB <br>
+                T2P 3K2
+              </span>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-subheading">
+            Learn More
+          </div>
+          <div class="footer-col-options">
+            <ul class="footer-option-list">
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-subheading">
+            Get to know
+          </div>
+          <div class="footer-col-options">
+            <ul class="footer-option-list">
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+              <a class="footer-option-item"><li>
+                Lorem Ipsum Dolor
+              </li></a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-col footer-right">
+          <div class="footer-right-section">
+          </div>
+          <div class="footer-right-section">
+            <div class="footer-col-subheading">
+              Website Design / Code
+            </div>
+            <div class="founder-name">
+              Ria Pacheco<br>
+              <span class="founder-title">Founder @ Steer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

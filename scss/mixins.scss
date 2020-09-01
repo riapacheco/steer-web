@@ -1,0 +1,9 @@
+/* ------------------------------ Optimizations ----------------------------- */
+@mixin smooth-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: unset;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
