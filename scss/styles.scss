@@ -6,7 +6,7 @@
 /*                              Quotation Section                             */
 /* -------------------------------------------------------------------------- */
 .homepage-quotes-section {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -323,8 +323,8 @@
                 }
                 &:hover {
                   color: $canary-yellow-medium;
-
                 }
+                
               }
             }
           }
@@ -531,7 +531,7 @@ footer {
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 30px;
+    padding: 50px;
 
     .footer-col {
       .footer-col-subheading {
@@ -802,7 +802,7 @@ footer {
     display: block;
     padding-top: 80px;
     overflow-x: hidden;
-    
+
     .mobile-nav-menu {
       z-index: 1 !important;
     }
@@ -866,12 +866,18 @@ ul > li {
 
   &:visited {
     color: $steel-grey-dark;
+    text-decoration: none;
   }
 }
 
-a:hover {
-  cursor: pointer;
-}
+// a:hover,
+// a:visited,
+// a:active,
+// a {
+  // cursor: pointer;
+  // text-decoration: none;
+// }
+
 
 button {
   border: none;
@@ -894,6 +900,11 @@ button {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+*:visited {
+  text-decoration: none;
+  color: unset;
+}
+
 
 body {
   margin: 0;
