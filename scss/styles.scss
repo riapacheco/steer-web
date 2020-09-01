@@ -763,9 +763,9 @@ footer {
   // NAVIGATION MENU
   // function showMobileNav()
   .navigation-section { 
-    display: none;
-    
+    display: none;  
   }
+
   .header-flex-container {
     display: block;
     position: relative;
@@ -800,6 +800,7 @@ footer {
   }
   .mobile-navigation-section {
     z-index: 1;
+    display: block;
     padding-top: 80px;
     position: sticky;
   }
