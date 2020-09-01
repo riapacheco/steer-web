@@ -799,11 +799,13 @@ footer {
     }
   }
   .mobile-navigation-section {
-    z-index: 1 !important;
-    display: inline-block;
+    display: block;
     padding-top: 80px;
-    position: sticky;
     overflow-x: hidden;
+    
+    .mobile-nav-menu {
+      z-index: 1 !important;
+    }
   }
   footer {
     .footer-info {
