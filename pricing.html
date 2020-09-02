@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" >
+  <link rel="icon" href="src/img/steer-logo-canary.svg">
+  <title>Steer</title>
+</head>
+<body>
+
+      <!-- ----------------------------------------------------------------------- -->
+    <!--                            Navigation Begins                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="navigation-section">
+      <div class="nav-content">
+        <div href="#" class="logo-container">
+          <img src="src/img/steer-logo-canary.svg" width=60 />
+        </div>
+        <div class="nav-items-group">
+          <div class="dropdown-container">
+            <a href="#" class="nav-item">Product <i class="ion-ios-arrow-down dropdown-icon"></i></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <div class="dropdown-section-subheading">
+                  Learn
+                </div>
+                <div class="dropdown-section-items">
+                  <a href="#" class="dropdown-item">Overview</a>
+                  <a href="#" class="dropdown-item">Features</a>
+                  <a href="#" class="dropdown-item">Case Study</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nav-item">Resources</a>
+          <a href="/pricing.html" class="nav-item">Pricing</a>
+        </div>
+      </div>
+
+      <div class="nav-cta-btns">
+        <a href="https://app.steer.software/login?register=true" class="cta-btn login-cta-btn" target=_blank>
+          <div class="btn-label">Login</div>
+        </a>
+        <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+          <div class="btn-label">Sign Up</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- -------------------------- Mobile Navigation -------------------------- -->
+    <div class="header-flex-container">
+      <div class="mobile-nav-header">
+        <div href="#" class="mobile-logo-container">
+          <img src="src/img/steer-logo-canary.svg" width=60 />
+        </div>
+        <a onclick="showMobileNav();removeHam()" class="mobile-menu-btn">
+          <div id="mobileIcon" class="ion-ios-menu mobile-menu-icon"></div>
+        </a>
+      </div>
+    </div>
+    <div class="mobile-navigation-section">
+      <!-- Hidden by Default -->
+      <div id="mobileNavMenu" class="mobile-nav-menu">
+        <div class="mobile-flex-container">
+          <a href="#" class="mobile-menu-item products-mobile-submenu">
+            Product <i class="ion-ios-arrow-down mobile-dropdown-icon"></i>
+          </a>
+          <div class="mobile-submenu-items">
+            <a href="#" class="mobile-submenu-item">Overview</a>
+            <a href="#" class="mobile-submenu-item">Features</a>
+            <a href="#" class="mobile-submenu-item">Case Study</a>
+          </div>
+          <a href="#" class="mobile-menu-item">
+            Resources
+          </a>
+          <a href="#" class="mobile-menu-item">
+            Pricing
+          </a>
+  
+          <div class="mobile-cta-btns">
+            <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
+              <div class="btn-label">Login</div>
+            </a>
+            <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
+              <div class="btn-label">Sign Up</div>
+            </a>
+            <div class="mobile-user-notes">
+              Note: Steer is not yet mobile optimized
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</body>
+</html>
