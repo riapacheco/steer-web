@@ -51,6 +51,7 @@
     cursor: pointer;
   }
 }
+
 @mixin strip-link-states {
   &:active {
     color: $bondi-blue-light;
@@ -168,4 +169,20 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
+
+/* --------------------- Variables for Responsive Sizing -------------------- */
+$break-small: 600px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == smartphones {
+    @media only screen and (max-width: $break-small) {@content;}
+  } @else if $media == notebooks {
+    @media only screen and (min-width: $break-small + 1px) and (max-width: $break-large - 1px) {@content;}
+  } @else if $media == desktops {
+    @media only screen and (min-width: $break-large) {@content;}
+  }
+}
+
+$desktop-content-width: 900px;
 
