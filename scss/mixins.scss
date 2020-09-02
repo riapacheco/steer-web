@@ -170,6 +170,10 @@
   letter-spacing: 1.5px;
 }
 
+@mixin blue-btn-bg {
+  background-image: linear-gradient(to bottom right, $bondi-blue-darkest, $bondi-blue-light);
+}
+
 /* --------------------- Variables for Responsive Sizing -------------------- */
 $break-small: 600px;
 $break-large: 1024px;
