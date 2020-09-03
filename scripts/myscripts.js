@@ -75,17 +75,31 @@ function removeOverviewHam() {
 
 /* -------------------------------- Typed.JS -------------------------------- */
 
+// jQuery needs to finish loading so we can safely
+// start doing things
 $(document).ready(function() {
-  $("#typed").typed({
+  typingTest();
+});
+
+
+
+function typingTest() {
+  // make sure we can load it by checking the element is present
+  const el = document.getElementById('typing-test');
+  if (!el) return console.log('Expected element not found');
+
+  // make sure Typed exists
+  if (!Typed) return console.error('Unable to find Typed.js');
+
+  // see the typed options for this
+  const options = {
     strings: [
       "Testing out this thing.",
       "I feel like it's never going to work!"
     ],
     typeSpeed: 30,
-    callback: function(){
-      shift();
-    }
-  });
-});
+  };
 
-
+  // it's not "really" necessary to declare like this,
+  const typingTarget = new Typed('#typing-test', options);
+}
