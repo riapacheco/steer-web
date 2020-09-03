@@ -1,0 +1,6 @@
+Options +Multiviews
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.yoursite\.com [OR]
+RewriteCond %{REQUEST_URI} /index\.html$
+RewriteRule (.*?)(index\.html)?$ http://www.steer.software
