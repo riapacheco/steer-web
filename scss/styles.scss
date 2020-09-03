@@ -844,12 +844,13 @@ body {
   min-height: 300px;
   overflow: hidden;
   position: relative;
-
   margin-bottom: 50px;
   @include first-section-padding;
 
   @include respond-to(smartphones) {
-    min-height: 100vh;
+    min-height: 85vh;
+    height: 300px;
+    margin-bottom: 0;
   }
 
   .overview-hero-content {
@@ -919,6 +920,7 @@ body {
   .overview-bg-overlay {
     @include parent-overlay;
     opacity: 0.45;
+
     .overview-bg-img {
       @include child-bg-img;
       @include parallax-effect;
@@ -929,9 +931,272 @@ body {
 }
 /* ---------------------------- Overview Sections --------------------------- */
 .overview-section {
-  .one-place-section {
-    
+  min-width: 100vw;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 100px;
+
+  @include respond-to(smartphones) {
+    padding-top: 0px;
   }
+
+  .one-place-section {
+    margin: auto;
+    width: 1300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include respond-to(notebooks) {
+      flex-direction: column;
+      width: 600px;
+    }
+    @include respond-to(smartphones) {
+      flex-direction: column;
+    }
+    .one-place-content {
+      width: 550px;
+
+      .one-place-title {
+        font-size: 48px;
+        line-height: 54px;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        @include respond-to(notebooks) {
+          margin-bottom: 30px;
+        }
+        @include respond-to(smartphones) {
+          font-size: 34px;
+          line-height: 40px;
+          white-space: wrap;
+          width: 400px;
+          margin: 15px;
+        }
+      }
+      .one-place-txt {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        @include respond-to(smartphones){
+          width: 300px;
+          margin: 15px;
+
+        }
+      }
+    }
+    .one-place-example {
+      @include respond-to(notebooks) {
+        margin-top: 40px;
+        margin-bottom: 100px;
+      }
+
+      @include respond-to(smartphones) {
+        width: 0;
+        transform: scale(0.55);
+        margin: 15px;
+      }
+      .milestone-rectangle {
+        position: relative;
+        width: 590px;
+        height: 38px;
+        border: 2px solid $bondi-blue-dark;
+        border-radius: 10px;
+        margin-bottom: 15px;
+
+        .milestone-difficulty {
+          position: absolute;
+          height: 40px;
+          width: 115px;
+          border-radius: 7px 0px 0px 7px;
+          background-color: $bondi-blue-dark;
+          box-sizing: border-box;
+          
+          @include caps-heading;
+          color: $steel-grey-light;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 38px;
+          padding-left: 15px;
+
+          @include respond-to(notebooks) {
+            font-size: 12px;
+          }
+        }
+        .milestone-criteria-txt {
+          line-height: 38px;
+          position: absolute;
+          padding-left: 140px;
+          letter-spacing: 0.3px;
+        }
+
+        &:first-child {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+}
+.metric-ribbon-section {
+  min-height: 100vh;
+  margin: auto;
+  min-width: 100vw;
+  
+  .metric-ribbon-content {
+    margin: auto;
+    height: inherit;
+    width: 1300px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include respond-to(notebooks) {
+      flex-flow: column wrap;
+      width: 100%;
+    }
+    @include respond-to(smartphones) {
+      min-width: inherit;
+      width: 100%;
+      flex-flow: column;
+    }
+
+    .metric-numbers {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: 20px;
+
+      @include respond-to(notebooks) {
+        margin-bottom: 30px;
+      }
+      @include respond-to(smartphones) {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-right: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        transform: scale(0.6);
+        justify-content: flex-start;
+      }
+
+      .circle-graph {
+        .progress-ring__circle {
+          transition: 0.35s stroke-dashoffset;
+          border-radius: 5px;
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+        }
+        .metric-ribbon {
+          .goal-current-label {
+            text-align: right;
+          }
+        }
+        .metrics-input {
+          position: relative;
+          top: 10px;
+          left: 10px;
+          width: 80px;
+        }
+      }
+    }
+    .metric-labels {
+      min-height: 150px;
+      height: 100%;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      
+      @include respond-to(smartphones) {
+        transform: scale(0.6);
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      .metric-values {
+        width: inherit;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .metric-value-group {
+          min-width: 190px;
+          display: inline-flex;
+          flex-flow: column nowrap;
+
+          .top-label {
+            padding-bottom: 10px;
+            border-bottom: 2px solid $pale-midnight-light;
+            margin-bottom: 10px;
+            font-size: 22px;
+            
+          }
+          .bottom-label {
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 300;
+            display: none;
+            padding-top: 10px;
+            color: $bondi-blue-light;
+
+
+            .goal-sub-label {
+              @include caps-heading;
+              float: right;
+              color: $soot-grey-medium;
+              padding-top: 10px;
+              
+            }
+          }
+          .label-placeholder {
+            font-size: 20px;
+            line-height: 36px;
+            color: $soot-grey-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.quantity {
+  position: relative;
+}
+// crap to override browser bullshit
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input {
+  -webkit-appearance: none; 
+  box-shadow: none !important; 
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #00c7e6;
+  font-family: lato, sans-serif;
+  font-weight: 300;
+  font-size: 110px;
+  height: 125px;
+  min-width: 100px;
+  margin-left: 50px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px dashed $pale-midnight-light;
+
+}
+.quantity input:focus {
+  outline: 0;
 }
 
 /* -------------------------------------------------------------------------- */
