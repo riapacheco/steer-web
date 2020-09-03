@@ -3,9 +3,10 @@
 /*                            Navigation Functions                            */
 /* -------------------------------------------------------------------------- */
 
-/* ------------------------- Mobile Menu Click Events ----------------------- */
 
-// show menu
+/* -------------------------- Home Page Mobile Menu ------------------------- */
+
+// Show Menu
 function showMobileNav() {
   let x = document.getElementById("mobileMenu");
   if (x.style.display === "block") {
@@ -15,10 +16,54 @@ function showMobileNav() {
   }
 }
 
-// replace hamburger icon with close icon only when menu is showing
+// Replace Icon 
 function removeHam() {
   let y = document.getElementById("mobileMenu");
   let z = document.getElementById("mobileIcon");
+
+  if (y.style.display === "block") {
+    z.classList = 'ion-md-close mobile-menu-icon';
+  } else {
+    z.classList = 'ion-ios-menu mobile-menu-icon';
+  }
+}
+
+/* --------------------------- Pricing Mobile Menu -------------------------- */
+// Show Menu
+function showPricingNav() {
+  let x = document.getElementById("pricingMenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+// Replace Icon
+function removePriceHam() {
+  let y = document.getElementById("pricingMenu");
+  let z = document.getElementById("pricingIcon");
+
+  if (y.style.display === "block") {
+    z.classList = 'ion-md-close mobile-menu-icon';
+  } else {
+    z.classList = 'ion-ios-menu mobile-menu-icon';
+  }
+}
+
+/* -------------------------- Overview Mobile Menu -------------------------- */
+// Show Menu
+function showOverviewNav() {
+  let x = document.getElementById("overviewMenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+// Replace Icon 
+function removeOverviewHam() {
+  let y = document.getElementById("overviewMenu");
+  let z = document.getElementById("overviewCloseIcon");
 
   if (y.style.display === "block") {
     z.classList = 'ion-md-close mobile-menu-icon';

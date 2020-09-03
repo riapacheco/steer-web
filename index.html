@@ -19,32 +19,55 @@
       <div class="nav-content-group">
         <div class="nav-content">
           <div class="logo-container">
-            <a href="#">
+            <a href="index.html">
               <img src="src/img/steer-logo-canary.svg" width=60 />
             </a>
           </div>
           <div class="nav-items-group">
+            <a href="overview.html" class="nav-item">
+              Product
+            </a>
             <div class="dropdown-structure-container">
               <div class="nav-item">
-                Product 
+                Resources
                 <i class="ion-ios-arrow-down dropdown-icon"></i>
               </div>
               <div class="dropdown-div">
                 <div class="dropdown-menu">
                   <div class="dropdown-section">
                     <div class="dropdown-section-heading">
-                      Learn
+                      More Cowbell
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="#" class="dropdown-item">Overview</a>
-                      <a href="#" class="dropdown-item">Features</a>
+                      <a href="#" class="dropdown-item">Feature List</a>
                       <a href="#" class="dropdown-item">Case Study</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Materials
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="overview.html" class="dropdown-item whitepapers-item">Whitepapers
+                        <div class="coming-soon-tooltip">
+                          Coming soon!
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown-item how-to-item">How-to videos
+                        <div class="coming-soon-tooltip">
+                          Coming soon!
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown-item blog-item">Blog Articles
+                        <div class="coming-soon-tooltip">
+                          Coming soon!
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" class="nav-item">Resources</a>
             <a href="/pricing.html" class="nav-item">Pricing</a>
           </div>
         </div>
@@ -63,25 +86,36 @@
     <!-- -------------------------- Mobile Navigation -------------------------- -->
     <div class="mobile-nav-div">
       <div class="mobile-nav-header">
-        <div href="#" class="mobile-logo-container">
+        <a href="index.html" class="mobile-logo-container">
           <img src="src/img/steer-logo-canary.svg" width=60 />
-        </div>
+        </a>
         <a onclick="showMobileNav();removeHam()" class="mobile-menu-btn">
           <div id="mobileIcon" class="ion-ios-menu mobile-menu-icon"></div>
         </a>
       </div>
     </div>
 
-    <div id="mobileMenu" class="mobile-menu-div">
+    <div id="mobileMenu" class="mobile-menu-div steer-mobile-menu">
       <div class="mobile-menu">
         <div class="mobile-content">
+          <a href="overview.html" class="mobile-menu-item">
+            Product
+          </a>
           <div class="mobile-sub-list">
-            <div class="sublist-label">
-              Product <i id="mobileIcon" class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            <div class="mobile-menu-item">
+              Resources <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
             </div>
-            <a href="#" class="submenu-item">Overview</a>
+            <div class="sublist-heading">
+              More Cowbell
+            </div>
             <a href="#" class="submenu-item">Features</a>
             <a href="#" class="submenu-item">Case Study</a>
+            <div class="sublist-heading">
+              Materials
+            </div>
+            <a href="#" class="submenu-item">Whitepapers <span class="soon-subtext">Coming soon!</span></a>
+            <a href="#" class="submenu-item">How-to-videos <span class="soon-subtext">Coming soon!</span></a>
+            <a href="#" class="submenu-item">Blog Articles <span class="soon-subtext">Coming soon!</span></a>
           </div>
           <a href="#" class="mobile-menu-item">Resources</a>
           <a href="/pricing.html" class="mobile-menu-item">Pricing</a>
@@ -100,7 +134,7 @@
         </div>
       </div>
     </div>
-    <!-- <main> -->
+
     <!-- ----------------------------------------------------------------------- -->
     <!--                             Home Page Hero                              -->
     <!-- ----------------------------------------------------------------------- -->
@@ -199,7 +233,6 @@
     <!-- ----------------------------------------------------------------------- -->
     <footer>
       <div class="footer-div">
-  
         <div class="footer-col">
           <div class="footer-col-heading">
             About
@@ -248,7 +281,6 @@
           </div>
         </div>
       </div>
-
     </footer>
     <script type="text/javascript" src="scripts/myscripts.js"></script>
 

@@ -24,7 +24,7 @@
   border: 0;
   padding: 0;
   font-size: 100%;
-  color: $steel-grey-dark;
+  color: unset;
 
   &:active {
     color: $bondi-blue-light;
@@ -33,14 +33,14 @@
   }
 
   &:focus {
-    color: $steel-grey-dark;
+    color: unset;
     text-decoration: none;
     filter: brightness(1.15);
     cursor: pointer;
   }
 
   &:visited {
-    color: $steel-grey-dark;
+    color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
@@ -67,7 +67,7 @@
   }
 
   &:visited {
-    color: $steel-grey-dark;
+    color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
@@ -86,14 +86,14 @@
   }
 
   &:focus {
-    color: $steel-grey-dark;
+    color: unset;
     text-decoration: none;
     filter: brightness(1.15);
     cursor: pointer;
   }
 
   &:visited {
-    color: $steel-grey-dark;
+    // color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
@@ -111,8 +111,9 @@
   touch-action: manipulation;
 }
 @mixin first-section-padding {
-  padding-top: 60px;
+  padding-top: 70px;
 }
+
 
 /* --------------------------------- Special -------------------------------- */
 @mixin parallax-effect { // must include background-image: url('#');
@@ -149,6 +150,36 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%);
   opacity: 0.3;
+}
+
+@mixin tooltip-styling {
+  padding: 10px 15px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-image: linear-gradient(to bottom left, $midnight, $pale-midnight);
+  color: $steel-grey-medium;
+  border-radius: 6px;
+  box-shadow: $standard-shadow;
+  letter-spacing: 0.3px;
+}
+
+/* ------------------------------ Hero Overlays ----------------------------- */
+
+@mixin parent-overlay {
+  background-image: linear-gradient(to bottom right, $soot-grey-dark, $midnight);
+}
+@mixin child-bg-img { // must include background-image: url('#');
+  min-width: 100vw;
+  min-height: 400px;
+  overflow-x: hidden;
+  position: relative;
+  width: inherit;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-position: center;
+  opacity: 0.2;
 }
 
 /* ---------------------------- Responsive Sizing --------------------------- */
