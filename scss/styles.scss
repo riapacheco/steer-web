@@ -104,13 +104,18 @@ body {
 
         .nav-item {
           padding-right: 25px;
-          font-size: 24px;
+          font-size: 22px;
           line-height: 70px;
           color: $steel-grey-dark;
           white-space: nowrap;
           letter-spacing: 0.3px;
-          font-weight: 300;
 
+          .current-page {
+            color: $bondi-blue-dark;
+            font-weight: normal;
+            border-bottom: 2px solid $bondi-blue-darkest;
+            padding-bottom: 5px;
+          }
           .dropdown-icon {
             font-size: 16px;
           }
@@ -118,6 +123,7 @@ body {
             font-size: 22px;
           }
         }
+
         a:hover,
         .nav-item:hover {
           color: $canary-yellow-medium;
@@ -168,15 +174,14 @@ body {
                     letter-spacing: 0.3px;
                   }
                   .coming-soon-tooltip {
-                    @include tooltip-styling;
-                    display: none;
+                    @include tooltip-bottom;
                   }
 
                   .whitepapers-item:hover,
                   .how-to-item:hover,
                   .blog-item:hover {
                     .coming-soon-tooltip {
-                      display: block;
+                      visibility: visible;
                     }
                   }
                 }
@@ -437,6 +442,7 @@ body {
     display: inline-block;
     position: absolute;
     padding-top: 70px;
+
     .stack-content {
       width: inherit;
       height: inherit;
@@ -458,13 +464,19 @@ body {
           font-weight: 300;
           margin-bottom: 30px;
         }
-
         .boilerplate {
           font-size: 1.4rem;
-          line-height: 1.8rem;
+          line-height: 2rem;
           letter-spacing: 0.3px;
           font-weight: 300;
           margin-bottom: 30px;
+          @include respond-to(notebooks) {
+            font-size: 1.3rem;
+          }
+          @include respond-to(smartphones) {
+            font-size: 1.25rem;
+            line-height: 1.9rem;
+          }
         }
         .btn-container {
           width: 365px;
@@ -556,7 +568,6 @@ body {
     }
   }
 }
-
 /* -------------------------------------------------------------------------- */
 /*                                 VALUE PROPS                                */
 /* -------------------------------------------------------------------------- */
@@ -626,7 +637,6 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                              CASE STUDY QUOTE                              */
 /* -------------------------------------------------------------------------- */
-
 .case-study-section {
   min-width: 100vw;
   min-height: 250px;
@@ -694,9 +704,9 @@ body {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                PRICING PAGE                                */
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
+//*                                PRICING PAGE                                */
+//* -------------------------------------------------------------------------- */
 .pricing-div {
   width: 100%;
   min-height: 250px;
@@ -824,9 +834,9 @@ body {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                            Product Overview Page                           */
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
+//*                            Product Overview Page                           */
+//* -------------------------------------------------------------------------- */
 /* -------------------------- Overview Hero Section ------------------------- */
 .overview-hero {
   min-width: 100vw;
@@ -915,6 +925,12 @@ body {
       background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/empty-boardroom_rTVSohh-Y.jpg');
       background-position: bottom;
     }
+  }
+}
+/* ---------------------------- Overview Sections --------------------------- */
+.overview-section {
+  .one-place-section {
+    
   }
 }
 
