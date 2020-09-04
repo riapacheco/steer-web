@@ -145,7 +145,34 @@ function thirdMilestone() {
 
 
 
-// Input styling
+/* ---------------------------- Passed Milestones --------------------------- */
+
+function passMilestone1() {
+  let mile1 = document.getElementById('milestone1');
+  if (mile1.className == 'milestone-rectangle passed-milestone') {
+    mile1.className = 'milestone-rectangle';
+  } else {
+    mile1.className = 'milestone-rectangle passed-milestone';
+  }
+}
+
+function passMilestone2() {
+  let mile2 = document.getElementById('milestone2');
+  if (mile2.className == 'milestone-rectangle passed-milestone') {
+    mile2.className = 'milestone-rectangle';
+  } else {
+    mile2.className = 'milestone-rectangle passed-milestone';
+  }
+}
+
+function passMilestone3() {
+  let mile3 = document.getElementById('milestone3');
+  if (mile3.className == 'milestone-rectangle passed-milestone') {
+    mile3.className = 'milestone-rectangle';
+  } else {
+    mile3.className = 'milestone-rectangle passed-milestone';
+  }
+}
 
 /* -------------------------- Fake Metrics Ribbone -------------------------- */
 

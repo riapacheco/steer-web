@@ -169,37 +169,53 @@
       <div class="one-place-section">
         <div class="one-place-content">
           <div class="one-place-title">
-            <strong>Everything</strong> and <span style="color:#00c7e6;font-weight: bold;"> every outcome</span> in one place.
+            Every<strong> thing</strong> and <span style="color:#00c7e6;font-weight: bold;"> every outcome</span> in one place.
           </div>
           <div class="one-place-txt">
-            Take execution to the next level with dummy-proof projects that over-clarify exactly what you want.
+            Create projects that impact the business, with the ability to include every over-simplified expectation. 
           </div>
         </div>
         <div class="one-place-example">
-          <div class="milestone-rectangle">
-            <div class="milestone-difficulty">
-              Difficult
+          <a onclick="passMilestone1()">
+            <div id="milestone1" class="milestone-rectangle">
+              <div class="milestone-difficulty">
+                Difficult
+              </div>
+              <div class="milestone-criteria-txt">
+                <span id="third-milestone"></span>
+              </div>
+              <div class="passed-badge">
+                Passed
+              </div>
             </div>
-            <div class="milestone-criteria-txt">
-              <span id="third-milestone"></span>
+          </a>
+          <a onclick="passMilestone2()">
+            <div id="milestone2" class="milestone-rectangle">
+              <div class="milestone-difficulty">
+                Normal
+              </div>
+              <div class="milestone-criteria-txt">
+               <span id="second-milestone"></span>
+              </div>
+              <div class="passed-badge">
+                Passed
+              </div>
             </div>
-          </div>
-          <div class="milestone-rectangle">
-            <div class="milestone-difficulty">
-              Normal
+          </a>
+
+          <a onclick="passMilestone3()">
+            <div id="milestone3" class="milestone-rectangle">
+              <div class="milestone-difficulty">
+                Easy
+              </div>
+              <div class="milestone-criteria-txt">
+                <span id="milestone-text"></span>
+              </div>
+              <div class="passed-badge">
+                Passed
+              </div>
             </div>
-            <div class="milestone-criteria-txt">
-             <span id="second-milestone"></span>
-            </div>
-          </div>
-          <div class="milestone-rectangle">
-            <div class="milestone-difficulty">
-              Easy
-            </div>
-            <div class="milestone-criteria-txt">
-              <span id="milestone-text"></span>
-            </div>
-          </div>
+          </a>
         </div>
      </div>
     </div>
@@ -226,12 +242,13 @@
             <div class="quantity">
               <input
               class="metrics-input"
-              value="67"
+              value="62"
               type="number"
               step="5"
               min="0"
               max="100"
               placeholder="goal"
+              autofocus
               >
               <span style="font-size: 20px;
               color: #484a55;
@@ -252,17 +269,22 @@
         <div class="metric-labels">
           <div class="metric-values">
             <div class="metric-value-group">
-              <a onclick="showTimeLeft();hideTimePlaceholder()" class="top-label time-left">Time Left</a>
+              <a onclick="showTimeLeft();hideTimePlaceholder()" class="top-label time-left">
+                Time Left <i class="ion-ios-arrow-down label-arrow-down"></i></a>
               <div class="bottom-label" id="showTimeLeft">1 week</div>
               <span id="hideTimeClick" class="label-placeholder">Until Deadline</span>
             </div>
             <div class="metric-value-group">
-              <a onclick="showBudgetSpent();hideBudgetPlaceholder()" class="top-label budget-spent">Expenses</a>
+              <a onclick="showBudgetSpent();hideBudgetPlaceholder()" class="top-label budget-spent">
+                Expenses
+                <i class="ion-ios-arrow-down label-arrow-down"></i></a>
               <div class="bottom-label" id="showBudgetSpent">$24.5k</div>
               <span id="hideBudgetClick" class="label-placeholder"> Spent So Far</span>
             </div>
             <div class="metric-value-group">
-              <a onclick="showGoalMetric();hideGoalPlaceholder()" class="top-label goal-metric">Goal Metric</a>
+              <a onclick="showGoalMetric();hideGoalPlaceholder()" class="top-label goal-metric">
+                Goal Metric
+                <i class="ion-ios-arrow-down label-arrow-down"></i></a>
               <div class="bottom-label" id="showGoalMetric">100
                 <span class="goal-sub-label">Orientations</span>
               </div>
