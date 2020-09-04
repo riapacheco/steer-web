@@ -214,8 +214,27 @@
   letter-spacing: 1.5px;
 }
 
+@mixin caps-section-subheading {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $soot-grey-medium;
+  padding-left: 5px;
+}
+
 @mixin blue-btn-bg {
-  background-image: linear-gradient(to bottom right, $bondi-blue-darkest, $bondi-blue-light);
+  background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-dark, $bondi-blue-darkest);
+  &:hover {
+    filter: brightness(1.15);
+  }
+}
+@mixin midnight-btn-bg {
+  background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
+  &:hover {
+    filter: brightness(1.15);
+  }
 }
 
 /* --------------------- Variables for Responsive Sizing -------------------- */
