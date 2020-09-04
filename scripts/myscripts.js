@@ -261,5 +261,6 @@ function hideGoalPlaceholder() {
   } else {
     hideGoalPlac.style.display = "block";
   }
-
 }
+
+
