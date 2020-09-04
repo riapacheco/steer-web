@@ -172,6 +172,12 @@ body {
                     line-height: 16px;
                     padding-top: 17px;
                     letter-spacing: 0.3px;
+                    .hot-link {
+                      font-size: 15px;
+                      color: $color-opportunity;
+                      box-shadow: $standard-shadow;
+                      padding-left: 5px;
+                    }
                   }
                   .coming-soon-tooltip {
                     @include tooltip-bottom;
@@ -335,6 +341,12 @@ body {
           padding-top: 25px;
           font-weight: 300;
           color: $steel-grey-medium;
+          .hot-link {
+            font-size: 15px;
+            color: $color-opportunity;
+            box-shadow: $standard-shadow;
+            padding-left: 5px;
+          }
 
           .soon-subtext {
             font-size: 10px;
@@ -360,11 +372,12 @@ body {
       .mobile-menu-item {
         display: block;
         font-size: 26px;
-        line-height: 24px;
+        line-height: 28px;
         letter-spacing: 0.3px;
         padding-top: 20px;
         color: $steel-grey-dark;
         font-weight: 300;
+
         &:last-child {
           padding-bottom: 50px;
         }
@@ -1131,7 +1144,6 @@ body {
       }
     }
   }
-
 }
 .metric-ribbon-section {
   min-height: 100vh;
@@ -1249,19 +1261,28 @@ body {
             padding-top: 10px;
             color: $bondi-blue-light;
 
+            &:hover {
+              cursor: default;
+            }
 
             .goal-sub-label {
               @include caps-heading;
               float: right;
               color: $soot-grey-medium;
               padding-top: 10px;
-              
+              &:hover {
+                cursor: default;
+              }
             }
           }
           .label-placeholder {
             font-size: 20px;
             line-height: 38px;
             color: $soot-grey-dark;
+
+            &:hover {
+              cursor: default;
+            }
           }
         }
       }
@@ -1281,7 +1302,7 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-input {
+.quantity input {
   -webkit-appearance: none; 
   box-shadow: none !important; 
   background: transparent;
@@ -1300,6 +1321,7 @@ input {
 
   &:hover {
     color: $canary-yellow-medium;
+    cursor: pointer;
   }
 }
 .quantity input:focus {
