@@ -75,17 +75,164 @@ function removeOverviewHam() {
 
 /* -------------------------------- Typed.JS -------------------------------- */
 
+// jQuery needs to finish loading so we can safely
+// start doing things
 $(document).ready(function() {
-  $("#typed").typed({
-    strings: [
-      "Testing out this thing.",
-      "I feel like it's never going to work!"
-    ],
-    typeSpeed: 30,
-    callback: function(){
-      shift();
-    }
-  });
+  typingMilestone();
+  secondMilestone();
+  thirdMilestone();
 });
 
+function typingMilestone() {
+  // make sure we can load it by checking the element is present
+  const el = document.getElementById('milestone-text');
+  if (!el) return console.log('Expected element not found');
 
+  // make sure Typed exists
+  if (!Typed) return console.error('Unable to find Typed.js');
+
+  // see the typed options for this
+  const options = {
+    strings: [
+      "^9000 How we store files makes sense (it isn't a mess for once) &nbsp;"
+    ],
+    typeSpeed: 70,
+  };
+
+  // it's not "really" necessary to declare like this,
+  const typingTarget = new Typed('#milestone-text', options);
+}
+
+function secondMilestone() {
+  // make sure we can load it by checking the element is present
+  const el = document.getElementById('second-milestone');
+  if (!el) return console.log('Expected element not found');
+
+  // make sure Typed exists
+  if (!Typed) return console.error('Unable to find Typed.js');
+
+  // see the typed options for this
+  const options = {
+    strings: [
+      "^4000 When finished, each team member 'knows' the material &nbsp;",
+    ],
+    typeSpeed: 70,
+  };
+
+  // it's not "really" necessary to declare like this,
+  const typingTarget = new Typed('#second-milestone', options);
+}
+
+function thirdMilestone() {
+  // make sure we can load it by checking the element is present
+  const el = document.getElementById('third-milestone');
+  if (!el) return console.log('Expected element not found');
+
+  // make sure Typed exists
+  if (!Typed) return console.error('Unable to find Typed.js');
+
+  // see the typed options for this
+  const options = {
+    strings: [
+      "Orientation considered easy by 6+ customers &nbsp;"
+    ],
+    typeSpeed: 70,
+  };
+
+  // it's not "really" necessary to declare like this,
+  const typingTarget = new Typed('#third-milestone', options);
+}
+
+
+
+// Input styling
+
+/* -------------------------- Fake Metrics Ribbone -------------------------- */
+
+var circle = document.querySelector('circle');
+var radius = circle.r.baseVal.value;
+var circumference = radius * 2 * Math.PI;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
+function setProgress(percent) {
+  const offset = circumference - percent / 100 * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
+const input = document.querySelector('.quantity input');
+setProgress(input.value);
+
+input.addEventListener('change', function(e) {
+  if (input.value < 101 && input.value > -1) {
+    setProgress(input.value);
+  }  
+})
+
+/* ------------------------- Fake ribbon with labels ------------------------ */
+
+function showTimeLeft() {
+  let timeVal = document.getElementById('showTimeLeft');
+  if (timeVal.style.display === "block") {
+    timeVal.style.display = "none";
+  } else {
+    timeVal.style.display = "block";
+  }
+}
+
+function hideTimePlaceholder() {
+  let timeValShown = document.getElementById('showTimeLeft');
+  let timeValPlac = document.getElementById('hideTimeClick');
+
+  if (timeValShown.style.display === "block") {
+    timeValPlac.style.display = "none";
+  } else {
+    timeValPlac.style.display = "block";
+  }
+}
+
+function showBudgetSpent() {
+  let budgetVal = document.getElementById('showBudgetSpent');
+
+  if(budgetVal.style.display === "block") {
+    budgetVal.style.display = "none";
+  } else {
+    budgetVal.style.display = "block";
+  }
+}
+
+function hideBudgetPlaceholder() {
+
+  let budgetValShown = document.getElementById('showBudgetSpent');
+  let hideBudgetPlac = document.getElementById('hideBudgetClick');
+
+  if (budgetValShown.style.display === "block") {
+    hideBudgetPlac.style.display = "none";
+  } else {
+    hideBudgetPlac.style.display = "block";
+  }
+}
+
+function showGoalMetric() {
+  let goalVal = document.getElementById('showGoalMetric');
+
+  if (goalVal.style.display === "block") {
+    goalVal.style.display = "none";
+  } else {
+    goalVal.style.display = "block";
+  }
+}
+
+function hideGoalPlaceholder() {
+
+  let goalValShown = document.getElementById('showGoalMetric');
+  let hideGoalPlac = document.getElementById('goalPlaceholder');
+
+  if (goalValShown.style.display === "block") {
+    hideGoalPlac.style.display = "none";
+  } else {
+    hideGoalPlac.style.display = "block";
+  }
+
+}
