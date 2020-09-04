@@ -174,22 +174,10 @@ body {
                     padding-top: 17px;
                     letter-spacing: 0.3px;
                     .hot-link {
-<<<<<<< HEAD
-                      font-size: 17px;
-                      padding-left: 5px;
-                      color: $color-opportunity;
-                    }
-
-                    &:hover {
-                      .hot-link {
-                        color: $canary-yellow-medium;
-                      }
-=======
                       font-size: 15px;
                       color: $color-opportunity;
                       box-shadow: $standard-shadow;
                       padding-left: 5px;
->>>>>>> development
                     }
                   }
                   .coming-soon-tooltip {
