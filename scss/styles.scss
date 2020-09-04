@@ -458,6 +458,8 @@ body {
         width: 90%;
       }
       .hero-txt {
+        width: 100%;
+        
         .slogan-statement {
           font-size: 42px;
           line-height: auto;
@@ -465,17 +467,19 @@ body {
           margin-bottom: 30px;
         }
         .boilerplate {
-          font-size: 1.4rem;
-          line-height: 2rem;
+          font-size: 22px;
+          width: 650px;
+          line-height: 32px;
           letter-spacing: 0.3px;
           font-weight: 300;
           margin-bottom: 30px;
           @include respond-to(notebooks) {
-            font-size: 1.3rem;
+            width: 550px;
           }
           @include respond-to(smartphones) {
-            font-size: 1.25rem;
-            line-height: 1.9rem;
+            width: 350px;
+            font-size: 21px;
+            line-height: 30px;
           }
         }
         .btn-container {
@@ -582,6 +586,9 @@ body {
   position: relative;
   width: inherit;
   background-color: $pale-midnight-dark;
+  display: flex;
+  flex-flow: column;
+
   @include respond-to(notebooks) {
     padding-top: 0;
   }
@@ -603,15 +610,30 @@ body {
       display: block;
       width: 300px;
     }
+    @include respond-to(notebooks) {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
     .value-prop-col {
       @include respond-to(desktops) {
         width: 330px;
       }
-      @include respond-to(notebooks) {
-        width: 200px;
+      @include respond-to(notebooks) {        
+        width: 450px;
+        margin-bottom: 65px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       @include respond-to(smartphones) {
-        margin-top: 50px;
+        margin-top: 60px;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-top: 20px;
+        }
       }
       .value-prop-icon {
         font-size: 40px;
@@ -629,7 +651,40 @@ body {
       .value-prop-body {
         font-size: 1.1rem;
         line-height: 1.5rem;
+        .learn-more-now {
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 0.3px;
+          color: $bondi-blue-dark;
+          
+          &:hover {
+            filter: brightness(1.15);
+          }
+        }
       }
+    }
+  }
+  .value-prop-cta-btn {
+    width: inherit;
+    margin: auto;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    display: block;
+    box-sizing: border-box;;
+    text-align: center;
+    @include caps-heading;
+    line-height: 50px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
+    box-shadow: $standard-shadow;
+
+    &:hover {
+      filter: brightness(1.15);
+      cursor: pointer;
     }
   }
 }
@@ -895,7 +950,7 @@ body {
             line-height: 50px;
             width: 175px;
             text-align: center;
-            background-image: linear-gradient(to bottom right, $midnight, $pale-midnight);
+            background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
             border-radius: 6px;
             box-shadow: $standard-shadow;
             margin-top: 30px;
@@ -978,14 +1033,14 @@ body {
         }
       }
       .one-place-txt {
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 22px;
+        line-height: 32px;
         font-weight: 300;
         letter-spacing: 0.3px;
-        @include respond-to(smartphones){
-          width: 300px;
-          margin: 15px;
 
+        @include respond-to(smartphones){
+          width: 350px;
+          margin: 15px;
         }
       }
     }
@@ -1007,6 +1062,26 @@ body {
         border: 2px solid $bondi-blue-dark;
         border-radius: 10px;
         margin-bottom: 15px;
+
+        &:hover {
+          border: 2px solid $canary-yellow-medium;
+          color: $steel-grey-medium;
+          .milestone-difficulty {
+            background-color: $canary-yellow-medium;
+          }
+          cursor: pointer;
+        }
+
+        &.passed-milestone {
+          border: 2px solid $color-opportunity;
+          .milestone-difficulty {
+            background-color: $color-opportunity;
+            color: white;
+          }
+          .passed-badge {
+            display: block;
+          }
+        }
 
         .milestone-difficulty {
           position: absolute;
@@ -1032,6 +1107,22 @@ body {
           position: absolute;
           padding-left: 140px;
           letter-spacing: 0.3px;
+        }
+        .passed-badge {
+          position: absolute;
+          right: 5px;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 4px;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 1px;
+          background-color: $color-opportunity;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 6px;
+          color: white;
+          display: none;
         }
 
         &:first-child {
@@ -1135,7 +1226,20 @@ body {
             border-bottom: 2px solid $pale-midnight-light;
             margin-bottom: 10px;
             font-size: 22px;
-            
+
+            .label-arrow-down {
+              font-size: 15px;
+              padding-left: 3px;
+              line-height: 24px;
+              color: $soot-grey-light;
+            }
+
+            &:hover {
+              .label-arrow-down {
+                color: $canary-yellow-medium;
+                cursor: pointer;
+              }
+            }
           }
           .bottom-label {
             font-size: 36px;
@@ -1156,7 +1260,7 @@ body {
           }
           .label-placeholder {
             font-size: 20px;
-            line-height: 36px;
+            line-height: 38px;
             color: $soot-grey-dark;
           }
         }
@@ -1194,6 +1298,9 @@ input {
   display: inline-block;
   border-bottom: 2px dashed $pale-midnight-light;
 
+  &:hover {
+    color: $canary-yellow-medium;
+  }
 }
 .quantity input:focus {
   outline: 0;
