@@ -214,24 +214,22 @@
   letter-spacing: 1.5px;
 }
 
-@mixin caps-section-subheading {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: $soot-grey-medium;
-  padding-left: 5px;
-}
-
-@mixin blue-btn-bg {
-  background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-dark, $bondi-blue-darkest);
+@mixin blue-btn {
+  background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-darkest);
+  box-shadow: $standard-shadow;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: $steel-grey-light;
   &:hover {
     filter: brightness(1.15);
   }
 }
-@mixin midnight-btn-bg {
+@mixin midnight-btn {
+  color: $steel-grey-medium;
   background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
+  box-shadow: $standard-shadow;
+  border-radius: 6px;
+  box-sizing: border-box;
   &:hover {
     filter: brightness(1.15);
   }

@@ -238,11 +238,7 @@ body {
         box-sizing: border-box;
       }
       .signup-cta-btn {
-        @extend .login-cta-btn;
-        @include midnight-btn-bg;
-        border: none;
-        box-shadow: $standard-shadow;
-        
+        @include midnight-btn;
       }
     }
   }
@@ -554,8 +550,8 @@ body {
             min-height: 48px;
             line-height: 49px;
             border-radius: 6px;
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 35px;
+            padding-right: 35px;
             white-space: nowrap;
 
             &:hover {
@@ -572,14 +568,11 @@ body {
             }
           }
           .hero-signup-btn {
-            background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-darkest);
-            color: $steel-grey-light;
-            box-shadow: $standard-shadow;
-            box-sizing: border-box;
+            @include blue-btn;
           }
-          .hero-remote-btn {
-            @include midnight-btn-bg;
-            box-shadow: $standard-shadow;
+
+          .hero-remote-teams-btn {
+            @include midnight-btn;
           }
         }
       }
@@ -808,6 +801,7 @@ body {
         border-radius: 6px;
         padding-left: 30px;
         padding-right: 30px;
+        @include blue-btn;
         color: $steel-grey-light;
         box-shadow: $standard-shadow;
       }
@@ -929,7 +923,7 @@ body {
             border-radius: 6px;
             text-align: center;
             color: white;
-            @include blue-btn-bg;
+            @include blue-btn;
             box-shadow: $standard-shadow;
 
             &:hover {
@@ -1060,7 +1054,7 @@ body {
 
   .one-place-section {
     margin: auto;
-    width: 1300px;
+    width: 1250px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -1201,7 +1195,8 @@ body {
   }
 }
 .metric-ribbon-section {
-  min-height: 100vh;
+  min-height: 300px;
+
   margin: auto;
   min-width: 100vw;
   
@@ -1270,6 +1265,10 @@ body {
       display: inline-flex;
       flex-direction: row;
       align-items: center;
+
+      @include respond-to(notebooks) {
+        margin-bottom: 40px;
+      }
       
       @include respond-to(smartphones) {
         transform: scale(0.6);
@@ -1343,7 +1342,6 @@ body {
     }
   }
 }
-
 .quantity {
   position: relative;
 }
@@ -1380,6 +1378,53 @@ input[type=number] {
 }
 .quantity input:focus {
   outline: 0;
+}
+/* ------------------------- Overview Second Section ------------------------ */
+.break-section {
+  min-width: 100vw;
+  width: 100%;
+  min-height: 300px;
+  overflow-x: hidden;
+  .break-btns {
+    height: 200px;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 470px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    .break-section-cta {
+      @include caps-heading;
+      margin: auto;
+      height: 50px;
+      width: 200px;
+      display: inline-block;
+      text-align: center;
+      @include midnight-btn;
+      line-height: 50px;
+    }
+    .break-pricing-btn {
+      @extend .break-section-cta;
+      @include blue-btn;
+    }
+  }
+
+
+  .break-section-content {
+    margin: auto;
+    width: 1200px;
+   .steer-screenshot {
+     width: 1200px;
+     @include respond-to(notebooks) {
+       width: 950px;
+     }
+
+     @include respond-to(smartphones) {
+       width: 405px;
+     }
+   } 
+  }
 }
 
 /* -------------------------------------------------------------------------- */
