@@ -81,6 +81,8 @@ $(document).ready(function() {
   typingMilestone();
   secondMilestone();
   thirdMilestone();
+  driftFunction();
+  
 });
 
 function typingMilestone() {
@@ -142,7 +144,6 @@ function thirdMilestone() {
   // it's not "really" necessary to declare like this,
   const typingTarget = new Typed('#third-milestone', options);
 }
-
 
 
 /* ---------------------------- Passed Milestones --------------------------- */

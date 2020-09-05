@@ -242,9 +242,6 @@ body {
     }
   }
 }
-.scroll-test {
-  height: 2000px;
-}
 /* -------------------------------------------------------------------------- */
 /*                         MOBILE OPTIMIZED NAVIGATION                        */
 /* -------------------------------------------------------------------------- */
@@ -694,7 +691,6 @@ body {
     }
   }
 }
-
 /* -------------------------------------------------------------------------- */
 /*                              CASE STUDY QUOTE                              */
 /* -------------------------------------------------------------------------- */
@@ -1326,62 +1322,19 @@ input[type=number] {
 .quantity input:focus {
   outline: 0;
 }
-/* ------------------------- Overview Second Section ------------------------ */
-.break-section {
-  display: block;
-  min-width: 100vw;
-  width: 100%;
 
-  .break-section-content {
-    margin: auto;
-    width: 1200px;
-    .steer-screenshot {
-      width: 1200px;
-      @include respond-to(notebooks) {
-        width: 780px;
-      }
+/* ----------------------------- EXPLORE PRODUCT ---------------------------- */
 
-      @include respond-to(smartphones) {
-        width: 380px;
-      }
-    }
-    margin-bottom: 30px;
-  }
+.image-section {
+  display: inline-block;
+  width: 30%;
+  float: left;
+}
 
-  .break-btns {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    margin-bottom: 50px;
-
-    .break-btns-content {
-      .mobile-btn {
-        display: inline-block;
-        height: 50px;
-        border-radius: 6px;
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-
-        @include respond-to(smartphones) {
-          display: block;
-          text-align: center;
-          margin-bottom: 15px;
-        }
-      }
-      .break-section-cta {
-        @include caps-heading;
-        @include blue-btn;
-        line-height: 50px;
-      }
-      .break-pricing-btn {
-        @include caps-heading;
-        @include midnight-btn;
-        line-height: 50px;
-      }
-    }
-  }
+.image-details {
+  position: relative;
+  width: 65%;
+  margin-left: 5%;
 }
 
 /* -------------------------------------------------------------------------- */
