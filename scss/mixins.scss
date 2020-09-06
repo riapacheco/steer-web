@@ -195,16 +195,6 @@
   opacity: 0.2;
 }
 
-/* ---------------------------- Responsive Sizing --------------------------- */
-
-@mixin mobile-screens { // 0 - 600px
-  @media (max-width: 700px) {@content;}
-}
-
-@mixin tablet-screens { // prev - 1300px
-  @media (min-width: 701px) and (max-width: 1300px) {@content;}
-}
-
 /* --------------------------------- Styles --------------------------------- */
 @mixin caps-heading {
   font-size: 12px;
@@ -212,6 +202,14 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+
+@mixin section-caps-heading {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-left: 5px;
 }
 
 @mixin blue-btn {
@@ -233,6 +231,15 @@
   &:hover {
     filter: brightness(1.15);
   }
+}
+/* ---------------------------- Responsive Sizing --------------------------- */
+
+@mixin mobile-screens { // 0 - 600px
+  @media (max-width: 700px) {@content;}
+}
+
+@mixin tablet-screens { // prev - 1300px
+  @media (min-width: 701px) and (max-width: 1300px) {@content;}
 }
 
 /* --------------------- Variables for Responsive Sizing -------------------- */

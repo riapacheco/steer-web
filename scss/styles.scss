@@ -541,7 +541,6 @@ body {
       
 
         img {
-
           margin: auto;
           @include respond-to(desktops) {
             width: 850px;
@@ -935,11 +934,19 @@ body {
           flex-flow: column;
         }
         .overview-title-txt {
+          .product-overview-subheading {
+            display: block;
+            @include section-caps-heading;
+            font-weight: normal;
+            color: $steel-grey-dark;
+            margin-bottom: 10px;
+          }
           font-size: 46px;
           line-height: 56px;
           font-weight: 300;
           margin-right: 40px;
           white-space: nowrap;
+        
 
           @include respond-to(notebooks) {
             font-size: 30px;
@@ -1034,6 +1041,13 @@ body {
           white-space: wrap;
           width: 400px;
           margin: 15px;
+        }
+        .goal-top-heading {
+          display: block;
+          @include section-caps-heading;
+          font-weight: normal;
+          color: $steel-grey-dark;
+          margin-bottom: 15px;
         }
       }
       .one-place-txt {
