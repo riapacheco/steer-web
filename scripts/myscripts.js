@@ -69,6 +69,27 @@ function removeOverviewHam() {
   }
 }
 
+/* ------------------------ Business Page Mobile Menu ----------------------- */
+
+function showBusinessNav() {
+  let x = document.getElementById("businessMenu");
+  if (x.style.display === "block") {
+    x.style.display == "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function removeBusinessHam() {
+  let y = document.getElementById("businessMenu");
+  let z = document.getElementById("businessCloseIcon");
+
+  if (y.style.display === "block") {
+    z.classList = 'ion-md-close mobile-menu-icon';
+  } else {
+    z.classList = 'ion-ios-menu mobil-menu-icon';
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                 ANIMATIONS                                 */
 /* -------------------------------------------------------------------------- */

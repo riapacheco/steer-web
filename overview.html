@@ -28,15 +28,24 @@
             </a>
           </div>
           <div class="nav-items-group">
-            <a href="overview.html" class="nav-item">
-              <span class="current-page">
-                Product Overview
-              </span>
-            </a>
+            <div class="nav-item list-trigger">
+                Product
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              <div class="triggered-list">
+                <div class="triggered-list-content">
+                  <div class="dropdown-section-heading">Manage</div>
+                  <a href="/manage-business.html" class="listed-page why-steer">Business</a>
+                  <a href="#" class="listed-page">The Work</a>
+                  <a href="#" class="listed-page">Remote Teams</a>
+                </div>
+              </div>
+            </div>
             <div class="dropdown-structure-container">
               <div class="nav-item">
-                Resources
-                <i class="ion-ios-arrow-down dropdown-icon"></i>
+                <span class="current-page">
+                  Resources
+                  <i class="ion-ios-arrow-down dropdown-icon"></i>
+                </span>
               </div>
               <div class="dropdown-div">
                 <div class="dropdown-menu">
@@ -45,31 +54,10 @@
                       More Cowbell
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="#" class="dropdown-item">Feature List</a>
+                      <a href="/overview.html" class="dropdown-item">
+                        <span style="color:#ffab00;font-weight: bold;">Feature Overview</span>
+                      </a>
                       <a href="#" class="dropdown-item">Case Study</a>
-                      <a href="#" class="dropdown-item">Remote Teams  <i class="material-icons hot-link">new_releases</i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="dropdown-section">
-                    <div class="dropdown-section-heading">
-                      Materials
-                    </div>
-                    <div class="dropdown-section-items">
-                      <a href="overview.html" class="dropdown-item whitepapers-item">Whitepapers
-                        <div class="coming-soon-tooltip">
-                          Coming soon!
-                        </div>
-                      </a>
-                      <a href="#" class="dropdown-item how-to-item">How-to videos
-                        <div class="coming-soon-tooltip">
-                          Coming soon!
-                        </div>
-                      </a>
-                      <a href="#" class="dropdown-item blog-item">Blog Articles
-                        <div class="coming-soon-tooltip">
-                          Coming soon!
-                        </div>
                       </a>
                     </div>
                   </div>
@@ -106,27 +94,21 @@
     <div id="overviewMenu" class="mobile-menu-div steer-mobile-menu">
       <div class="mobile-menu">
         <div class="mobile-content">
-          <a href="overview.html" class="mobile-menu-item">
-            Product Overview
-          </a>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Manage <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="/manage-business.html" class="submenu-item">Business</a>
+            <a href="#" class="submenu-item">The Work</a>
+            <a href="#" class="submenu-item">Remote Teams</a>
+          </div>
           <div class="mobile-sub-list">
             <div class="mobile-menu-item">
               Resources <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
             </div>
-            <div class="sublist-heading">
-              More Cowbell
-            </div>
-            <a href="#" class="submenu-item">Features</a>
+            <a href="/overview.html" class="submenu-item">Feature Overview</a>
             <a href="#" class="submenu-item">Case Study</a>
-            <a href="#" class="submenu-item">Remote Teams <i class="material-icons hot-link">new_releases</i></a>
-            <div class="sublist-heading">
-              Materials
-            </div>
-            <a href="#" class="submenu-item">Whitepapers <span class="soon-subtext">Coming soon!</span></a>
-            <a href="#" class="submenu-item">How-to-videos <span class="soon-subtext">Coming soon!</span></a>
-            <a href="#" class="submenu-item">Blog Articles <span class="soon-subtext">Coming soon!</span></a>
           </div>
-          <a href="#" class="mobile-menu-item">Resources</a>
           <a href="/pricing.html" class="mobile-menu-item">Pricing</a>
         </div>
 
@@ -153,7 +135,7 @@
         <div class="overview-stacked-content">
           <div class="overview-hero-flex">
             <div class="overview-title-txt">
-              <div class="product-overview-subheading">Product Overview</div>
+              <div class="product-overview-subheading">Feature Overview</div>
               More outcomes.<br>
               Less re-hashing.
               <a href="#" class="get-started-btn">
@@ -311,11 +293,24 @@
       <div class="centralized-delegation-content">
         <div class="centralized-delegation-copy">
           <div class="centralized-delegation-title">
-            <div class="delegation-top-heading">Delegation & Workflow</div>
-            Easy to<strong> give</strong> and easy to <span style="color:#00c7e6;font-weight: bold;"> find</span>
+            <div class="delegation-top-heading">Linked Assets</div>
+            Easy to<strong> give, find</strong> and <span style="color:#00c7e6;font-weight: bold;"> adapt</span> when things change
           </div>
           <div class="delegation-txt">
             Neatly provide what your team needs for success in one place, since these items can be shared as synced versions of themselves wherever they're linked.
+          </div>
+          <div class="linked-items-accordion">
+            <a href="#" class="accord-title">Action Items
+              <div class="accord-content">
+              dslfkjas;lekjlsek sefes sefasefaesf esfsef wefsefse sefsef
+              </div>
+            </a>
+            <a href="#" class="accord-title">Resources
+              <div class="accord-content">
+              kjhfasklejfselkfjaseklfj slekfjslefkj esklfjslekfjse slekfjslekjf seflsekjf 
+              </div>
+            </a>
+
           </div>
         </div>
 
@@ -384,6 +379,18 @@
     <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
 
     <script>
+      const allContent = $('.accord-title .accord-content').hide();
+
+      $('.accord-title').click(function(e) {
+        const thisContent = $(this).find('.accord-content');
+        const isShowing = thisContent.is(":visible");
+        allContent.hide();
+        if (!isShowing) {
+          thisContent.show();
+        }
+
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>

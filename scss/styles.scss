@@ -123,6 +123,50 @@ body {
             font-size: 22px;
           }
         }
+        .nav-item.list-trigger {
+          &:hover {
+            .triggered-list {
+              display: block;
+            }
+          }
+          
+          .triggered-list {
+            display: none;
+            position: absolute;
+            
+            .triggered-list-content {
+              background-color: $midnight;
+              box-shadow: $standard-shadow;
+              padding: 20px 40px 20px 20px;
+              border-radius: 6px;
+              display: flex;
+              flex-direction: column;
+
+              .dropdown-section-heading {
+                color: $bondi-blue-light;
+                font-size: 12px;
+                line-height: 12px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                padding-bottom: 20px;
+              }
+
+              .listed-page {
+                font-size: 1rem;
+                line-height: 1rem;
+                color: $steel-grey-medium;
+                margin-bottom: 15px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                &:hover {
+                  color: $canary-yellow-medium;
+                }
+              }
+            }
+          }
+        }
 
         a:hover,
         .nav-item:hover {
@@ -474,7 +518,7 @@ body {
         }
         .boilerplate {
           font-size: 22px;
-          width: 650px;
+          width: 800px;
           line-height: 32px;
           letter-spacing: 0.3px;
           font-weight: 300;
@@ -1361,14 +1405,13 @@ input[type=number] {
       white-space: nowrap;
     }
     .centralized-delegation-copy {
-      width: 500px;
+      width: 550px;
       padding: 50px;
       .centralized-delegation-title {
         font-size: 48px;
         line-height: 58px;
         font-weight: 300;
         margin-bottom: 20px;
-        width: 400px;
      
         .delegation-top-heading {
           @include section-caps-heading;
@@ -1380,9 +1423,64 @@ input[type=number] {
         line-height: 32px;
         font-weight: 300;
         letter-spacing: 0.3px;
+        margin-bottom: 30px;
+      }
+
+      .linked-items-accordion {
+
+        .accord-title {
+          display: block;
+          font-size: 22px;
+        }
+        .accord-content {
+          font-size: 16px;
+        }
       }
     }
   }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              WHY CHOOSE STEER                              */
+/* -------------------------------------------------------------------------- */
+
+.animation-spacing {
+  display: block;
+  height: 100px;
+}
+.why-choose-btns {
+  min-width: 100vw;
+  height: 200px;
+  overflow-x: hidden;
+  width: 100%;
+
+  .why-choose-cta-content {
+    margin: auto;
+    width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .why-cta-btn {
+      @include caps-heading;
+      height: 50px;
+      line-height: 52px;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .learn-about-projects {
+      @include blue-btn;
+    }
+
+    .why-choose-signup {
+      @include midnight-btn;
+    }
+  }
+
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1400,9 +1498,7 @@ footer {
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-between;
-
     .footer-col {
-      display: inline-block;
       margin: 40px;
 
       .footer-col-heading { 
@@ -1410,11 +1506,42 @@ footer {
         color: $soot-grey-light;
       }
       .footer-col-options {
+        color: $steel-grey-dark;
+        font-size: 1rem;
+        letter-spacing: 0.3px;
         .footer-option {
           display: block;
           font-size: 17px;
           line-height: 17px;
           padding-top: 20px;
+
+          .coming-soon-moon {
+            color: $bondi-blue-darkest;
+            font-size: 20px;
+            padding-left: 5px;
+
+            &:hover {
+              .soon-tooltip {
+                display: block;
+              }
+            }
+          }
+          &.soon-tooltip:hover {
+            color: $bondi-blue-dark;
+            .soon-tooltip-txt {
+              display: block;
+            }
+          }
+          .soon-tooltip-txt {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: $standard-shadow;
+            background-color: $midnight;
+            color: $steel-grey-dark;
+            font-size: 16px;
+          }
         }
         .bottom-txt {
           font-size: 16px;
@@ -1423,6 +1550,9 @@ footer {
           color: $soot-grey-light;
         }
       }
+    }
+    .footer-col.no-show {
+      display: none;
     }
     .founder-cred,
     .hq-txt {
