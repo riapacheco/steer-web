@@ -1443,10 +1443,32 @@ input[type=number] {
 /* -------------------------------------------------------------------------- */
 /*                              WHY CHOOSE STEER                              */
 /* -------------------------------------------------------------------------- */
+.mgb-section {
+  margin: auto;
+  position: relative;
+  width: 900px;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.mgb-section-one {
 
-.animation-spacing {
+}
+.break-30 {
+  display: block;
+  height: 30px;
+}
+.break-50 {
+  display: block;
+  height: 50px;
+}
+.break-hundred {
   display: block;
   height: 100px;
+}
+.break-two-bills {
+  display: block;
+  height: 200px;
 }
 .why-choose-btns {
   min-width: 100vw;
@@ -1481,6 +1503,9 @@ input[type=number] {
     }
   }
 
+}
+.HYPE_document {
+  min-height: 100vh;
 }
 
 /* -------------------------------------------------------------------------- */
