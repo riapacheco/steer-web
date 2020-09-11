@@ -103,7 +103,6 @@ $(document).ready(function() {
   secondMilestone();
   thirdMilestone();
   driftFunction();
-  
 });
 
 function typingMilestone() {
