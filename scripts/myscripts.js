@@ -102,7 +102,7 @@ $(document).ready(function() {
   typingMilestone();
   secondMilestone();
   thirdMilestone();
-  driftFunction();
+  driftZoom();
 });
 
 function typingMilestone() {
@@ -194,6 +194,9 @@ function passMilestone3() {
     mile3.className = 'milestone-rectangle passed-milestone';
   }
 }
+
+/* ---------------------------------- drift --------------------------------- */
+
 
 /* -------------------------- Fake Metrics Ribbone -------------------------- */
 

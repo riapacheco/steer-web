@@ -486,6 +486,7 @@ body {
   justify-content: center;
   overflow-x: hidden;
   display: block;
+  cursor: default;
   
   @include respond-to(smartphones) {
     margin-bottom: 30px;
@@ -497,45 +498,71 @@ body {
     height: inherit;
     display: inline-block;
     position: absolute;
-    padding-top: 70px;
+    padding-top: 100px;
 
     .stack-content {
       width: inherit;
       height: inherit;
       margin: auto;
       display: block;
+      padding-left: 20px;
       @include respond-to(desktops) {
-        width: 900px;
+        width: 800px;
       }
       @include respond-to(notebooks) {
-        width: 500px;
+        width: 720px;
+
       }
       @include respond-to(smartphones) {
         width: 90%;
+        padding: 0;
       }
       .hero-txt {
         width: 100%;
         
         .slogan-statement {
-          font-size: 42px;
+          font-size: 70px;
+          line-height: 72px;
           line-height: auto;
           font-weight: 300;
           margin-bottom: 30px;
+          width: 600px;
+          @include respond-to(smartphones) {
+            width: 90%;
+            font-size: 60px;
+          }
+          
+          .blue {
+            color: $bondi-blue-dark;
+          }
         }
+
         .boilerplate {
-          font-size: 22px;
-          width: 800px;
-          line-height: 32px;
-          letter-spacing: 0.3px;
+          font-size: 20px;
           font-weight: 300;
-          margin-bottom: 30px;
+          line-height: 30px;
+          letter-spacing: 0.3px;
+          margin-bottom: 55px;
+          width: 550px;
+
           @include respond-to(notebooks) {
-            width: 550px;
+            width: 600px;
           }
           @include respond-to(smartphones) {
-            width: 350px;
-            font-size: 21px;
+            width: 330px;
+            font-size: 20px;
             line-height: 30px;
+          }
+
+          ul {
+            padding-top: 10px;
+            .boilerplate-icon {
+              color: $bondi-blue-darkest;
+              padding-right: 10px;
+            }
+            li {
+              padding-left: 15px;
+            }
           }
         }
         .btn-container {
@@ -561,12 +588,14 @@ body {
             padding-right: 35px;
             white-space: nowrap;
 
+
             &:hover {
               filter: brightness(1.15);
             }
             @include respond-to(smartphones) {
               display: block;
               width: 100%;
+              
               text-align: center;
               margin-bottom: 15px;
               &:last-child {
@@ -601,7 +630,7 @@ body {
             padding-bottom: 0;
           }
           @include respond-to(smartphones) {
-            width: 99%;
+            display: none;
           }
         }
       }
@@ -624,187 +653,893 @@ body {
     }
   }
 }
+
 /* -------------------------------------------------------------------------- */
-/*                                 VALUE PROPS                                */
+/*                                 Quotations                                 */
 /* -------------------------------------------------------------------------- */
-.value-props-section {
-  z-index: 1;
+.credibility-section {
+  cursor: default;
   width: 100%;
-  min-height: 200px;
-  height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   overflow-x: hidden;
-  position: relative;
-  width: inherit;
-  background-color: $pale-midnight-dark;
-  display: flex;
-  flex-flow: column;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  padding-top: 200px;
+  min-height: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+
+  @include respond-to(desktops) {
+    width: 999px;
+  }
 
   @include respond-to(notebooks) {
-    padding-top: 0;
+    width: 700px;
+    padding-top: 50px;
   }
+
   @include respond-to(smartphones) {
-    padding-top: 0;
+    width: 360px;
   }
 
-  .value-prop-content {
+  .cred-header {
+    font-size: 60px;
+    letter-spacing: -1px;
     margin: auto;
-    display: inline-flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-
-    @include respond-to(smartphones) {
-      margin: auto;
-      display: block;
-      width: 300px;
+    font-weight: 300;
+    padding-bottom: 45px;
+    .notebook-logo {
+      display: none;
     }
     @include respond-to(notebooks) {
-      flex-flow: column wrap;
-      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .notebook-logo {
+        display: block;
+        padding-left: 30px;
+      }
+    }
+
+    @include respond-to(smartphones) {
+      font-size: 45px;
+      letter-spacing: -1.3px; 
+    }
+
+    .cred-header-icon {
+      font-size: 70px;
+      height: 70px;
+      width: 70px;
+      padding-top: 2px;
+      color: $bondi-blue-dark;
+      padding-right: 20px;
+
+      @include respond-to(smartphones) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .cred-quote-container {
+    margin: auto;
+    padding-bottom: 20px;
+    color: $steel-grey-medium;
+
+    .michael-quote {
+      @include smooth-text;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: 300;
+      padding-bottom: 30px;
+      letter-spacing: 0.3px;
+      text-align: right;
+      @include respond-to(smartphones) {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+    }
+    .michael-name {
+      text-align: right;
+
+      .first-last {
+        font-size: 40px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        @include respond-to(smartphones) {
+          font-size: 35px;
+        }
+      }
+      .work-title {
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.8px;
+        color: $steel-grey-medium;
+        @include respond-to(smartphones) {
+          font-size: 9px;
+        }
+
+        a {
+          padding-bottom: 3px;
+          border-bottom: 2px solid $bondi-blue-darkest;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .cred-content {
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: flex-end;
+
+    @include respond-to(notebooks) {
+      flex-flow: row wrap;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: row wrap;
+      padding-top: 0px;
+    }
+
+    .cred-logo-container {
+      padding-right: 40px;
+      .full-logo {
+        @include respond-to(notebooks) {
+          display: none;
+        }
+        @include respond-to(smartphones) {
+          display: none;
+        }
+      }
+      
+      .notebook-logo {
+        display: none;
+        @include respond-to(notebooks) {
+          display: block;
+        }
+        @include respond-to(smartphones) {
+          display: none;
+        }
+      }
+      .mobile-logo {
+        padding-top: 40px;
+        display: none;
+        @include respond-to(smartphones) {
+          display: block;
+
+        }
+      }
+    }
+
+    .stats-container {
+      padding-top: 30px;
+      width: inherit;
+      display: flex;
+      align-items: flex-end;
+      @include respond-to(smartphones) {
+        display: inline-flex;
+        flex-flow: column nowrap;
+      }
+  
+      .single-stat {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: right;
+        padding: 0px 30px;
+        @include respond-to(smartphones) {
+          margin-bottom: 40px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .stats-amount {
+          font-size: 100px;
+          font-weight: 200;
+          color: $steel-grey-light;
+          letter-spacing: -1px;
+
+          @include respond-to(notebooks) {
+            font-size: 95px;
+          }
+  
+          .stats-icon {
+            font-size: 80px;
+            color: $bondi-blue-light;
+            filter: brightness(.6);
+          }
+        }
+        .stats-label {
+          font-size: 26px;
+          font-weight: 500;
+          letter-spacing: 0;
+          color: $steel-grey-medium;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .cred-cta-btns {
+    width: inherit;
+    text-align: right;
+    display: block;
+    padding-top: 100px;
+
+    .cred-cta-content {
+      .cred-btn {
+        display: inline-block;
+        @include caps-heading;
+        min-height: 50px;
+        line-height: 51px;
+        padding: 0 30px;
+        margin: 10px;
+        border-radius: 6px;
+        @include respond-to(smartphones) {
+          display: block;
+          padding: 0;
+          width: inherit;
+          text-align: center;
+          margin: 15px;
+        }
+      }
+
+      .cred-dl {
+        @include midnight-btn;
+      }
+      .cred-signup {
+        @include dark-blue-btn;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Organize the Work                             */
+/* -------------------------------------------------------------------------- */
+
+.organize-work-section {
+  cursor: default;
+  min-width: 100vw;
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  @include respond-to(smartphones) {
+    padding: 0;
+    padding-top: 170px;
+    width: 100vw;
+  }
+
+  @include respond-to(notebooks) {
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .organize-work-content { // no bp width to adjust, just the two column elements
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;//centers
+
+    @include respond-to(smartphones) {
+      flex-flow: column-reverse nowrap;
+      width: 100%;
+    }
+
+    @include respond-to(notebooks) {
+      width: 100%;
+      flex-flow: column-reverse nowrap;
+      margin: auto;
       align-items: center;
     }
-    .value-prop-col {
-      @include respond-to(desktops) {
-        width: 330px;
-      }
-      @include respond-to(notebooks) {        
-        width: 450px;
-        margin-bottom: 65px;
 
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-      @include respond-to(smartphones) {
-        margin-top: 60px;
-        margin-bottom: 0;
 
-        &:first-child {
-          margin-top: 20px;
+    .image-section {
+      .touchscreen-message {
+        display: none;
+      }
+      .mockup-container {
+        display: block;
+        border: 2px solid $midnight;
+        border-radius: 6px;
+        background-color: $midnight;
+        border-bottom: none;
+        box-shadow: $standard-shadow;
+        
+        @include respond-to(smartphones) {
+          margin-top: 50px;
+          margin-bottom: 20px;
+          width: 100%;
         }
-      }
-      .value-prop-icon {
-        font-size: 40px;
-        color: $bondi-blue-darkest;
-        margin-bottom: 15px;
-      }
-      .value-prop-title {
-        font-size: 30px;
-        line-height: 30px;
-        font-weight: 300;
-        padding-bottom: 15px;
-        border-bottom: 2px solid $bondi-blue-darkest;
-        margin-bottom: 15px;
-      }
-      .value-prop-body {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-        .learn-more-now {
-          font-size: 15px;
-          font-weight: bold;
-          letter-spacing: 0.3px;
-          color: $bondi-blue-dark;
-          
+
+        .browser-bar-div {
+          height: 25px;
+          background-color: $midnight;
+          border-radius: 4px 4px 0px 0px;
+          background-color: $midnight;
+          @include respond-to(smartphones) {
+            height: 20px;
+            width: 100%;
+          }
+          .browser-btns-div {
+            padding-left: 10px;
+            display: inline-flex;
+            flex-flow: row nowrap;
+            width: 32px;
+            align-items: center;
+            justify-content: space-between;
+
+            @include respond-to(smartphones) {
+              display: inline-flex;
+              flex-direction: row;
+              align-items: center;
+              width: 20px;
+            }
+            .browser-btn {
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+
+              @include respond-to(smartphones) {
+                height: 5px;
+                width: 5px;
+              }
+            }
+            .browser-close {
+              background-color: $color-barrier;
+            }
+            .browser-minimize {
+              background-color: $color-challenge;
+            }
+            .browser-expand {
+              background-color: $color-opportunity;
+            }
+
+          }
+        }
+        .prioritycard-screenshot {
+          height: 420px;
           &:hover {
-            filter: brightness(1.15);
+            cursor: crosshair;
+          }
+
+          @include respond-to(notebooks) {
+            height: 390px;
+          }
+          @include respond-to(smartphones) {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+
+          img {
+            position: relative;
+            border-radius: 0px 0px 6px 6px;
+            width: 100%;
+          }
+        }
+      }
+      .priority-cta-btns {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+
+        @include respond-to(smartphones) {
+          flex-direction: column;
+          margin: 10px;
+        }
+
+        .hover-container {
+          .hover-msg {
+            display: inline-flex;
+            align-items: center;
+            color: $soot-grey-light;
+            letter-spacing: 0.3px;
+            font-size: 13px;
+            .icon {
+              font-size: 14px;
+              padding-right: 5px;
+            }
+          }
+          @include respond-to(smartphones) {
+            .touchscreen-msg {
+              display: block;
+            }
+            .mouse-msg {
+              display: none;
+            }
+          }
+          @include respond-to(notebooks) {
+            .touchscreen-msg {
+              display: block;
+            }
+            .mouse-msg {
+              display: none;
+            }
+          }
+          @include respond-to(desktops) {
+            .touchscreen-msg {
+              display: none;
+            }
+          }
+        }
+        .priority-btns-container {
+          width: 200px;
+          margin-top: 20px;
+          display: inline-block;
+
+          .priority-btn {
+            display: block;
+            height: 50px;
+            @include caps-heading;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 6px;
+            @include midnight-btn;
+
+
+          }
+        }
+      }
+    }
+    .organize-content {
+      .title {
+        width: 450px; // BP ADJUSTS
+        font-size: 38px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        .blue {
+          color: $bondi-blue-dark;
+        }
+      }
+      .above-heading {
+        @include caps-heading;
+        padding-left: 5px;
+      }
+    }
+
+    .body,
+    .zoom-area {
+      //see below
+    }
+
+  }
+}
+
+// isolated feature block (expandable cards) 
+.feature-toggle {
+  height: 100%;
+  @include respond-to(notebooks) {
+    margin-bottom: 60px;
+  }
+  .dialog-window {
+    width: 580px;
+    background-image: linear-gradient(to bottom right, $pale-midnight-light, $pale-midnight-medium);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: $standard-shadow;
+    @include respond-to(smartphones) {
+      width: 370px;
+    }
+  }
+
+  .category-title {
+    &:hover {
+      color: $bondi-blue-dark;
+      cursor: pointer;
+      .title-icon,
+      .down-arrow {
+        color: $bondi-blue-dark;
+        cursor: pointer;
+      }
+    }
+    .title-icon {
+      font-size: 22px;
+      height: 22px;
+      width: 22px;
+      color: $soot-grey-light;
+      padding-right: 5px;
+    }
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    align-items: center;
+    .down-arrow {
+      float: right;
+      padding-top: 2px;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      color: $steel-grey-dark;
+    }
+  }
+
+  .inner-body {
+    border-top: 2px solid $soot-grey-dark;
+    margin-top: 15px;
+    padding-top: 20px;
+    position: relative;
+    .action-body {
+      position: relative;
+      width: 100%;
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      background-image: linear-gradient(to top right, $pale-midnight-medium, $midnight);
+      height: 34px;
+      border-radius: 30px;
+      margin-bottom: 15px;
+
+      border-top: 4px solid $pale-midnight-dark;
+      box-shadow: -6px -6px 15px #ced2d610,
+                    6px 6px 15px $midnight;
+      .action-body-txt {
+        font-size: 15px;
+        padding-left: 15px;
+        padding-bottom: 2px;
+        letter-spacing: 0.3px;
+
+        @include respond-to(smartphones){
+          font-size: 12px;
+        }
+      }
+      .action-status-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include caps-heading;
+        line-height: 37px;
+        padding-left: 20px;
+        padding-right: 15px;
+        background-image: linear-gradient(to bottom, $pale-midnight-dark, $midnight);
+        border-radius: 20px;
+        box-shadow: $standard-shadow;
+        .arrow-down {
+          font-size: 12px;
+          padding-left: 5px;
+        }
+      }
+      .open-feature-menu {
+        z-index: 1;
+        position: absolute;
+        right:0;
+        top: 0;
+        margin-top: 40px;
+        padding: 20px 25px;
+        border-radius: 6px;
+        background: $midnight;
+        box-shadow: $standard-shadow;
+        .feature-menu-content {
+          color: $steel-grey-medium;
+
+          .feature-menu-header {
+            @include caps-heading;
+            color: $bondi-blue-light;
+            padding-bottom: 10px;
+            border-bottom: 2px solid $bondi-blue-darkest;
+            margin-bottom: 10px;
+          }
+          .feature-menu-body {
+            letter-spacing: 0.3px;
+            font-size: 16px;
+
+            @include respond-to(smartphones) {
+              font-size: 12px;
+            }
+            .icon {
+              color: $bondi-blue-dark;
+              padding-right: 5px;
+            }
+
+            ul > li {
+              margin-bottom: 10px;
+              &:first-child {
+                padding-top: 5px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
           }
         }
       }
     }
   }
-  .value-prop-cta-btn {
-    width: inherit;
-    margin: auto;
-    border-radius: 6px;
-    width: 200px;
-    height: 50px;
-    display: block;
-    box-sizing: border-box;;
-    text-align: center;
-    @include caps-heading;
-    line-height: 50px;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
-    box-shadow: $standard-shadow;
-
-    &:hover {
-      filter: brightness(1.15);
-      cursor: pointer;
-    }
-  }
 }
-/* -------------------------------------------------------------------------- */
-/*                              CASE STUDY QUOTE                              */
-/* -------------------------------------------------------------------------- */
-.case-study-section {
+
+.project-card {
   min-width: 100vw;
-  min-height: 250px;
-  overflow-x: hidden;
+  width: 100%;
   position: relative;
-  width: inherit;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  @include parallax-effect;
-  background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/ereader_bg_45ljhQE2r.png');
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
 
+  @include respond-to(smartphones) {
+    padding: 0;
+    padding-top: 170px;
+    width: 100vw;
+  }
+  .project-card-content {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
 
-  .case-study-content {
-    width: 100%;
-    margin: auto;
-    width: 900px;
-    @include respond-to(notebooks) {
-      width: 500px;
-    }
     @include respond-to(smartphones) {
-      width: 400px;
-    }
-    .quote-block {
-      .quotation-txt {
-        font-size: 32px;
-        font-weight: 300;
+      flex-flow: row wrap;
 
-        @include respond-to(desktops) {
-          margin-bottom: 30px;
+    }
+    .title {
+      margin-top: 15px;
+      font-size: 52px;
+      font-weight: 300;
+      margin-bottom: 50px;
+      width: 575px;
+
+      @include respond-to(smartphones){
+        width: 400px;
+      }
+
+
+      .above-heading {
+        font-size: 13px;
+        line-height: 13px;
+        padding-left: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.8px;
+        color: $soot-grey-light;
+      }
+
+      @include respond-to(notebooks) {
+        margin-left: 20px;
+      }
+
+      @include respond-to(smartphones) {
+        font-size: 36px;
+        padding: 10px;
+      }
+
+      .blue {
+        color: $bondi-blue-dark;
+      }
+    }
+
+    .body,
+    .zoom-area {
+      .feature-block {
+        width: 705px;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+
+        background-image: linear-gradient(145deg, $pale-midnight-medium, $pale-midnight-dark);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: $standard-shadow;
+
+        .feature-title {
+          @include smooth-text;
+          font-size: 22px;
+          line-height: 22px;
+          position: relative;
+          letter-spacing: 0.3px;
+          color: $steel-grey-medium;
+
+          .block-icon {
+            color: $soot-grey-medium;
+            font-size: 26px;
+            padding: 0px 5px;
+          }
+          .down-icon {
+            float: right;
+            padding-right: 5px;
+            padding-top: 3px;
+            color: $soot-grey-light;
+          }
+
+          &:hover {
+            cursor: pointer;
+            filter: brightness(1.10);
+
+            .feature-body {
+              color: $steel-grey-medium;
+              cursor: default;
+            }
+          }
+
+          .feature-body {
+            width: inherit;
+            position: relative;
+            font-size: 16px;
+            padding: 10px;
+            padding-top: 30px;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
+            cursor: default;
+            border-top: 2px solid $pale-midnight-light;
+            color: $steel-grey-dark;
+            &:hover {
+              color: $steel-grey-medium;
+            }
+
+            .sub-feature-rectangle {
+              display: flex;
+              flex-direction: row;
+              border-radIus: 30px;
+              background-image: linear-gradient(to bottom right, $midnight, $pale-midnight-dark);
+              padding: 10px 15px;
+              position: relative;
+              box-shadow: -6px -6px 15px #ced2d610,
+                          6px 6px 15px $midnight;
+              border-top: 3px solid $pale-midnight;
+              margin-bottom: 18px;
+
+              @include respond-to(smartphones) {
+                padding-top: 50px;
+              }
+
+              .sub-feature-txt  {
+                padding-left: 5px;
+
+                @include respond-to(notebooks) {
+                  font-size: 14px;
+                }
+                @include respond-to(smartphones) {
+                  font-size: 14px;
+                  text-align: center;
+                }
+              }
+
+              .mock-status-btn {
+                background-image: linear-gradient(to bottom, $pale-midnight-dark, $midnight);
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 10px 30px 9px 30px;
+                border-radius: 30px;
+                box-shadow: $standard-shadow;
+                text-transform: uppercase;
+
+                font-size: 12px;
+                line-height: 23px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+
+
+                @include respond-to(smartphones) {
+                  background-image: none;
+                  background: transparent;
+                  border-radius: 20px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  text-align: center;
+                }
+              }
+            }
+          }
+
         }
-        @include respond-to(notebooks) {
-          margin-bottom: 20px;
+      }
+    }
+    .project-card-screen {
+      @include respond-to(smartphones) {
+        position: relative;
+        width: 100%;
+        height: 50%;
+      }
+      .browser-bar-div {
+        top: 0;
+        min-width: 100px;
+        height: 32px;
+        background-color: $midnight;
+        border-radius: 6px 6px 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-right: 9px;
+        font-weight: bold;
+        color: $soot-grey-light;
+
+        @include respond-to(smartphones) {
+          height: 15px;
+        }
+
+        .browser-btns-div {
+          display: inline-flex;
+          flex-flow: row nowrap;
+          width: 40px;
+          justify-content: space-between;
+          opacity: .7;
+          padding: 0px 10px;
+          @include respond-to(smartphones) {
+            width: 20px;
+          }
+
+          .browser-btn {
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+
+            @include respond-to(smartphones) {
+              height: 4px;
+              width: 4px;
+            }
+          }
+          .browser-close {
+            background-color: $color-barrier;
+          }
+          .browser-minimize {
+            background-color: $color-challenge;
+          }
+          .browser-expand {
+            background-color: $color-opportunity;
+          }
+        }
+      }
+
+      .project-card-mockup {
+        position: relative;
+        width: 100%;
+        border: 1px solid $midnight;
+        border-bottom: none;
+        border-radius: 0px 0px 8px 8px;
+        box-sizing: border-box;
+        background-color: $midnight;
+        box-shadow: $standard-shadow;
+        
+
+        max-height: 700px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: $pale-midnight-medium;
+        }
+        &::-webkit-scrollbar-track {
+          display: none;
+          background-color: $pale-midnight-medium;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $midnight;
+          border-radius: 3px;
+
         }
         @include respond-to(smartphones) {
-          margin-bottom: 30px;
+          img {
+            width: 100%;
+          }
         }
-      }
-      .quote-source {
-        font-weight: 300;
-        font-size: 26px;
-      }
-      .source-position-title {
-        font-weight: bold;
-        @include caps-heading;
-        margin-bottom: 30px;
-        height: 40px;
-        line-height: 42px;
-      }
-    }
-    .quote-btn-block {
-
-      .download-case-study {
-        @include caps-heading;
-        display: inline-block;
-        min-height: 50px;
-        line-height: 53px;
-        border-radius: 6px;
-        padding-left: 30px;
-        padding-right: 30px;
-        @include blue-btn;
-        color: $steel-grey-light;
-        box-shadow: $standard-shadow;
+        .project-screenshot {
+          border-radius: 0px 0px 6px 6px;
+        }
       }
     }
   }

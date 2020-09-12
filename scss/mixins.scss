@@ -222,6 +222,16 @@
     filter: brightness(1.15);
   }
 }
+@mixin dark-blue-btn {
+  background-image: linear-gradient(to bottom right, $bondi-blue-dark, $bondi-blue-darkest);
+  box-shadow: $standard-shadow;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: $steel-grey-light;
+  &:hover {
+    filter: brightness(1.15);
+  }
+}
 @mixin midnight-btn {
   color: $steel-grey-medium;
   background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
@@ -242,19 +252,93 @@
   @media (min-width: 701px) and (max-width: 1300px) {@content;}
 }
 
+
 /* --------------------- Variables for Responsive Sizing -------------------- */
-$break-small: 600px;
-$break-large: 1024px;
+$break-small: 750px;
+$break-large: 1000px;
 
 @mixin respond-to($media) {
-  @if $media == smartphones {
+  @if $media == smartphones { 
     @media only screen and (max-width: $break-small) {@content;}
-  } @else if $media == notebooks {
+  } @else if $media == notebooks { // 749 - 999
     @media only screen and (min-width: $break-small + 1px) and (max-width: $break-large - 1px) {@content;}
-  } @else if $media == desktops {
+  } @else if $media == desktops { //1000+
     @media only screen and (min-width: $break-large) {@content;}
   }
 }
 
 $desktop-content-width: 900px;
 
+/* ------------------------------ Feature Block ----------------------------- */
+
+@mixin feature-block {
+  width: 575px;
+  background-image: linear-gradient(to bottom right, $pale-midnight-light, $pale-midnight-medium);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: $standard-shadow;
+
+  .feature-title {
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    align-items: center;
+
+    .block-icon {
+      font-size: 22px;
+      height: 22px;
+      width: 22px;
+      color: $soot-grey-medium;
+      padding-right: 5px;
+    }
+    .down-icon {
+      float: right;
+      padding-top: 2px;
+      color: $steel-grey-dark;
+    }
+
+    .feature-body {
+      border-top: 2px solid $soot-grey-dark;
+      margin-top: 15px;
+      padding-top: 15px;
+
+      .sub-feature-rectangle {
+        position: relative;
+        width: 100%;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        background-image: linear-gradient(to top right, $pale-midnight-medium, $midnight);
+        height: 34px;
+        border-radius: 30px;
+        margin-bottom: 15px;
+
+        border-top: 4px solid $pale-midnight-dark;
+        box-shadow: -6px -6px 15px #ced2d610,
+                      6px 6px 15px $midnight;
+        .sub-feature-txt {
+          font-size: 14px;
+          padding-left: 15px;
+          padding-bottom: 2px;
+          letter-spacing: 0.3px;
+        }
+        .mock-status-btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include caps-heading;
+          line-height: 34px;
+          padding-left: 20px;
+          padding-right: 20px;
+          background-image: linear-gradient(to bottom, $pale-midnight-dark, $midnight);
+          border-radius: 20px;
+          box-shadow: $standard-shadow;
+        }
+      }
+    }
+  }
+}
