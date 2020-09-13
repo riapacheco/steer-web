@@ -522,7 +522,7 @@ body {
         width: 100%;
         
         .slogan-statement {
-          font-size: 65px;
+          font-size: 52px;
           line-height: auto;
           font-weight: 300;
           margin-bottom: 30px;
@@ -1157,7 +1157,7 @@ body {
   }
 
   .dialog-window {
-    width: 580px;
+    width: 500px; // controls width of accordions
     background-image: linear-gradient(to bottom right, $pale-midnight-light, $pale-midnight-medium);
     padding: 20px;
     margin-bottom: 20px;
@@ -1167,7 +1167,9 @@ body {
       width: 340px;
       margin: auto;
       margin-bottom: 20px;
-
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -1247,6 +1249,17 @@ body {
         .arrow-down {
           font-size: 12px;
           padding-left: 5px;
+        }
+
+        &:hover {
+          filter: brightness(1.1);
+        }
+        &:active {
+          box-shadow: none;
+          color: $pale-midnight-dark;
+          background-image: linear-gradient(to top right, $pale-midnight-dark, $midnight);
+          filter: brightness(0.90);
+          line-height: 34px;
         }
       }
       .open-feature-menu {
@@ -1335,7 +1348,7 @@ body {
       }
     }
     .title {
-      width: 500px; // BP ADJUSTS
+      width: 450px; // BP ADJUSTS
       font-size: 38px;
       font-weight: 300;
       margin-bottom: 30px;
@@ -1360,6 +1373,7 @@ body {
     .zoom-area {
     }
     .project-card-screen {
+
       @include respond-to(smartphones) {
         position: relative;
         width: 100%;
@@ -1428,9 +1442,8 @@ body {
         box-sizing: border-box;
         background-color: $midnight;
         box-shadow: $standard-shadow;
-        
 
-        max-height: 700px;
+        max-height: 600px;
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
@@ -1446,18 +1459,20 @@ body {
           border-radius: 3px;
 
         }
-        @include respond-to(smartphones) {
-          img {
-            width: 100%;
-          }
+
         }
         .project-screenshot {
           border-radius: 0px 0px 6px 6px;
         }
+        img { // controls width of project card screenshot
+          width: 800px;
+          @include respond-to(smartphones) {
+            width: 100%;
+          }
+        }
       }
     }
   }
-}
 
 //* -------------------------------------------------------------------------- */
 //*                                PRICING PAGE                                */
@@ -2034,65 +2049,6 @@ input[type=number] {
 }
 .quantity input:focus {
   outline: 0;
-}
-/* ------------------------ Centralized Distribution ------------------------ */
-
-.centralized-delegation-section {
-  min-width: 100vw;
-  height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  .centralized-delegation-content {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    .add-resources-animation {
-      z-index: 1;
-      display: block;
-      white-space: nowrap;
-    }
-    .centralized-delegation-copy {
-      width: 550px;
-      padding: 50px;
-      .centralized-delegation-title {
-        font-size: 48px;
-        line-height: 58px;
-        font-weight: 300;
-        margin-bottom: 20px;
-     
-        .delegation-top-heading {
-          @include section-caps-heading;
-          padding-bottom: 10px;
-        }
-      }
-      .delegation-txt {
-        font-size: 22px;
-        line-height: 32px;
-        font-weight: 300;
-        letter-spacing: 0.3px;
-        margin-bottom: 30px;
-      }
-
-      .linked-items-accordion {
-
-        .accord-title {
-          display: block;
-          font-size: 22px;
-        }
-        .accord-content {
-          font-size: 16px;
-        }
-      }
-    }
-  }
 }
 
 /* -------------------------------------------------------------------------- */
