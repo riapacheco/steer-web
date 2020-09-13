@@ -1174,6 +1174,13 @@ body {
   }
 
   .category-title {
+    @include respond-to(smartphones) {
+      font-size: 17px;
+      line-height: 17px;
+      font-weight: bold;
+      color: $steel-grey-medium;
+      letter-spacing: -0.3px;
+    }
     &:hover {
       color: $bondi-blue-dark;
       cursor: pointer;
@@ -1190,8 +1197,10 @@ body {
       color: $soot-grey-light;
       padding-right: 5px;
     }
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 22px;
     display: block;
     align-items: center;
     .down-arrow {
@@ -1201,6 +1210,12 @@ body {
       height: 24px;
       text-align: center;
       color: $steel-grey-dark;
+    }
+    .blue {
+      color: $bondi-blue-light;
+      @include respond-to(smartphones) {
+        color: $bondi-blue-dark;
+      }
     }
   }
 
@@ -1342,6 +1357,7 @@ body {
       }
       @include respond-to(smartphones) {
         margin-right: 0;
+        margin-bottom: 40px;
       }
       @include respond-to(notebooks) {
         margin-right: 0;
@@ -1369,11 +1385,9 @@ body {
       color: $soot-grey-medium;
     }
 
-    .body,
-    .zoom-area {
-    }
+    // .body,
+    // .zoom-area {} => Defined with global toggle
     .project-card-screen {
-
       @include respond-to(smartphones) {
         position: relative;
         width: 100%;
@@ -1460,7 +1474,6 @@ body {
 
         }
 
-        }
         .project-screenshot {
           border-radius: 0px 0px 6px 6px;
         }
@@ -1473,6 +1486,7 @@ body {
       }
     }
   }
+}
 
 //* -------------------------------------------------------------------------- */
 //*                                PRICING PAGE                                */
