@@ -116,9 +116,10 @@ body {
         display: inherit; 
 
         .nav-item {
-          padding-right: 25px;
+          width: 100%;
+          margin-right: 30px;
           font-size: 16px;
-          line-height: 70px;
+          line-height: 32px;
           color: $steel-grey-dark;
           white-space: nowrap;
           letter-spacing: 0.3px;
@@ -134,6 +135,9 @@ body {
             font-size: 13px;
           }
 
+          &.active-menu-item {
+            border-bottom: 5px solid $pale-midnight-dark;
+          }
         }
         .nav-item.list-trigger {
           &:hover {
@@ -234,6 +238,11 @@ body {
                       box-shadow: $standard-shadow;
                       padding-left: 5px;
                     }
+
+                    &.active-dropdown-item {
+                      color: $canary-yellow-dark;
+                      font-weight: bold;
+                    }
                   }
                   .coming-soon-tooltip {
                     @include tooltip-bottom;
@@ -299,15 +308,7 @@ body {
     }
   }
 }
-.active-menu-item {
-  border-bottom: 5px solid $pale-midnight-dark;
-  padding-bottom: 6px;
 
-}
-.active-submenu-item {
-  color: $canary-yellow-medium;
-  font-weight: bold;
-}
 /* -------------------------------------------------------------------------- */
 /*                         MOBILE OPTIMIZED NAVIGATION                        */
 /* -------------------------------------------------------------------------- */
