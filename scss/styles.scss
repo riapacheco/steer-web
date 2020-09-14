@@ -1489,6 +1489,18 @@ body {
         justify-content: center;
         align-items: center;
       }
+      .scroll-message {
+        @include caps-heading;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2px;
+        color: $soot-grey-light;
+        display: none;
+
+        @include respond-to(smartphones) {
+          display: block;
+        }
+      }
     }
 
     .title {
@@ -1531,7 +1543,10 @@ body {
         margin: auto;
         display: block;
         margin-top: 40px;
-
+      }
+      @include respond-to(notebooks) {
+        margin-top: 10px;
+        margin-bottom: 40px;
       }
     }
     // .body,
@@ -1616,6 +1631,9 @@ body {
         @include respond-to(smartphones) {
           max-height: 250px;
           width: 103%;
+        }
+        @include respond-to(notebooks) {
+          max-height: 460px;
         }
 
         &::-webkit-scrollbar {
