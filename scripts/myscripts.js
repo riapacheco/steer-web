@@ -104,6 +104,20 @@ $(document).ready(function() {
   thirdMilestone();
   driftZoom();
 });
+function typingIntro() {
+  const txtEl = document.getElementById('over-text');
+  if (!txtEl) return console.log('Index element not found');
+  if (!Typed) return console.log('Cannot find Typed');
+
+  const options = {
+    strings: [
+      "^400 Clarify", "^400 Centralize", "^400 Simplify"
+    ],
+    loop: true,
+    typeSpeed: 100
+  };
+  const typingTarget = new Typed('#over-text', options);
+}
 
 function typingMilestone() {
   // make sure we can load it by checking the element is present
