@@ -611,6 +611,7 @@ body {
             line-height: 30px;
             margin: auto;
             margin-bottom: 90px;
+            font-weight: 300;
           }
 
           ul {
@@ -1612,6 +1613,11 @@ body {
         max-height: 600px;
         overflow-y: scroll;
 
+        @include respond-to(smartphones) {
+          max-height: 250px;
+          width: 103%;
+        }
+
         &::-webkit-scrollbar {
           width: 6px;
           background-color: $pale-midnight-medium;
@@ -1623,7 +1629,6 @@ body {
         &::-webkit-scrollbar-thumb {
           background: $midnight;
           border-radius: 3px;
-
         }
 
         .project-screenshot {
