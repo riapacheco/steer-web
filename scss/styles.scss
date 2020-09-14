@@ -6,7 +6,7 @@
 /*                              Browser Overrides                             */
 /* -------------------------------------------------------------------------- */
 html {
-  background-color: $midnight;
+  background-image: radial-gradient(circle at bottom left, $pale-midnight-dark, $midnight);
   background-attachment: fixed;
   color: $steel-grey-medium;
   font-family: lato, sans-serif;
@@ -17,7 +17,7 @@ html {
     width: 6px;
   }
   &::-webkit-scrollbar-track {
-    display: none;
+    background-color: $pale-midnight;
   }
   &::-webkit-scrollbar-thumb {
     background: $midnight;
@@ -126,9 +126,7 @@ body {
           .dropdown-icon {
             font-size: 16px;
           }
-          @include tablet-screens {
-            font-size: 22px;
-          }
+
         }
         .nav-item.list-trigger {
           &:hover {
@@ -283,7 +281,8 @@ body {
         }
       }
       .login-cta-btn {
-        border: 2px solid $pale-midnight-light;
+        border: 2px solid $bondi-blue-darkest;
+        color: $bondi-blue-darkest;
         border-radius: 4px;
         box-sizing: border-box;
       }
@@ -479,36 +478,66 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                 Home > Hero                                */
 /* -------------------------------------------------------------------------- */
+
 .home-hero {
-  width: 100vw;
+  min-width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   padding-top: 70px;
   justify-content: center;
   overflow-x: hidden;
   display: block;
   cursor: default;
-  
-  @include respond-to(smartphones) {
-    margin-bottom: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+
+  .hero-hype {
+    width: inherit;
+    display: inline-block;
+    height: 800px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    @include respond-to(smartphones) {
+      width: 100%;
+      display: none;
+    }
+    @include respond-to(notebooks) {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   .hero-content {
-    z-index: 1;
+    display: inline-block;
     width: inherit;
     height: inherit;
-    display: inline-block;
-    position: absolute;
-    padding-top: 130px;
     @include smooth-text;
+    width: 600px;
+    margin: auto;
+  
+    margin-top: 100px;
+
+    @include respond-to(smartphones) {
+      margin-top: 50px;
+    }
 
     .stack-content {
+      padding: 30px;
       width: inherit;
-      height: inherit;
+      width: 100%;
       margin: auto;
-      display: block;
-      padding-left: 20px;
+
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+
       @include respond-to(desktops) {
-        width: 800px;
+        width: 950px;
       }
       @include respond-to(notebooks) {
         width: 720px;
@@ -516,69 +545,85 @@ body {
       }
       @include respond-to(smartphones) {
         width: 90%;
+        margin: auto;
         padding: 0;
       }
-      .hero-txt {
-        width: 100%;
+      .slogan-statement {
+        font-size: 58px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        text-align: left;
+
         
-        .slogan-statement {
-          font-size: 56px;
-          line-height: auto;
-          font-weight: 300;
-          margin-bottom: 30px;
+        @include respond-to(smartphones) {
+          font-size: 60px;
           letter-spacing: -1px;
-          width: 600px;
-          
-          @include respond-to(smartphones) {
-            width: 80%;
-            font-size: 50px;
-            letter-spacing: -1px;
-          }
-          
-          .blue {
-            color: $bondi-blue-dark;
-          }
+          margin: auto;
+        }
+        
+        .blue {
+          color: $bondi-blue-dark;
         }
 
         .boilerplate {
+          width: 500px;
+          text-align: left;
           @include smooth-text;
           font-size: 16px;
-          line-height: 32px;
+          line-height: 26px;
           letter-spacing: 0.3px;
-          margin-bottom: 55px;
-          width: 570px;
-          color: $soot-grey-light;
+          color: $steel-grey-dark;
+          font-weight: normal;
+          padding-top: 30px;
+          margin-left: 20px;
+        
 
           @include respond-to(notebooks) {
             width: 600px;
           }
           @include respond-to(smartphones) {
-            width: 330px;
-            font-size: 20px;
+            margin-left: 0;
+            width: 100%;
+            font-size: 18px;
             line-height: 30px;
+            margin: auto;
+            margin-bottom: 30px;
           }
 
           ul {
             padding-top: 10px;
             .boilerplate-icon {
-              color: $bondi-blue-darkest;
-              padding-right: 10px;
+              color: $bondi-blue-dark;
+              padding-right: 5px;
             }
             li {
               padding-left: 15px;
             }
           }
         }
+      }
+
+      .boiler-buttons {
+        display: flex;
+        width: 350px;
+      
+        @include respond-to(smartphones) {
+          width: 100%;
+          margin: auto;
+        }
+        
         .btn-container {
-          width: 350px;
+          width: inherit;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
 
           @include respond-to(smartphones) {
-            width: 100%;
             flex-direction: column;
+            margin: auto;
+            align-items: center;
+            padding-bottom: 15px;
           }
 
           .hero-btn {
@@ -588,9 +633,9 @@ body {
             min-height: 48px;
             line-height: 51px;
             border-radius: 6px;
-            padding-left: 35px;
-            padding-right: 35px;
+            width: 165px;
             white-space: nowrap;
+            text-align: center;
 
 
             &:hover {
@@ -599,9 +644,9 @@ body {
             @include respond-to(smartphones) {
               display: block;
               width: 100%;
-              
               text-align: center;
               margin-bottom: 15px;
+              
               &:last-child {
                 margin-bottom: 0;
               }
@@ -609,56 +654,42 @@ body {
           }
           .hero-signup-btn {
             @include blue-btn;
+            filter: brightness(.9);
+            border-radius: 40px; // needed to override blue-btn
           }
 
           .hero-learn-btn {
             @include midnight-btn;
+            border-radius: 40px;
           }
         }
       }
 
-      .screenshot-div{
-        padding-top: 100px;
-        display: inline-flex;
-        justify-content: flex-end;
       
+    }
+    .screenshot-div{
+      padding-top: 50px;
+      display: inline-flex;
+      justify-content: flex-end;
+    
+      @include respond-to(smartphones) {
+        display: none;
+      }
+
+      img {
+        margin: auto;
+        @include respond-to(desktops) {
+          width: 900px;
+        }
+        @include respond-to(notebooks) {
+          margin-top: 30px;
+          width: 550px;
+          padding-bottom: 0;
+        }
         @include respond-to(smartphones) {
           display: none;
         }
-
-        img {
-          margin: auto;
-          @include respond-to(desktops) {
-            width: 850px;
-          }
-          @include respond-to(notebooks) {
-            margin-top: 30px;
-            width: 550px;
-            padding-bottom: 0;
-          }
-          @include respond-to(smartphones) {
-            display: none;
-          }
-        }
       }
-    }
-  }
-  .clipped-image {
-    display: block;
-    width: 100%;
-    height: 90vh;
-    // background-image: linear-gradient(to top right, $pale-midnight, $midnight);
-    // background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/tr:q-120,tr:w-1200/point-wall_tBxhLnV2G.jpg');
-    background-attachment: fixed;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
-    // opacity: 0.8;
-
-
-    @include respond-to(smartphones) {
-      height: 110vh;
     }
   }
 }
@@ -1676,7 +1707,7 @@ body {
             border-radius: 6px;
             text-align: center;
             color: white;
-            @include blue-btn;
+            @include midnight-btn;
             box-shadow: $standard-shadow;
 
             &:hover {
