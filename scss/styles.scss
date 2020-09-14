@@ -8,6 +8,7 @@
 html {
   background-image: radial-gradient(circle at bottom left, $pale-midnight-dark, $midnight);
   background-attachment: fixed;
+  background-color: $midnight;
   color: $steel-grey-medium;
   font-family: lato, sans-serif;
   overflow-x: hidden;
@@ -59,6 +60,12 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                 NAVIGATION                                 */
 /* -------------------------------------------------------------------------- */
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
 .navigation-section {
   z-index: 1;
   width: 100vw;
@@ -124,7 +131,7 @@ body {
             padding-bottom: 5px;
           }
           .dropdown-icon {
-            font-size: 16px;
+            font-size: 13px;
           }
 
         }
@@ -291,6 +298,15 @@ body {
       }
     }
   }
+}
+.active-menu-item {
+  border-bottom: 5px solid $pale-midnight-dark;
+  padding-bottom: 6px;
+
+}
+.active-submenu-item {
+  color: $canary-yellow-medium;
+  font-weight: bold;
 }
 /* -------------------------------------------------------------------------- */
 /*                         MOBILE OPTIMIZED NAVIGATION                        */
@@ -489,10 +505,13 @@ body {
   display: block;
   cursor: default;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-evenly;
 
+  @include respond-to(notebooks) {
+    flex-flow: row wrap;
+  } 
 
   .hero-hype {
     width: inherit;
@@ -549,15 +568,17 @@ body {
         padding: 0;
       }
       .slogan-statement {
-        font-size: 58px;
+        font-size: 54px;
         font-weight: 300;
         margin-bottom: 30px;
+        margin-top: 50px;
         text-align: left;
 
         
         @include respond-to(smartphones) {
           font-size: 60px;
           letter-spacing: -1px;
+          margin-top: 0;
           margin: auto;
         }
         
@@ -569,13 +590,14 @@ body {
           width: 500px;
           text-align: left;
           @include smooth-text;
-          font-size: 16px;
+          font-size: 17px;
           line-height: 26px;
           letter-spacing: 0.3px;
           color: $steel-grey-dark;
           font-weight: normal;
           padding-top: 30px;
-          margin-left: 20px;
+          margin-bottom: 50px;
+          margin-left: 5px;
         
 
           @include respond-to(notebooks) {
@@ -583,15 +605,15 @@ body {
           }
           @include respond-to(smartphones) {
             margin-left: 0;
-            width: 100%;
+            width: 350px;
             font-size: 18px;
             line-height: 30px;
             margin: auto;
-            margin-bottom: 30px;
+            margin-bottom: 90px;
           }
 
           ul {
-            padding-top: 10px;
+            padding-top: 5px;
             .boilerplate-icon {
               color: $bondi-blue-dark;
               padding-right: 5px;
@@ -693,7 +715,11 @@ body {
     }
   }
 }
-
+.slogan-statement {
+  @include respond-to(smartphones) {
+    width: 380px;
+  }
+}
 /* -------------------------------------------------------------------------- */
 /*                                 Quotations                                 */
 /* -------------------------------------------------------------------------- */
@@ -958,14 +984,13 @@ body {
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 150px;
-  // margin-top: 100px;
 
   .blue {
     color: $bondi-blue-medium;
   }
 
   @include respond-to(smartphones) {
-    font-size: 40px;
+    font-size: 48px;
     margin-top: 100px;
     margin-bottom: 0;
   }
@@ -1024,7 +1049,6 @@ body {
         margin-right: 0;
       }
       @include respond-to(notebooks) {
-        // margin-right: 0;
         margin: auto;
       }
     }
@@ -1186,6 +1210,9 @@ body {
     }
     .organize-content {
       margin: auto;
+      @include respond-to(smartphones) {
+        width: 100%;
+      }
 
       @include respond-to(notebooks) {
         width: 100%;
@@ -1194,17 +1221,17 @@ body {
         align-items: center;
       }
       .title {
-        width: 500px; // BP ADJUSTS
-        font-size: 38px;
+        font-size: 40px;
         font-weight: 300;
-        margin-bottom: 30px;
+        text-align: right;
+        margin-bottom: 60px;
         .blue {
           color: $bondi-blue-dark;
         }
         @include respond-to(smartphones) {
-          font-size: 28px;
-          width: 100%;
-          padding: 15px;
+          font-size: 36px;
+
+          text-align: center;
         }
       }
       .above-heading {
@@ -1411,6 +1438,7 @@ body {
   flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-evenly;
+  margin-bottom: 100px;
 
   @include respond-to(smartphones) {
     position: relative;
@@ -1460,18 +1488,19 @@ body {
         align-items: center;
       }
     }
+
     .title {
       width: 450px; // BP ADJUSTS
       font-size: 38px;
       font-weight: 300;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
       .blue {
         color: $bondi-blue-dark;
       }
       @include respond-to(smartphones) {
-        font-size: 30px;
+        font-size: 36px;
         width: 100%;
-        padding: 20px;
+        text-align: center;
         margin-top: 100px;
       }
     }
@@ -1482,6 +1511,27 @@ body {
       color: $soot-grey-medium;
     }
 
+    .toggle-cta-container {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      @include caps-heading;
+
+      border-radius: 6px;
+      height: 50px;
+      line-height: 50px;
+      width: 150px;
+      text-align: center;
+      margin-top: 50px;
+      @include blue-btn;
+
+      @include respond-to(smartphones) {
+        margin: auto;
+        display: block;
+        margin-top: 40px;
+
+      }
+    }
     // .body,
     // .zoom-area {} => Defined with global toggle
     .project-card-screen {
@@ -1726,6 +1776,7 @@ body {
 //* -------------------------------------------------------------------------- */
 //*                            Product Overview Page                           */
 //* -------------------------------------------------------------------------- */
+
 /* -------------------------- Overview Hero Section ------------------------- */
 .overview-hero {
   min-width: 100vw;
@@ -1774,13 +1825,17 @@ body {
             color: $steel-grey-dark;
             margin-bottom: 10px;
           }
-          font-size: 46px;
-          line-height: 56px;
+          font-size: 42px;
+          line-height: 52px;
           font-weight: 300;
           margin-right: 40px;
           white-space: nowrap;
         
-
+          @include respond-to(smartphones) {
+            white-space: wrap;
+            font-size: 30px;
+            line-height: 40px;
+          }
           @include respond-to(notebooks) {
             font-size: 30px;
             line-height: 40px;
@@ -1824,7 +1879,14 @@ body {
       background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/empty-boardroom_rTVSohh-Y.jpg');
       background-position: bottom;
     }
+
+    @include respond-to(smartphones) {
+      opacity: 0.25;
+    }
   }
+}
+.blue {
+  color: $bondi-blue-light;
 }
 /* ---------------------------- Overview Sections --------------------------- */
 .overview-section {
@@ -2173,70 +2235,11 @@ input[type=number] {
 /* -------------------------------------------------------------------------- */
 /*                              WHY CHOOSE STEER                              */
 /* -------------------------------------------------------------------------- */
-.mgb-section {
-  margin: auto;
-  position: relative;
-  width: 900px;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: 100px;
-}
-.mgb-section-one {
 
-}
-.break-30 {
-  display: block;
-  height: 30px;
-}
-.break-50 {
-  display: block;
-  height: 50px;
-}
-.break-hundred {
-  display: block;
-  height: 100px;
-}
-.break-two-bills {
-  display: block;
-  height: 200px;
-}
-.why-choose-btns {
-  min-width: 100vw;
-  height: 200px;
-  overflow-x: hidden;
-  width: 100%;
+/* -------------------------------------------------------------------------- */
+/*                                 Coming Soon                                */
+/* -------------------------------------------------------------------------- */
 
-  .why-choose-cta-content {
-    margin: auto;
-    width: 600px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    .why-cta-btn {
-      @include caps-heading;
-      height: 50px;
-      line-height: 52px;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    .learn-about-projects {
-      @include blue-btn;
-    }
-
-    .why-choose-signup {
-      @include midnight-btn;
-    }
-  }
-
-}
-.HYPE_document {
-  min-height: 100vh;
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                   Footer                                   */
