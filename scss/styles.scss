@@ -2272,6 +2272,7 @@ input[type=number] {
   position: relative;
   margin-bottom: 100px;
   @include first-section-padding;
+
   .videos-hero-content {
     width: inherit;
     height: inherit;    
@@ -2286,7 +2287,7 @@ input[type=number] {
       height: 400px;
       margin: auto;
       align-items: center;
-
+      
       .videos-hero-col { //both columns -- responsive here
         color: $steel-grey-medium;
         margin-left: 20px;
@@ -2325,6 +2326,10 @@ input[type=number] {
   cursor: default;
   padding-top: 100px;
   margin-bottom: 150px;
+
+  @include respond-to(smartphones) {
+    padding-top: 0;
+  }
 
   .video-content {
     width: inherit;
