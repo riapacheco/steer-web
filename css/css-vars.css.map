@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scripts/plyr/src/sass/lib/css-vars.scss"
+    ],
+    "names": [],
+    "file": "css-vars.css"
+}

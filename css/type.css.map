@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scripts/plyr/src/sass/settings/type.scss"
+    ],
+    "names": [],
+    "file": "type.css"
+}
