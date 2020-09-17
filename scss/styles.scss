@@ -2403,13 +2403,13 @@ input[type=number] {
           padding: 25px;
           color: $steel-grey-medium;
           letter-spacing: 0.3px;
-          @include respond-to(smartphones) {
-            margin-left: 50px;
+          @include respond-to(smartphones) {  
+            min-width: 100%;
+
           }
           @include respond-to(notebooks) {
             right: 0;
           }
-
           .vid-btn {
             width: 100%;
             text-align: left;
@@ -2420,7 +2420,6 @@ input[type=number] {
             &:last-child {
               margin-bottom: 0;
             }
-
             .option-icon {
               display: inline-block;
               width: 18px;
@@ -2429,8 +2428,11 @@ input[type=number] {
               color: $bondi-blue-dark;
               text-align: center;
             }
+            @include respond-to(smartphones) {
+              font-size: 20px;
+              margin-bottom: 35px;
+            }
           }
-
         }
       }
     }
