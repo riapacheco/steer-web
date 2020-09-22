@@ -158,141 +158,150 @@
       </div>
     </div>
 
-    <!-- ---------------------- Overview Section Content ----------------------- -->
+    <!-- How it works -->
+    <div class="how-it-works">
+      <div class="it-works-content">
+        <div class="it-works-col heading-title">
+          <div class="it-works-heading">
+            No More Re-Structuring
+          </div>
 
-    <div class="overview-section">
-      <div class="one-place-section">
-        <div class="one-place-content">
-          <div class="one-place-title">
-            <div class="goal-top-heading">Project Milestones & Goal Metrics</div>
-            State the results you want, to over-clarify for every team member.
+          <div class="it-works-title">
+            Simple <span class="blue">card</span> organization
           </div>
-          <div class="one-place-txt">
-            <!-- We know how frustrating it is to work too hard on the wrong things. We made planning the work simple from the beginning down to the end result. -->
-          </div>
-        </div>
-        <div class="one-place-example">
-          <a onclick="passMilestone1()">
-            <div id="milestone1" class="milestone-rectangle">
-              <div class="milestone-difficulty">
-                Difficult
-              </div>
-              <div class="milestone-criteria-txt">
-                <span id="third-milestone"></span>
-              </div>
-              <div class="passed-badge">
-                Passed
-              </div>
-            </div>
-          </a>
-          <a onclick="passMilestone2()">
-            <div id="milestone2" class="milestone-rectangle">
-              <div class="milestone-difficulty">
-                Normal
-              </div>
-              <div class="milestone-criteria-txt">
-               <span id="second-milestone"></span>
-              </div>
-              <div class="passed-badge">
-                Passed
-              </div>
-            </div>
-          </a>
 
-          <a onclick="passMilestone3()">
-            <div id="milestone3" class="milestone-rectangle">
-              <div class="milestone-difficulty">
-                Easy
-              </div>
-              <div class="milestone-criteria-txt">
-                <span id="milestone-text"></span>
-              </div>
-              <div class="passed-badge">
-                Passed
-              </div>
-            </div>
-          </a>
-        </div>
-     </div>
-    </div>
-    <div class="metric-ribbon-section">
-      <div class="metric-ribbon-content">
-        <div class="metric-numbers">
-          <div class="circle-graph">
-            <svg
-            class=""
-            width="175"
-            height="175">
-            <circle
-              class="progress-ring__circle"
-              stroke="#00a3bf"
-              stroke-width="8"
-              stroke-linejoin="round"
-              fill="transparent"
-              r="80"
-              cx="90"
-              cy="90"/>
-            </svg>
-          </div>
-          <div class="metric-ribbon">
-            <div class="quantity">
-              <input
-              class="metrics-input"
-              value="62"
-              type="number"
-              step="5"
-              min="0"
-              max="100"
-              placeholder="goal"
-              >
-              <span style="font-size: 20px;
-              color: #484a55;
-              display: flex;
-              justify-content: center;
-              padding-top: 10px;
-              padding-left: 25px;
-              ">
-   Update Progress Field</span>
-            </div>
-            
-            <div class="other-ribbon-values">
-  
-            </div>
+          <div class="it-works-paragraph">
+            Create <a href="#priorities" style="padding-bottom: 3px;border-bottom: 1px solid #5b5d6a;">priority cards</a> to manage overarching 'bigger' projects. Each can build a list of project cards that will manage everything you need.
           </div>
         </div>
 
-        <div class="metric-labels">
-          <div class="metric-values">
-            <div class="metric-value-group">
-              <a onclick="showTimeLeft();hideTimePlaceholder()" class="top-label time-left">
-                Time Left <i class="ion-ios-arrow-down label-arrow-down"></i></a>
-              <div class="bottom-label" id="showTimeLeft">1 week</div>
-              <span id="hideTimeClick" class="label-placeholder">Until Deadline</span>
-            </div>
-            <div class="metric-value-group">
-              <a onclick="showBudgetSpent();hideBudgetPlaceholder()" class="top-label budget-spent">
-                Expenses
-                <i class="ion-ios-arrow-down label-arrow-down"></i></a>
-              <div class="bottom-label" id="showBudgetSpent">$24.5k</div>
-              <span id="hideBudgetClick" class="label-placeholder"> Spent So Far</span>
-            </div>
-            <div class="metric-value-group">
-              <a onclick="showGoalMetric();hideGoalPlaceholder()" class="top-label goal-metric">
-                Goal Metric
-                <i class="ion-ios-arrow-down label-arrow-down"></i></a>
-              <div class="bottom-label" id="showGoalMetric">100
-                <span class="goal-sub-label">Orientations</span>
-              </div>
-              <span id="goalPlaceholder" class="label-placeholder"> Total Goal</span>
-            </div>
+        <div class="it-works-col feature-animation">
+          <div id="howitworks_hype_container" class="HYPE_document card-org-anim" style="margin:auto;position:relative;width:800px;height:507px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/how-it-works/how-it-works.hyperesources/howitworks_hype_generated_script.js?72935"></script>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                         Explore Product Section                         -->
-    <!-- ----------------------------------------------------------------------- -->
+
+    <!-- Priority Cards -->
+    <div id="priorities" class="priority-card-explainer">
+      <div class="priority-card-content">
+        <div class="priority-card-col priority-card-text">
+          <div class="priority-card-heading">
+            Focus Priorities and Projects
+          </div>
+
+          <div class="priority-card-title">
+            Track goal <span class="blue">metrics</span>
+          </div>
+
+          <div class="priority-card-paragraph">
+            Add a trackable metric with any value or unit type to a priority card. If your priority needs more than one metric, you can add them to their child project cards to avoid over-tracking confusion!
+          </div>
+        </div>
+
+        <div class="priority-card-col metric-section">
+          <div class="metric-ribbon-section">
+            <div class="metric-ribbon-content">
+              <div class="metric-numbers">
+                <div class="circle-graph">
+                  <svg
+                  class=""
+                  width="175"
+                  height="175">
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#00a3bf"
+                    stroke-width="8"
+                    stroke-linejoin="round"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"/>
+                  </svg>
+                </div>
+                <div class="metric-ribbon">
+                  <div class="quantity">
+                    <input
+                    class="metrics-input"
+                    value="62"
+                    type="number"
+                    step="5"
+                    min="0"
+                    max="100"
+                    placeholder="goal"
+                    >
+                    <span style="font-size: 20px;
+                    color: #484a55;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 10px;
+                    padding-left: 25px;
+                    ">
+        Update Progress Field</span>
+                  </div>
+                  
+                  <div class="other-ribbon-values">
+        
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-labels">
+                <div class="metric-values">
+                  <div class="metric-value-group">
+                    <a onclick="showTimeLeft();hideTimePlaceholder()" class="top-label time-left">
+                      Time Left <i class="ion-ios-arrow-down label-arrow-down"></i></a>
+                    <div class="bottom-label" id="showTimeLeft">1 week</div>
+                    <span id="hideTimeClick" class="label-placeholder">Until Deadline</span>
+                  </div>
+                  <div class="metric-value-group">
+                    <a onclick="showBudgetSpent();hideBudgetPlaceholder()" class="top-label budget-spent">
+                      Expenses
+                      <i class="ion-ios-arrow-down label-arrow-down"></i></a>
+                    <div class="bottom-label" id="showBudgetSpent">$24.5k</div>
+                    <span id="hideBudgetClick" class="label-placeholder"> Spent So Far</span>
+                  </div>
+                  <div class="metric-value-group">
+                    <a onclick="showGoalMetric();hideGoalPlaceholder()" class="top-label goal-metric">
+                      Goal Metric
+                      <i class="ion-ios-arrow-down label-arrow-down"></i></a>
+                    <div class="bottom-label" id="showGoalMetric">100
+                      <span class="goal-sub-label">Orientations</span>
+                    </div>
+                    <span id="goalPlaceholder" class="label-placeholder"> Total Goal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="priority-card-content milestone-content">
+        <div class="priority-card-col priority-card-text">
+          <div class="priority-card-heading">
+            Focus Team Outcomes
+          </div>
+
+          <div class="priority-card-title">
+            Describe <span class="blue">milestones</span>
+          </div>
+
+          <div class="priority-card-paragraph">
+            Instead of tracking metrics, describe the outcomes you want with milestones so that all expectations are over-clarified.
+          </div>
+        </div>
+
+        <div class="priority-card-col">
+          <div id="milestonestype_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:370px;height:140px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/milestones-type/milestones-type.hyperesources/milestonestype_hype_generated_script.js?34886"></script>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- ----------------------------------------------------------------------- -->
@@ -385,7 +394,31 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="scripts/jquery-responsive-vertical-tabs/js/easyResponsiveTabs.js"></script>
     <script>
+      $(document).ready(function(){
 
+        $('.tabs-list li a').click(function(e){
+          e.preventDefault();
+        });
+
+        $('.tabs-list .tab-label').click(function(e){
+          
+          $('.tab .active').removeClass('.active');
+          $(this).parent().addClass('.active');
+
+
+        });
+
+        // $('.tabs-list .tab-label').click(function(e){
+          // const tabid = $(this).find('a').attr("href");
+// 
+          // $('tabs-list li,.tabs div.tab').removeClass('active');
+// 
+          // $('.tab').hide();
+          // $(tabid).show();
+          // $(this).addClass('active');
+        // });
+
+      });
     </script>
   </body>
 </html>
