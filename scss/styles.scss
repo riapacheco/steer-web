@@ -2225,7 +2225,7 @@ body {
 
     &.milestone-content {
       text-align: right;
-      width: 1200px;
+      width: 1100px;
       margin-top: 250px;
       display: flex;
       flex-flow: column nowrap;
@@ -2240,7 +2240,8 @@ body {
       }
 
       .priority-card-text {
-        width: 100%;
+        width: 90%;
+
 
         .priority-card-heading {
           @include respond-to(smartphones) {
@@ -2249,7 +2250,7 @@ body {
           }
 
           @include respond-to(notebooks) {
-            width: 95%;
+            width: 100%;
             margin: auto;
           }
         }
@@ -2262,7 +2263,7 @@ body {
           }
 
           @include respond-to(notebooks) {
-            width: 95%;
+            width: 100%;
             margin: auto;
             margin-bottom: 30px;
           }
@@ -2270,14 +2271,18 @@ body {
         .priority-card-paragraph {
           margin-left: auto;
           margin-bottom: 20px;
+          font-size: 24px;
+          line-height: 34px;
 
           @include respond-to(smartphones) {
             width: 95%;
             text-align: left;
+            font-size: 20px;
+            line-height: 30px;
           }
 
           @include respond-to(notebooks) {
-            width: 95%;
+            width: 100%;
             margin: auto;
             font-size: 22px;
           }
