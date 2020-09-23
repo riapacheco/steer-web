@@ -60,6 +60,12 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                 NAVIGATION                                 */
 /* -------------------------------------------------------------------------- */
+
+/*
+  To make items active: 
+  Nav items: .active-nav-item
+  Dropdown-item: .active-dropdown-item
+*/
 .disabled {
   opacity: 0.3;
   pointer-events: none;
@@ -116,7 +122,7 @@ body {
         display: inherit; 
 
         .nav-item {
-          width: 100%;
+
           margin-right: 30px;
           font-size: 16px;
           line-height: 32px;
@@ -136,6 +142,9 @@ body {
           }
 
           &.active-menu-item {
+            border-bottom: 5px solid $pale-midnight-dark;
+          }
+          &.active-nav-item {
             border-bottom: 5px solid $pale-midnight-dark;
           }
         }
@@ -431,10 +440,10 @@ body {
       }
       .mobile-menu-item {
         display: block;
-        font-size: 26px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: 20px;
         letter-spacing: 0.3px;
-        padding-top: 20px;
+        padding-top: 10px;
         color: $steel-grey-dark;
         font-weight: 300;
 
@@ -606,7 +615,7 @@ body {
           }
           @include respond-to(smartphones) {
             margin-left: 0;
-            width: 350px;
+            width: 330px;
             font-size: 18px;
             line-height: 30px;
             margin: auto;
@@ -1783,123 +1792,21 @@ body {
 //*                            Product Overview Page                           */
 //* -------------------------------------------------------------------------- */
 
-/* -------------------------- Features Hero Section ------------------------- */
-.overview-hero {
-  min-width: 100vw;
-  width: 100%;
-  min-height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 50px;
-  @include first-section-padding;
 
-  @include respond-to(smartphones) {
-    min-height: 85vh;
-    height: 300px;
-    margin-bottom: 0;
-  }
-
-  .overview-hero-content {
-    z-index: 1;
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    padding-top: 70px;
-
-    .overview-stacked-content {
-      width: 100%;
-      margin: auto;
-      max-width: 900px;
-      @include respond-to(notebooks) {
-        width: 700px;
-      }
-      @include respond-to(smartphones) {
-        width: 90%;
-      }
-      .overview-hero-flex {
-        display: inline-flex;
-        flex-flow: row nowrap;
-
-        @include respond-to(smartphones) {
-          flex-flow: column;
-        }
-        .overview-title-txt {
-          .product-overview-subheading {
-            display: block;
-            @include section-caps-heading;
-            font-weight: normal;
-            margin-bottom: 10px;
-          }
-          font-size: 42px;
-          line-height: 52px;
-          font-weight: 300;
-          margin-right: 40px;
-          white-space: nowrap;
-        
-          @include respond-to(smartphones) {
-            width: 300px;
-            font-size: 26px;
-            line-height: 36px;
-          }
-          @include respond-to(notebooks) {
-            font-size: 30px;
-            line-height: 40px;
-          }
-          .get-started-btn {
-            display: block;
-            @include caps-heading;
-            height: 50px;
-            line-height: 50px;
-            width: 175px;
-            text-align: center;
-            background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
-            border-radius: 6px;
-            box-shadow: $standard-shadow;
-            margin-top: 30px;
-
-            &:hover {
-              filter: brightness(1.15);
-            }
-          }
-        }
-        .overview-hero-img {
-          width: 500px;
-          padding: 0;
-          margin: 0;
-
-          @include respond-to(smartphones) {
-            width: 350px;
-          }
-        }
-      }
-    }
-  }
-  .overview-bg-overlay {
-    @include parent-overlay;
-    opacity: 0.45;
-
-    .overview-bg-img {
-      @include child-bg-img;
-      @include parallax-effect;
-      background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/empty-boardroom_rTVSohh-Y.jpg');
-      background-position: bottom;
-    }
-
-    @include respond-to(smartphones) {
-      opacity: 0.25;
-    }
-  }
-}
 .blue {
   color: $bondi-blue-light;
 }
 
-/* ------------------------------ How it works ------------------------------ */
+/* ---------------------------- Card Organization --------------------------- */
 .how-it-works {
   min-width: 100%;
   position: relative;
   padding-top: 150px;
   padding-bottom: 150px;
+
+  @include respond-to(smartphones) {
+    padding-top: 50px;
+  }
 
   .it-works-content {
     width: 1200px;
@@ -1953,6 +1860,7 @@ body {
           font-weight: 300;
           letter-spacing: 0.5px;
           color: $steel-grey-medium;
+          margin-bottom: 40px;
 
           @include respond-to(notebooks) {
             width: 500px;
@@ -1962,6 +1870,25 @@ body {
             width: 320px;
             font-size: 18px;
             line-height: 28px;
+          }
+        }
+
+        .it-works-btns {
+          .it-works-btn {
+            display: inline-block;
+            width: 160px;
+            text-align: center;
+            @include caps-heading;
+            height: 50px;
+            line-height: 50px;
+            @include blue-btn;
+            border-radius: 30px;
+
+            @include respond-to(smartphones) {
+              width: 60%;
+              margin: auto;
+              margin-bottom: 30px;
+            }
           }
         }
       }
@@ -1979,7 +1906,7 @@ body {
   }
 }
 
-/* ------------------------- Priority Card Explainer ------------------------ */
+/* --------------------------- Track Goal Metrics --------------------------- */
 .priority-card-explainer {
   // resizing found at bottom of this level
   min-width: 100vw;
@@ -2002,7 +1929,9 @@ body {
     }
     .priority-card-text {
       display: block;
+      margin: auto;
       margin-bottom: 40px;
+      
 
       .priority-card-heading {
         @include section-caps-heading;
@@ -2025,8 +1954,9 @@ body {
       }
       .priority-card-paragraph {
         @include section-paragraph;
+        
         margin-bottom: 50px;
-        width: 750px;
+        width: 700px;
 
         @include respond-to(notebooks) {
           width: 600px;
@@ -2180,6 +2110,12 @@ body {
       .quantity {
         position: relative;
       }
+
+      margin-bottom: 50px; // away from button
+
+      @include respond-to(smartphones) {
+        margin-bottom: 60px;
+      }
       // crap to override browser bullshit
       input[type=number]::-webkit-inner-spin-button,
       input[type=number]::-webkit-outer-spin-button {
@@ -2215,6 +2151,32 @@ body {
         outline: 0;
       }
     }
+
+    .priority-card-btns {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .priority-card-btn {
+        display: inline-block;
+        width: 160px;
+        text-align: center;
+        @include caps-heading;
+        height: 50px;
+        line-height: 50px;
+        @include midnight-btn;
+        border-radius: 30px;
+
+        @include respond-to(smartphones) {
+          width: 60%;
+          margin: auto;
+        }
+
+        @include respond-to(notebooks) {
+          margin-right: auto;
+        }
+      }
+    }
     @include respond-to(notebooks) {
       width: 700px;
       margin: auto;
@@ -2222,76 +2184,195 @@ body {
     @include respond-to(smartphones) {
       width: 370px;
     }
+  }
+}
 
-    &.milestone-content {
+/* --------------------------- Describe Milestones -------------------------- */
+.milestone-container {
+  min-width: 100vw;
+  width: 100%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  .milestone-content {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .milestone-col {
+      width: 100%;
       text-align: right;
-      width: 1100px;
-      margin-top: 250px;
-      display: flex;
-      flex-flow: column nowrap;
-
-      @include respond-to(smartphones) {
-        width: 100%;
-        text-align: left;
+      @include respond-to(notebooks) {
+        margin-bottom: 40px;
       }
+      .milestone-text {
+        width: 1070px;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+
+        @include respond-to(notebooks) {
+          width: 88%;
+        }
+
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+        .milestone-heading {
+          @include section-caps-heading;
+
+          @include respond-to(smartphones) {
+            width: 330px;
+            margin: auto;
+          }
+        }
+
+        .milestone-title {
+          @include section-title;
+          margin-bottom: 30px;
+
+          @include respond-to(smartphones) {
+            width: 340px;
+            margin: auto;
+            margin-bottom: 40px;
+          }
+        }
+
+        .milestone-paragraph {
+          align-self: flex-end;
+          @include section-paragraph;
+          width: 500px;
+
+          @include respond-to(smartphones) {
+            width: 330px;
+            font-size: 18px;
+            line-height: 28px;
+            margin: auto;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+
+    .milestone-btns {
+      width: 1070px;
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
 
       @include respond-to(notebooks) {
         width: 100%;
       }
 
-      .priority-card-text {
-        width: 90%;
+      .milestone-btn {
+        display: inline-block;
+        width: 150px;
+        @include caps-heading;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        @include midnight-btn;
+        border-radius: 30px;
 
-
-        .priority-card-heading {
-          @include respond-to(smartphones) {
-            width: 95%;
-            text-align: left;
-          }
-
-          @include respond-to(notebooks) {
-            width: 100%;
-            margin: auto;
-          }
+        @include respond-to(smartphones) {
+          display: none;
         }
 
-        .priority-card-title {
-          margin-left: auto;
-          @include respond-to(smartphones) {
-            width: 95%;
-            text-align: left;
-          }
-
-          @include respond-to(notebooks) {
-            width: 100%;
-            margin: auto;
-            margin-bottom: 30px;
-          }
-        }
-        .priority-card-paragraph {
-          margin-left: auto;
-          margin-bottom: 20px;
-          font-size: 24px;
-          line-height: 34px;
-
-          @include respond-to(smartphones) {
-            width: 95%;
-            text-align: left;
-            font-size: 20px;
-            line-height: 30px;
-          }
-
-          @include respond-to(notebooks) {
-            width: 100%;
-            margin: auto;
-            font-size: 22px;
-          }
+        @include respond-to(notebooks) {
+          margin: auto;
         }
       }
+
     }
   }
 }
 
+/* --------------------------- Same Goals Section --------------------------- */
+.same-goals-section {
+  min-width: 100vw;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+
+
+  .same-goals-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 100px;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+    .same-goals-col {
+      .same-goals-text {
+        width: 500px;
+        @include respond-to(smartphones) {
+          width: 95%;
+          margin: auto;
+        }
+        .same-goals-heading {
+          @include section-caps-heading;
+        }
+        .same-goals-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+        .same-goals-paragraph {
+          @include section-paragraph;
+
+          @include respond-to(smartphones) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 50px;
+          }
+          @include respond-to(notebooks) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .same-goals-animation {
+        width: 800px;
+
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .same-goals-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .same-goals-btn {
+      @include caps-heading;
+      display: inline-block;
+      height: 50px;
+      line-height: 52px;
+      @include blue-btn;
+      width: 160px;
+      text-align: center;
+      border-radius: 30px;
+    }
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                 Videos Page                                */

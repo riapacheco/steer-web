@@ -219,6 +219,7 @@
   padding-left: 5px;
   padding-bottom: 10px;
   color: $soot-grey-light;
+  cursor: default;
 }
 
 @mixin section-title {
@@ -226,15 +227,17 @@
   line-height: 52px;
   font-weight: 300;
   color: $steel-grey-medium;
+  cursor: default;
 }
 @mixin section-paragraph {
   padding-left: 5px;
   display: block;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 32px;
   font-weight: 300;
   letter-spacing: 0.5px;
   color: $steel-grey-medium;
+  cursor: default;
 }
 @mixin blue-btn {
   background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-darkest);
@@ -242,6 +245,7 @@
   border-radius: 6px;
   box-sizing: border-box;
   color: $steel-grey-light;
+  filter: brightness(.9);
   &:hover {
     filter: brightness(1.15);
   }
