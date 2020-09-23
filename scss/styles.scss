@@ -60,6 +60,12 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                 NAVIGATION                                 */
 /* -------------------------------------------------------------------------- */
+
+/*
+  To make items active: 
+  Nav items: .active-nav-item
+  Dropdown-item: .active-dropdown-item
+*/
 .disabled {
   opacity: 0.3;
   pointer-events: none;
@@ -116,7 +122,7 @@ body {
         display: inherit; 
 
         .nav-item {
-          width: 100%;
+
           margin-right: 30px;
           font-size: 16px;
           line-height: 32px;
@@ -136,6 +142,9 @@ body {
           }
 
           &.active-menu-item {
+            border-bottom: 5px solid $pale-midnight-dark;
+          }
+          &.active-nav-item {
             border-bottom: 5px solid $pale-midnight-dark;
           }
         }
@@ -431,10 +440,10 @@ body {
       }
       .mobile-menu-item {
         display: block;
-        font-size: 26px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: 20px;
         letter-spacing: 0.3px;
-        padding-top: 20px;
+        padding-top: 10px;
         color: $steel-grey-dark;
         font-weight: 300;
 
@@ -606,7 +615,7 @@ body {
           }
           @include respond-to(smartphones) {
             margin-left: 0;
-            width: 350px;
+            width: 330px;
             font-size: 18px;
             line-height: 30px;
             margin: auto;
@@ -1783,459 +1792,586 @@ body {
 //*                            Product Overview Page                           */
 //* -------------------------------------------------------------------------- */
 
-/* -------------------------- Features Hero Section ------------------------- */
-.overview-hero {
-  min-width: 100vw;
-  width: 100%;
-  min-height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 50px;
-  @include first-section-padding;
 
-  @include respond-to(smartphones) {
-    min-height: 85vh;
-    height: 300px;
-    margin-bottom: 0;
-  }
-
-  .overview-hero-content {
-    z-index: 1;
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    padding-top: 70px;
-
-    .overview-stacked-content {
-      width: 100%;
-      margin: auto;
-      max-width: 900px;
-      @include respond-to(notebooks) {
-        width: 700px;
-      }
-      @include respond-to(smartphones) {
-        width: 90%;
-      }
-      .overview-hero-flex {
-        display: inline-flex;
-        flex-flow: row nowrap;
-
-        @include respond-to(smartphones) {
-          flex-flow: column;
-        }
-        .overview-title-txt {
-          .product-overview-subheading {
-            display: block;
-            @include section-caps-heading;
-            font-weight: normal;
-            color: $steel-grey-dark;
-            margin-bottom: 10px;
-          }
-          font-size: 42px;
-          line-height: 52px;
-          font-weight: 300;
-          margin-right: 40px;
-          white-space: nowrap;
-        
-          @include respond-to(smartphones) {
-            white-space: wrap;
-            font-size: 30px;
-            line-height: 40px;
-          }
-          @include respond-to(notebooks) {
-            font-size: 30px;
-            line-height: 40px;
-          }
-          .get-started-btn {
-            display: block;
-            @include caps-heading;
-            height: 50px;
-            line-height: 50px;
-            width: 175px;
-            text-align: center;
-            background-image: linear-gradient(to bottom right, $pale-midnight-medium, $midnight);
-            border-radius: 6px;
-            box-shadow: $standard-shadow;
-            margin-top: 30px;
-
-            &:hover {
-              filter: brightness(1.15);
-            }
-          }
-        }
-        .overview-hero-img {
-          width: 500px;
-          padding: 0;
-          margin: 0;
-
-          @include respond-to(smartphones) {
-            width: 350px;
-          }
-        }
-      }
-    }
-  }
-  .overview-bg-overlay {
-    @include parent-overlay;
-    opacity: 0.45;
-
-    .overview-bg-img {
-      @include child-bg-img;
-      @include parallax-effect;
-      background-image: url('https://ik.imagekit.io/enhvtyz2ze/large_images/empty-boardroom_rTVSohh-Y.jpg');
-      background-position: bottom;
-    }
-
-    @include respond-to(smartphones) {
-      opacity: 0.25;
-    }
-  }
-}
 .blue {
   color: $bondi-blue-light;
 }
-/* ---------------------------- Features Sections --------------------------- */
-.overview-section {
-  min-width: 100vw;
-  height: 100%;
-  width: 100%;
-  min-height: 300px;
-  overflow: hidden;
+
+/* ---------------------------- Card Organization --------------------------- */
+.how-it-works {
+  min-width: 100%;
   position: relative;
-  padding-top: 100px;
-  display: block;
+  padding-top: 150px;
+  padding-bottom: 150px;
 
   @include respond-to(smartphones) {
-    padding-top: 0px;
+    padding-top: 50px;
   }
 
-  .one-place-section {
+  .it-works-content {
+    width: 1200px;
     margin: auto;
-    width: 1250px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    @include respond-to(notebooks) {
-      flex-direction: column;
-      width: 600px;
-    }
-    @include respond-to(smartphones) {
-      flex-direction: column;
-    }
-    .one-place-content {
-      width: 550px;
-
-      .one-place-title {
-        font-size: 48px;
-        line-height: 54px;
-        font-weight: 300;
-        margin-bottom: 20px;
-
-        @include respond-to(notebooks) {
-          margin-bottom: 30px;
-        }
-        @include respond-to(smartphones) {
-          font-size: 34px;
-          line-height: 40px;
-          white-space: wrap;
-          width: 400px;
-          margin: 15px;
-        }
-        .goal-top-heading {
-          display: block;
-          @include section-caps-heading;
-          font-weight: normal;
-          color: $steel-grey-dark;
-          margin-bottom: 15px;
-        }
-      }
-      .one-place-txt {
-        font-size: 22px;
-        line-height: 32px;
-        font-weight: 300;
-        letter-spacing: 0.3px;
-
-        @include respond-to(smartphones){
-          width: 350px;
-          margin: 15px;
-        }
-      }
-    }
-    .one-place-example {
-      @include respond-to(notebooks) {
-        margin-top: 40px;
-        margin-bottom: 100px;
-      }
-
-      @include respond-to(smartphones) {
-        width: 0;
-        transform: scale(0.60);
-        margin: 15px;
-      }
-      .milestone-rectangle {
-        position: relative;
-        width: 590px;
-        height: 38px;
-        border: 2px solid $bondi-blue-dark;
-        border-radius: 10px;
-        margin-bottom: 15px;
-
-        &:hover {
-          border: 2px solid $canary-yellow-medium;
-          color: $steel-grey-medium;
-          .milestone-difficulty {
-            background-color: $canary-yellow-medium;
-          }
-          cursor: pointer;
-        }
-
-        &.passed-milestone {
-          border: 2px solid $color-opportunity;
-          .milestone-difficulty {
-            background-color: $color-opportunity;
-            color: white;
-          }
-          .passed-badge {
-            display: block;
-          }
-        }
-
-        .milestone-difficulty {
-          position: absolute;
-          height: 40px;
-          width: 115px;
-          border-radius: 7px 0px 0px 7px;
-          background-color: $bondi-blue-dark;
-          box-sizing: border-box;
-          
-          @include caps-heading;
-          color: $steel-grey-light;
-          font-size: 13px;
-          font-weight: 900;
-          line-height: 38px;
-          padding-left: 15px;
-
-          @include respond-to(notebooks) {
-            font-size: 12px;
-          }
-        }
-        .milestone-criteria-txt {
-          line-height: 38px;
-          position: absolute;
-          padding-left: 140px;
-          letter-spacing: 0.3px;
-        }
-        .passed-badge {
-          position: absolute;
-          right: 5px;
-          height: 30px;
-          line-height: 30px;
-          margin-top: 4px;
-          text-transform: uppercase;
-          font-weight: bold;
-          letter-spacing: 1px;
-          background-color: $color-opportunity;
-          padding-left: 10px;
-          padding-right: 10px;
-          border-radius: 6px;
-          color: white;
-          display: none;
-        }
-
-        &:first-child {
-          margin-top: 20px;
-        }
-      }
-    }
-  }
-}
-.metric-ribbon-section {
-  min-height: 300px;
-
-  margin: auto;
-  min-width: 100vw;
-  
-  .metric-ribbon-content {
-    margin: auto;
-    height: inherit;
-    width: 1300px;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
 
     @include respond-to(notebooks) {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       width: 100%;
-    }
-    @include respond-to(smartphones) {
-      min-width: inherit;
-      width: 100%;
-      flex-flow: column;
     }
 
-    .metric-numbers {
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+      width: 100%;
+      align-items: center;
+    }
+    .it-works-col {
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
-      justify-content: flex-start;
-      margin-right: 20px;
-
-      @include respond-to(notebooks) {
-        margin-bottom: 30px;
-      }
-      @include respond-to(smartphones) {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        margin-right: auto;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        transform: scale(0.6);
-        justify-content: flex-start;
-      }
-
-      .circle-graph {
-        .progress-ring__circle {
-          transition: 0.35s stroke-dashoffset;
-          border-radius: 5px;
-          transform: rotate(-90deg);
-          transform-origin: 50% 50%;
+      width: 100%;
+      margin: 20px;
+      
+      &.heading-title {
+        margin-top: 100px;
+        display: inline-flex;
+        flex-flow: column nowrap;
+        @include respond-to(notebooks) {
+          width: 700px;
+          margin: auto;
         }
-        .metric-ribbon {
-          .goal-current-label {
-            text-align: right;
+        @include respond-to(smartphones) {
+          width: 80%;
+
+        }
+        .it-works-heading {
+          @include section-caps-heading;
+          color: $soot-grey-light;
+        }
+
+        .it-works-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+
+        .it-works-paragraph {
+          font-size: 22px;
+          line-height: 34px;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+          color: $steel-grey-medium;
+          margin-bottom: 40px;
+
+          @include respond-to(notebooks) {
+            width: 500px;
+            line-height: 32px;
+          }
+          @include respond-to(smartphones) {
+            width: 320px;
+            font-size: 18px;
+            line-height: 28px;
           }
         }
-        .metrics-input {
-          position: relative;
-          top: 10px;
-          left: 10px;
-          width: 80px;
+
+        .it-works-btns {
+          .it-works-btn {
+            display: inline-block;
+            width: 160px;
+            text-align: center;
+            @include caps-heading;
+            height: 50px;
+            line-height: 50px;
+            @include blue-btn;
+            border-radius: 30px;
+
+            @include respond-to(smartphones) {
+              width: 60%;
+              margin: auto;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+      &.feature-animation {
+        @include respond-to(notebooks){
+          width: 100%;
+          margin: auto;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+          margin: auto;
         }
       }
     }
-    .metric-labels {
-      min-height: 150px;
-      height: 100%;
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
+  }
+}
 
+/* --------------------------- Track Goal Metrics --------------------------- */
+.priority-card-explainer {
+  // resizing found at bottom of this level
+  min-width: 100vw;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+
+  .priority-card-content {
+    width: inherit;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    .priority-card-col {
+      width: 100%;
+    }
+    .priority-card-text {
+      display: block;
+      margin: auto;
+      margin-bottom: 40px;
+      
+
+      .priority-card-heading {
+        @include section-caps-heading;
+        color: $soot-grey-light;
+
+        @include respond-to(smartphones) {
+          width: 95%;
+          margin:auto;
+        }
+      }
+      .priority-card-title {
+        @include section-title;
+        width: 600px;
+        margin-bottom: 30px;
+        @include respond-to(smartphones) {
+          width: 95%;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+      }
+      .priority-card-paragraph {
+        @include section-paragraph;
+        
+        margin-bottom: 50px;
+        width: 700px;
+
+        @include respond-to(notebooks) {
+          width: 600px;
+        }
+
+        @include respond-to(smartphones) {
+          width: 95%;
+          font-size: 18px;
+          line-height: 28px;
+          margin: auto;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .metric-section {
+      width: inherit;
+      display: block;
+      .metric-ribbon-section {
+        display: block;
+        width: 100%;
+        .metric-ribbon-content {
+          position: relative;
+          width: inherit;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+
+          @include respond-to(notebooks) {
+            width: 700px;
+            flex-flow: row wrap;
+          }
+          @include respond-to(smartphones) {
+            width: inherit;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+          }
+
+      
+          .metric-numbers {
+            display: flex;
+            flex-flow: row nowrap;
+
+            @include respond-to(notebooks) {
+              margin-bottom: 55px;
+            }
+            @include respond-to(smartphones) {
+              transform: scale(0.7);
+            }
+      
+            .circle-graph {
+              .progress-ring__circle {
+                transition: 0.35s stroke-dashoffset;
+                border-radius: 5px;
+                transform: rotate(-90deg);
+                transform-origin: 50% 50%;
+              }
+              .metric-ribbon {
+                .goal-current-label {
+                  text-align: right;
+                }
+              }
+              .metrics-input {
+                position: relative;
+                top: 10px;
+                left: 10px;
+                width: 80px;
+              }
+            }
+          }
+          .metric-labels {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+      
+            @include respond-to(notebooks) {
+              margin-bottom: 40px;
+            }
+            
+            @include respond-to(smartphones) {
+              transform: scale(0.6);
+              flex-direction: row;
+            }
+      
+            .metric-values {
+              width: inherit;
+              display: flex;
+              flex-flow: row nowrap;
+      
+              .metric-value-group {
+                min-width: 180px;
+                display: inline-flex;
+                flex-flow: column nowrap;
+      
+                .top-label {
+                  padding-bottom: 10px;
+                  border-bottom: 2px solid $pale-midnight-light;
+                  margin-bottom: 10px;
+                  font-size: 22px;
+      
+                  .label-arrow-down {
+                    font-size: 15px;
+                    padding-left: 3px;
+                    line-height: 24px;
+                    color: $soot-grey-light;
+                  }
+      
+                  &:hover {
+                    .label-arrow-down {
+                      color: $canary-yellow-medium;
+                      cursor: pointer;
+                    }
+                  }
+                }
+                .bottom-label {
+                  font-size: 36px;
+                  line-height: 36px;
+                  font-weight: 300;
+                  display: none;
+                  padding-top: 10px;
+                  color: $bondi-blue-light;
+      
+                  &:hover {
+                    cursor: default;
+                  }
+      
+                  .goal-sub-label {
+                    @include caps-heading;
+                    float: right;
+                    color: $soot-grey-medium;
+                    padding-top: 10px;
+                    &:hover {
+                      cursor: default;
+                    }
+                  }
+                }
+                .label-placeholder {
+                  font-size: 20px;
+                  line-height: 38px;
+                  color: $soot-grey-dark;
+      
+                  &:hover {
+                    cursor: default;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .quantity {
+        position: relative;
+      }
+
+      margin-bottom: 50px; // away from button
+
+      @include respond-to(smartphones) {
+        margin-bottom: 60px;
+      }
+      // crap to override browser bullshit
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+      .quantity input {
+        -webkit-appearance: none; 
+        box-shadow: none !important; 
+        background: transparent;
+        outline: none;
+        border: none;
+        color: #00c7e6;
+        font-family: lato, sans-serif;
+        font-weight: 300;
+        font-size: 110px;
+        height: 125px;
+        min-width: 100px;
+        margin-left: 50px;
+        position: relative;
+        display: inline-block;
+        border-bottom: 2px dashed $pale-midnight-light;
+      
+        &:hover {
+          color: $canary-yellow-medium;
+          cursor: pointer;
+        }
+      }
+      .quantity input:focus {
+        outline: 0;
+      }
+    }
+
+    .priority-card-btns {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .priority-card-btn {
+        display: inline-block;
+        width: 160px;
+        text-align: center;
+        @include caps-heading;
+        height: 50px;
+        line-height: 50px;
+        @include midnight-btn;
+        border-radius: 30px;
+
+        @include respond-to(smartphones) {
+          width: 60%;
+          margin: auto;
+        }
+
+        @include respond-to(notebooks) {
+          margin-right: auto;
+        }
+      }
+    }
+    @include respond-to(notebooks) {
+      width: 700px;
+      margin: auto;
+    }
+    @include respond-to(smartphones) {
+      width: 370px;
+    }
+  }
+}
+
+/* --------------------------- Describe Milestones -------------------------- */
+.milestone-container {
+  min-width: 100vw;
+  width: 100%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  .milestone-content {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .milestone-col {
+      width: 100%;
+      text-align: right;
       @include respond-to(notebooks) {
         margin-bottom: 40px;
       }
-      
-      @include respond-to(smartphones) {
-        transform: scale(0.6);
-        align-items: flex-start;
-        flex-direction: row;
-      }
-
-      .metric-values {
-        width: inherit;
+      .milestone-text {
+        width: 1070px;
+        margin: auto;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
 
-        .metric-value-group {
-          min-width: 190px;
-          display: inline-flex;
-          flex-flow: column nowrap;
+        @include respond-to(notebooks) {
+          width: 88%;
+        }
 
-          .top-label {
-            padding-bottom: 10px;
-            border-bottom: 2px solid $pale-midnight-light;
-            margin-bottom: 10px;
-            font-size: 22px;
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+        .milestone-heading {
+          @include section-caps-heading;
 
-            .label-arrow-down {
-              font-size: 15px;
-              padding-left: 3px;
-              line-height: 24px;
-              color: $soot-grey-light;
-            }
-
-            &:hover {
-              .label-arrow-down {
-                color: $canary-yellow-medium;
-                cursor: pointer;
-              }
-            }
+          @include respond-to(smartphones) {
+            width: 330px;
+            margin: auto;
           }
-          .bottom-label {
-            font-size: 36px;
-            line-height: 36px;
-            font-weight: 300;
-            display: none;
-            padding-top: 10px;
-            color: $bondi-blue-light;
+        }
 
-            &:hover {
-              cursor: default;
-            }
+        .milestone-title {
+          @include section-title;
+          margin-bottom: 30px;
 
-            .goal-sub-label {
-              @include caps-heading;
-              float: right;
-              color: $soot-grey-medium;
-              padding-top: 10px;
-              &:hover {
-                cursor: default;
-              }
-            }
+          @include respond-to(smartphones) {
+            width: 340px;
+            margin: auto;
+            margin-bottom: 40px;
           }
-          .label-placeholder {
-            font-size: 20px;
-            line-height: 38px;
-            color: $soot-grey-dark;
+        }
 
-            &:hover {
-              cursor: default;
-            }
+        .milestone-paragraph {
+          align-self: flex-end;
+          @include section-paragraph;
+          width: 500px;
+
+          @include respond-to(smartphones) {
+            width: 330px;
+            font-size: 18px;
+            line-height: 28px;
+            margin: auto;
+            margin-bottom: 40px;
           }
         }
       }
     }
-  }
-}
-.quantity {
-  position: relative;
-}
-// crap to override browser bullshit
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
-.quantity input {
-  -webkit-appearance: none; 
-  box-shadow: none !important; 
-  background: transparent;
-  outline: none;
-  border: none;
-  color: #00c7e6;
-  font-family: lato, sans-serif;
-  font-weight: 300;
-  font-size: 110px;
-  height: 125px;
-  min-width: 100px;
-  margin-left: 50px;
-  position: relative;
-  display: inline-block;
-  border-bottom: 2px dashed $pale-midnight-light;
 
-  &:hover {
-    color: $canary-yellow-medium;
-    cursor: pointer;
+    .milestone-btns {
+      width: 1070px;
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include respond-to(notebooks) {
+        width: 100%;
+      }
+
+      .milestone-btn {
+        display: inline-block;
+        width: 150px;
+        @include caps-heading;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        @include midnight-btn;
+        border-radius: 30px;
+
+        @include respond-to(smartphones) {
+          display: none;
+        }
+
+        @include respond-to(notebooks) {
+          margin: auto;
+        }
+      }
+
+    }
   }
 }
-.quantity input:focus {
-  outline: 0;
+
+/* --------------------------- Same Goals Section --------------------------- */
+.same-goals-section {
+  min-width: 100vw;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+
+
+  .same-goals-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 100px;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+    .same-goals-col {
+      .same-goals-text {
+        width: 500px;
+        @include respond-to(smartphones) {
+          width: 95%;
+          margin: auto;
+        }
+        .same-goals-heading {
+          @include section-caps-heading;
+        }
+        .same-goals-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+        .same-goals-paragraph {
+          @include section-paragraph;
+
+          @include respond-to(smartphones) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 50px;
+          }
+          @include respond-to(notebooks) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .same-goals-animation {
+        width: 800px;
+
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .same-goals-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .same-goals-btn {
+      @include caps-heading;
+      display: inline-block;
+      height: 50px;
+      line-height: 52px;
+      @include blue-btn;
+      width: 160px;
+      text-align: center;
+      border-radius: 30px;
+    }
+  }
 }
 
 /* -------------------------------------------------------------------------- */
