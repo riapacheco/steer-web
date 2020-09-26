@@ -508,7 +508,7 @@ body {
   min-width: 100vw;
   width: 100%;
   position: relative;
-  padding-top: 200px;
+  padding-top: 250px;
   padding-bottom: 200px;
   .home-content {
     width: inherit;
@@ -530,7 +530,7 @@ body {
         }
         .home-para {
           @include section-paragraph;
-          margin-bottom: 40px;
+          margin-bottom: 70px;
         }
         .home-btns {
           width: 370px;
@@ -550,9 +550,6 @@ body {
             }
 
             &.home-signup-btn {
-              // border: 3px solid $bondi-blue-darkest;
-              // border-radius: 8px;
-              // color: $bondi-blue-medium;
 
               @include midnight-btn;
               height: 54px;
@@ -560,9 +557,9 @@ body {
             }
 
             &.home-demo-btn {
-              border: 3px solid $midnight;
+              border: 2px solid $pale-midnight-light;
               border-radius: 8px;
-              color: $steel-grey-dark;
+              color: $soot-grey-light;
             }
           }
         }
