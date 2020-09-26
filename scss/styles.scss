@@ -504,7 +504,75 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                 Home > Hero                                */
 /* -------------------------------------------------------------------------- */
+.home-section {
+  min-width: 100vw;
+  width: 100%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  .home-content {
+    width: inherit;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 130px;
 
+    .home-col {
+
+      &.home-text {
+        width: 500px;
+        .home-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+        .home-para {
+          @include section-paragraph;
+          margin-bottom: 40px;
+        }
+        .home-btns {
+          width: 370px;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-between;
+          .home-btn {
+            width: 170px;
+            display: inline-block;
+            text-align: center;
+            @include caps-heading;
+            height: 50px;
+            line-height: 50px;
+            &:hover {
+              filter: brightness(1.15);
+            }
+
+            &.home-signup-btn {
+              // border: 3px solid $bondi-blue-darkest;
+              // border-radius: 8px;
+              // color: $bondi-blue-medium;
+
+              @include midnight-btn;
+              height: 54px;
+              line-height: 55px;
+            }
+
+            &.home-demo-btn {
+              border: 3px solid $midnight;
+              border-radius: 8px;
+              color: $steel-grey-dark;
+            }
+          }
+        }
+      }
+      &.home-animation {
+        width: 800px;
+      }
+    }
+  }
+}
 .home-hero {
   min-width: 100vw;
   width: 100%;
@@ -1800,109 +1868,117 @@ body {
 .blue {
   color: $bondi-blue-light;
 }
-
 /* ---------------------------- Card Organization --------------------------- */
 .how-it-works {
   min-width: 100%;
   position: relative;
-  padding-top: 150px;
+  padding-top: 200px;
   padding-bottom: 150px;
 
   @include respond-to(smartphones) {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .it-works-content {
-    width: 1200px;
-    margin: auto;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
 
     @include respond-to(notebooks) {
       flex-flow: column nowrap;
       width: 100%;
     }
-
     @include respond-to(smartphones) {
       flex-flow: column nowrap;
       width: 100%;
       align-items: center;
     }
     .it-works-col {
-      display: flex;
-      flex-flow: row nowrap;
       width: 100%;
-      margin: 20px;
-      
+      display: flex;
+      justify-content: center;
+
       &.heading-title {
-        margin-top: 100px;
         display: inline-flex;
-        flex-flow: column nowrap;
-        @include respond-to(notebooks) {
-          width: 700px;
-          margin: auto;
-        }
-        @include respond-to(smartphones) {
-          width: 80%;
+        flex-flow: row nowrap;
+        justify-content: center;
 
-        }
-        .it-works-heading {
-          @include section-caps-heading;
-          color: $soot-grey-light;
-        }
-
-        .it-works-title {
-          @include section-title;
-          margin-bottom: 30px;
-        }
-
-        .it-works-paragraph {
-          font-size: 22px;
-          line-height: 34px;
-          font-weight: 300;
-          letter-spacing: 0.5px;
-          color: $steel-grey-medium;
-          margin-bottom: 40px;
-
-          @include respond-to(notebooks) {
-            width: 500px;
-            line-height: 32px;
+        .it-works-text { // adjust this for responsivity
+          width: 400px;
+          display: inline-flex;
+          flex-flow: column nowrap;
+          .it-works-heading {
+            @include section-caps-heading;
+            color: $soot-grey-light;
+          }
+          .it-works-title {
+            @include section-title;
+            margin-bottom: 30px;
+  
+            @include respond-to(smartphones) {
+              width: 80%;
+            }
+          }
+          .it-works-paragraph {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: $steel-grey-medium;
+            margin-bottom: 40px;
+  
+            @include respond-to(notebooks) {
+              width: 530px;
+              line-height: 32px;
+            }
+            @include respond-to(smartphones) {
+              width: 330px;
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
+          .it-works-btns {
+            .it-works-btn {
+              display: inline-block;
+              @include caps-heading;
+              height: 50px;
+              line-height: 48px;
+              width: 150px;
+              border: 2px solid $bondi-blue-darkest;
+              box-sizing: border-box;
+              border-radius: 7px;
+              text-align: center;
+              color: $bondi-blue-dark;
+      
+              &:hover {
+                filter: brightness(1.3);
+              }
+  
+              @include respond-to(smartphones) {
+                width: 60%;
+                margin: auto;
+                margin-bottom: 50px;
+              }
+  
+              @include respond-to(notebooks) {
+                margin-bottom: 50px;
+              }
+            }
+          }
+          @include respond-to(notebooks){
+            width: 100%;
+            margin-left: 50px;
           }
           @include respond-to(smartphones) {
-            width: 320px;
-            font-size: 18px;
-            line-height: 28px;
-          }
-        }
-
-        .it-works-btns {
-          .it-works-btn {
-            display: inline-block;
-            @include caps-heading;
-            height: 50px;
-            line-height: 48px;
-            width: 150px;
-            border: 2px solid $bondi-blue-darkest;
-            box-sizing: border-box;
-            border-radius: 7px;
-            text-align: center;
-            color: $bondi-blue-dark;
-    
-            &:hover {
-              filter: brightness(1.3);
-            }
-
-            @include respond-to(smartphones) {
-              width: 60%;
-              margin: auto;
-              margin-bottom: 30px;
-            }
+            width: 100%;
+            margin-left: 40px;
+            margin-top: 100px;
           }
         }
       }
       &.feature-animation {
+        width: 100%;
+        margin-right: 70px;
         @include respond-to(notebooks){
           width: 100%;
           margin: auto;
@@ -1915,284 +1991,253 @@ body {
     }
   }
 }
-
-/* --------------------------- Track Goal Metrics --------------------------- */
-.priority-card-explainer {
-  // resizing found at bottom of this level
+.goals-focused-section {
   min-width: 100vw;
   position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+  padding-top: 300px;
+  padding-bottom: 250px;
+  display: flex;
+  flex-flow: column nowrap;
 
-  .priority-card-content {
+  .goals-focused-content {
     width: inherit;
-    width: 1200px;
+    width: 100%;
     margin: auto;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
+    flex-flow: row nowrap;
+    align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 130px;
 
-    .priority-card-col {
-      width: 100%;
-    }
-    .priority-card-text {
-      display: block;
-      margin: auto;
-      margin-bottom: 40px;
-      
-
-      .priority-card-heading {
-        @include section-caps-heading;
-        color: $soot-grey-light;
-
-        @include respond-to(smartphones) {
-          width: 95%;
-          margin:auto;
-        }
-      }
-      .priority-card-title {
-        @include section-title;
-        width: 600px;
-        margin-bottom: 30px;
-        @include respond-to(smartphones) {
-          width: 95%;
-          margin: auto;
-          margin-bottom: 20px;
-        }
-      }
-      .priority-card-paragraph {
-        @include section-paragraph;
-        
-        margin-bottom: 50px;
-        width: 700px;
-
-        @include respond-to(notebooks) {
-          width: 600px;
-        }
-
-        @include respond-to(smartphones) {
-          width: 95%;
-          font-size: 18px;
-          line-height: 28px;
-          margin: auto;
-          margin-bottom: 0px;
-        }
-      }
-    }
-    .metric-section {
-      width: inherit;
-      display: block;
-      .metric-ribbon-section {
-        display: block;
-        width: 100%;
-        .metric-ribbon-content {
-          position: relative;
-          width: inherit;
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: space-evenly;
-
-          @include respond-to(notebooks) {
-            width: 700px;
-            flex-flow: row wrap;
-          }
-          @include respond-to(smartphones) {
-            width: inherit;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-          }
-
-      
-          .metric-numbers {
-            display: flex;
-            flex-flow: row nowrap;
-
-            @include respond-to(notebooks) {
-              margin-bottom: 55px;
-            }
-            @include respond-to(smartphones) {
-              transform: scale(0.7);
-            }
-      
-            .circle-graph {
-              .progress-ring__circle {
-                transition: 0.35s stroke-dashoffset;
-                border-radius: 5px;
-                transform: rotate(-90deg);
-                transform-origin: 50% 50%;
-              }
-              .metric-ribbon {
-                .goal-current-label {
-                  text-align: right;
-                }
-              }
-              .metrics-input {
-                position: relative;
-                top: 10px;
-                left: 10px;
-                width: 80px;
-              }
-            }
-          }
-          .metric-labels {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-      
-            @include respond-to(notebooks) {
-              margin-bottom: 40px;
-            }
-            
-            @include respond-to(smartphones) {
-              transform: scale(0.6);
-              flex-direction: row;
-            }
-      
-            .metric-values {
-              width: inherit;
-              display: flex;
-              flex-flow: row nowrap;
-      
-              .metric-value-group {
-                min-width: 180px;
-                display: inline-flex;
-                flex-flow: column nowrap;
-      
-                .top-label {
-                  padding-bottom: 10px;
-                  border-bottom: 2px solid $pale-midnight-light;
-                  margin-bottom: 10px;
-                  font-size: 22px;
-      
-                  .label-arrow-down {
-                    font-size: 15px;
-                    padding-left: 3px;
-                    line-height: 24px;
-                    color: $soot-grey-light;
-                  }
-      
-                  &:hover {
-                    .label-arrow-down {
-                      color: $canary-yellow-medium;
-                      cursor: pointer;
-                    }
-                  }
-                }
-                .bottom-label {
-                  font-size: 36px;
-                  line-height: 36px;
-                  font-weight: 300;
-                  display: none;
-                  padding-top: 10px;
-                  color: $bondi-blue-light;
-      
-                  &:hover {
-                    cursor: default;
-                  }
-      
-                  .goal-sub-label {
-                    @include caps-heading;
-                    float: right;
-                    color: $soot-grey-medium;
-                    padding-top: 10px;
-                    &:hover {
-                      cursor: default;
-                    }
-                  }
-                }
-                .label-placeholder {
-                  font-size: 20px;
-                  line-height: 38px;
-                  color: $soot-grey-dark;
-      
-                  &:hover {
-                    cursor: default;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .quantity {
-        position: relative;
-      }
-
-      margin-bottom: 50px; // away from button
-
-      @include respond-to(smartphones) {
-        margin-bottom: 60px;
-      }
-      // crap to override browser bullshit
-      input[type=number]::-webkit-inner-spin-button,
-      input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-      input[type=number] {
-        -moz-appearance: textfield;
-      }
-      .quantity input {
-        -webkit-appearance: none; 
-        box-shadow: none !important; 
-        background: transparent;
-        outline: none;
-        border: none;
-        color: #00c7e6;
-        font-family: lato, sans-serif;
-        font-weight: 300;
-        font-size: 110px;
-        height: 125px;
-        min-width: 100px;
-        margin-left: 50px;
-        position: relative;
-        display: inline-block;
-        border-bottom: 2px dashed $pale-midnight-light;
-      
-        &:hover {
-          color: $canary-yellow-medium;
-          cursor: pointer;
-        }
-      }
-      .quantity input:focus {
-        outline: 0;
-      }
-    }
-
-    .priority-card-btns {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-
-      .priority-card-btn {
-        display: inline-block;
-        width: 160px;
-        text-align: center;
-        @include caps-heading;
-        height: 50px;
-        line-height: 50px;
-        @include midnight-btn;
-        border-radius: 30px;
-
-        @include respond-to(smartphones) {
-          width: 60%;
-          margin: auto;
-        }
-
-        @include respond-to(notebooks) {
-          margin-right: auto;
-        }
-      }
-    }
     @include respond-to(notebooks) {
-      width: 700px;
-      margin: auto;
+      flex-flow: column nowrap;
+      margin-bottom: 100px;
     }
     @include respond-to(smartphones) {
-      width: 370px;
+      flex-flow: column nowrap;
+      margin-bottom: 40px;
+    }
+    .goals-focused-col {
+      &.goals-focused-text {
+        width: 400px;
+        margin-left: 40px;
+        margin-right: 40px;
+        .goals-focused-heading {
+          @include section-caps-heading;
+        }
+        .goals-focused-title {
+          @include section-title;
+          margin-bottom: 40px;
+        }
+        .goals-focused-para {
+          @include section-paragraph;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 50px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 50px;
+          }
+        }
+        @include respond-to(notebooks) {
+          width: 90%;
+        }
+        @include respond-to(smartphones) {
+          width: 80%;
+        }
+      }
+
+      &.goals-focused-animation {
+        width: 950px;
+        @include respond-to(notebooks) {
+          width: 100%;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .metric-section {
+    width: inherit;
+    display: block;
+    .metric-ribbon-section {
+      display: block;
+      width: 100%;
+      .metric-ribbon-content {
+        position: relative;
+        width: inherit;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+
+        @include respond-to(notebooks) {
+          width: 700px;
+          flex-flow: row wrap;
+        }
+        @include respond-to(smartphones) {
+          width: inherit;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+    
+        .metric-numbers {
+          display: flex;
+          flex-flow: row nowrap;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 55px;
+          }
+          @include respond-to(smartphones) {
+            transform: scale(0.7);
+          }
+    
+          .circle-graph {
+            .progress-ring__circle {
+              transition: 0.35s stroke-dashoffset;
+              border-radius: 5px;
+              transform: rotate(-90deg);
+              transform-origin: 50% 50%;
+            }
+            .metric-ribbon {
+              .goal-current-label {
+                text-align: right;
+              }
+            }
+            .metrics-input {
+              position: relative;
+              top: 10px;
+              left: 10px;
+              width: 80px;
+            }
+          }
+        }
+        .metric-labels {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+    
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
+          
+          @include respond-to(smartphones) {
+            transform: scale(0.6);
+            flex-direction: row;
+          }
+    
+          .metric-values {
+            width: inherit;
+            display: flex;
+            flex-flow: row nowrap;
+    
+            .metric-value-group {
+              min-width: 180px;
+              display: inline-flex;
+              flex-flow: column nowrap;
+    
+              .top-label {
+                padding-bottom: 10px;
+                border-bottom: 2px solid $pale-midnight-light;
+                margin-bottom: 10px;
+                font-size: 22px;
+    
+                .label-arrow-down {
+                  font-size: 15px;
+                  padding-left: 3px;
+                  line-height: 24px;
+                  color: $soot-grey-light;
+                }
+    
+                &:hover {
+                  .label-arrow-down {
+                    color: $canary-yellow-medium;
+                    cursor: pointer;
+                  }
+                }
+              }
+              .bottom-label {
+                font-size: 36px;
+                line-height: 36px;
+                font-weight: 300;
+                display: none;
+                padding-top: 10px;
+                color: $bondi-blue-light;
+    
+                &:hover {
+                  cursor: default;
+                }
+    
+                .goal-sub-label {
+                  @include caps-heading;
+                  float: right;
+                  color: $soot-grey-medium;
+                  padding-top: 10px;
+                  padding-left: 10px;
+                  &:hover {
+                    cursor: default;
+                  }
+                }
+              }
+              .label-placeholder {
+                font-size: 20px;
+                line-height: 38px;
+                color: $soot-grey-dark;
+    
+                &:hover {
+                  cursor: default;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .quantity {
+      position: relative;
+    }
+
+    margin-bottom: 50px; // away from button
+
+    @include respond-to(smartphones) {
+      margin-bottom: 60px;
+    }
+    // crap to override browser bullshit
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    .quantity input {
+      -webkit-appearance: none; 
+      box-shadow: none !important; 
+      background: transparent;
+      outline: none;
+      border: none;
+      color: #00c7e6;
+      font-family: lato, sans-serif;
+      font-weight: 300;
+      font-size: 110px;
+      height: 125px;
+      min-width: 100px;
+      margin-left: 50px;
+      position: relative;
+      display: inline-block;
+      border-bottom: 2px dashed $pale-midnight-light;
+    
+      &:hover {
+        color: $canary-yellow-medium;
+        cursor: pointer;
+      }
+    }
+    .quantity input:focus {
+      outline: 0;
     }
   }
 }
@@ -2204,6 +2249,7 @@ body {
   position: relative;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
 
   .milestone-content {
     display: flex;
@@ -2307,139 +2353,135 @@ body {
   }
 }
 
-/* --------------------------- Same Goals Section --------------------------- */
-.same-goals-section {
+/* ------------------------------ project stats ----------------------------- */
+
+.project-stats-section {
   min-width: 100vw;
+  width: 100%;
   position: relative;
   padding-top: 200px;
   padding-bottom: 200px;
+  .project-stats-content {
+    display: flex;
+    flex-flow: column nowrap;
+    .project-stats-row {
+
+      &.project-stats-boiler {
+        width: 800px;
+        margin: auto;
+        @include respond-to(notebooks) {
+          width: 600px;
+        }
+
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+        .project-stats-text {
+          margin-top: 300px;
+          @include respond-to(notebooks) {
+            margin-top: 0;
+          }
+          @include respond-to(smartphones) {
+            margin-top: 0;
+          }
+          .project-stats-heading {
+            @include section-caps-heading;
+          }
+          .project-stats-title {
+            @include section-title;
+            margin-bottom: 30px;
+          }
+          .project-stats-para {
+            @include section-paragraph;
+            width: 650px;
+            margin-bottom: 700px;
+
+            @include respond-to(notebooks) {
+              margin-bottom: 100px;
+            }
+            @include respond-to(smartphones) {
+              width: 90%;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+      &.project-stats-animation {}
+    }
+  }
+}
+
+.cta-section {
+  min-width: 100vw;
+  width: 100%;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 300px;
   background-image: linear-gradient(to top right, $pale-midnight, $midnight);
-
-
-  .same-goals-content {
+  .cta-content {
+    width: 800px;
+    margin: auto;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 100px;
+    align-items: flex-end;
+    justify-content: space-between;
 
     @include respond-to(notebooks) {
-      flex-flow: column nowrap;
+      width: 600px;
     }
-
     @include respond-to(smartphones) {
       flex-flow: column nowrap;
       width: 100%;
     }
-    .same-goals-col {
-      .same-goals-text {
-        width: 500px;
+    .cta-col {
+      .cta-text {
         @include respond-to(smartphones) {
-          width: 95%;
-          margin: auto;
+          margin-left: 20px;
         }
-        .same-goals-heading {
+        .cta-heading {
           @include section-caps-heading;
         }
-        .same-goals-title {
+        .cta-title {
           @include section-title;
-          margin-bottom: 30px;
-        }
-        .same-goals-paragraph {
-          @include section-paragraph;
-          margin-bottom: 50px;
+          margin-bottom: 40px;
 
           @include respond-to(smartphones) {
-            font-size: 18px;
-            line-height: 28px;
-            margin-bottom: 50px;
+            width: 80%;
           }
+        }
+        .cta-para {
+          width: 450px;
+          @include section-paragraph;
+
           @include respond-to(notebooks) {
-            margin-bottom: 50px;
+            width: 300px;
+          }
+          @include respond-to(smartphones) {
+            width: 80%;
+            margin-bottom: 40px;
           }
         }
       }
+      .cta-btn {
+        .pm-cta-btn {
+          display: inline-block;
+          width: 200px;
+          @include caps-heading;
+          height: 50px;
+          line-height: 50px;
+          @include blue-btn;
+          text-align: center;
+          filter: brightness(0.85);
 
-      .same-goals-animation {
-        width: 800px;
-
-        @include respond-to(smartphones) {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .same-goals-btns {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    @include respond-to(smartphones) {
-      margin-bottom: 50px;
-    }
-    @include respond-to(notebooks) {
-      margin-bottom: 100px;
-    }
-
-    .same-goals-btn {
-      @include caps-heading;
-      display: inline-block;
-      height: 50px;
-      line-height: 52px;
-      @include blue-btn;
-      width: 160px;
-      text-align: center;
-      border-radius: 30px;
-      margin-right: 20px;
-    }
-
-    .learn-more-dropdown {
-      position: relative;
-      
-      .learn-more-select {
-        display: inline-block;
-        @include caps-heading;
-        height: 50px;
-        line-height: 45px;
-        width: 190px;
-        text-align: center;
-        color: $bondi-blue-dark;
-        border: 2px solid $bondi-blue-darkest;
-        border-radius: 50px;
-        box-sizing: border-box;
-        .icon {
-          font-size: 14px;
-        }
-      }
-      .learn-dropdown {
-        position: absolute;
-        padding: 20px 25px 20px 20px;
-        background-color: $midnight;
-        box-shadow: $standard-shadow;
-        border-radius: 6px;
-        margin-top: -2px;
-        display: none;
-
-        .learn-content {
-          font-size: 15px;
-          line-height: 15px;
-          letter-spacing: 0.3px;
-          color: $steel-grey-medium;
-
-          .learn-list-option {
-            display: block;
-            margin-bottom: 20px;
+          @include respond-to(smartphones) {
+            width: 200px;
+            margin-right: 30px;
           }
         }
       }
     }
   }
 }
-
 //* -------------------------------------------------------------------------- */
 //*                                 Videos Page                                */
 //* -------------------------------------------------------------------------- */
