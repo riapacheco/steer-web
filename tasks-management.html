@@ -159,7 +159,7 @@
 
         <div class="action-intro-col action-intro-text">
           <div class="action-intro-heading">
-           Tasks & Subtasks
+           Action Items & Subtasks
           </div>
 
           <div class="action-intro-title">
@@ -184,32 +184,133 @@
       </div>
     </div>
 
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                           Action Item Drawer                            -->
-    <!-- ----------------------------------------------------------------------- -->
-    <div class="action-item-drawer">
-      <div class="action-drawer-content">
-        <div class="action-drawer-col action-drawer-text">
-          <div class="action-drawer-heading">
-            Flexible and Convenient
+    <!-- ------------------------ secondary navigation ------------------------- -->
+    <div class="secondary-nav-section">
+      <div class="secondary-nav-content">
+        <div class="secondary-nav-btns">
+          <div class="secondary-nav-group">
+            <a href="#synced-locations" class="secondary-nav-btn">Synced Locations</a>
+            <a href="#multiple-assignees" class="secondary-nav-btn">Multiple Assignees</a>
+            <a href="#time-tracking" class="secondary-nav-btn">Time Tracking</a>
           </div>
-          <div class="action-drawer-title">
-            Add or <span class="blue">link</span> them anywhere
-          </div>
-          <div class="action-drawer-paragraph">
-            Create action items in <span style="font-weight: bold;letter-spacing: 0;">both priority and project cards</span> or link the same action item to either location for synced access
-          </div>
-        </div>
-        <div class="action-drawer-col action-drawer-animation">
-          <div id="taskslidelinks_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:320px;height:400px;overflow:hidden;">
-            <script type="text/javascript" charset="utf-8" src="/hype/task-slide-links/task-slide-links.hyperesources/taskslidelinks_hype_generated_script.js?83212"></script>
+          <div class="secondary-nav-group">
+            <a href="#resource-linking" class="secondary-nav-btn">Resource Linking</a>
+            <a href="#subtasks" class="secondary-nav-btn">Subtasks</a>
+            <a href="#task-inbox" class="secondary-nav-btn">Task Inbox</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="subtasks-section">
+    <!-- -------------------------- synced locations --------------------------- -->
+    <div class="action-item-drawer" id="synced-locations">
+      <div class="action-drawer-content">
+        <div class="action-drawer-col action-drawer-text">
+          <div class="action-drawer-heading">
+            Synced Location Linking
+          </div>
+          <div class="action-drawer-title">
+            Add or <span class="blue">link</span> them anywhere
+          </div>
+          <div class="action-drawer-paragraph">
+            Create action items in both priority and project cards or link the same action item to different locations for synced access
+          </div>
+          <div class="action-drawer-btns">
+            <a class="action-drawer-btn" href="https://app.steer.software/login?register=true" target="_blank">Sign up</a>
+          </div>
+        </div>
+        <div class="action-drawer-col action-drawer-animation">
+          <div id="synceditems_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:370px;height:255px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/synced-items/synced-items.hyperesources/synceditems_hype_generated_script.js?83002"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------- multiple assignees -------------------------- -->
+    <div class="multiple-assignees-section" id="multiple-assignees">
+      <div class="multiple-assignees-content">
+        <div class="multiple-assignees-col multiple-assignees-text">
+          <div class="multiple-assignees-heading">
+            Multiple Assignees
+          </div>
+          <div class="multiple-assignees-title">
+            Team up with <span class="blue">multi-user action items</span>
+          </div>
+          <div class="multiple-assignees-para">
+            Smooth out collaboration by assigning multiple workspace (and guest) team members to a single action item
+          </div>
+          <div class="multiple-assignees-btns">
+            <div class="multiple-assignees-btn">
+              <a href="https://app.steer.software/login?register=true" target="_blank">Try it today</a>
+            </div>
+          </div>
+        </div>
+        <div class="multiple-assignees-col multiple-assignees-animation">
+          <div id="assigneeslide_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:470px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/assignee-slide/assignee-slide.hyperesources/assigneeslide_hype_generated_script.js?74759"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------- time tracking ---------------------------- -->
+    <div class="time-tracking-section" id="time-tracking">
+      <div class="time-tracking-content">
+        <div class="time-tracking-col time-tracking-text">
+          <div class="time-tracking-heading">
+            Time Tracking
+          </div>
+          <div class="time-tracking-title">
+            Built-in <span class="blue">capacity planning</span>
+          </div>
+          <div class="time-tracking-para">
+            Add time estimates to project action items and view logged progress right on the card
+          </div>
+          <div class="time-tracking-btns">
+            <a  class="time-tracking-btn" href="https://app.steer.software/login?register=true" target="_blank">Sign up</a>
+          </div>
+        </div>
+
+        <div class="time-tracking-col time-tracking-animation">
+          <div id="timetrackinganime_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:210px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/time-tracking-anime/time-tracking-anime.hyperesources/timetrackinganime_hype_generated_script.js?26639"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------- resource linking --------------------------- -->
+    <div class="resource-linking-section" id="resource-linking">
+      <div class="resource-linking-content">
+        <div class="resource-linking-col resource-linking-text">
+          <div class="resource-linking-heading">
+            Resource Linking
+          </div>
+          <div class="resource-linking-title">
+            Work on the <span class="blue">same resource</span>
+          </div>
+          <div class="resource-linking-para">
+            Link the same resource to multiple action items so that every team member can work on the same thing
+          </div>
+          <div class="resource-linking-btns">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="resource-linking-btn">
+              Try it free
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-linking-col resource-linking-animation">
+          <div id="resourcesanime_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:250px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/resources-anime/resources-anime.hyperesources/resourcesanime_hype_generated_script.js?66108"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ------------------------------ subtasks ------------------------------- -->
+    <div class="subtasks-section" id="subtasks">
       <div class="subtasks-content">
         <div class="subtasks-col subtasks-animation">
           <div id="subtasks_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:300px;overflow:hidden;">
@@ -221,12 +322,44 @@
           <div class="subtasks-heading">Subtasks</div>
           <div class="subtasks-title">Break them into <span class="blue">subtasks</span></div>
           <div class="subtasks-paragraph">
-            Team up on action items and assign subtasks to different team members. 
+            Team up on action items by assigning their subtasks to different team members
+          </div>
+          <div class="subtasks-btns">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="subtasks-btn">
+              Sign up
+            </a>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- ----------------------------- task inbox ------------------------------ -->
+    <div class="task-inbox-section" id="task-inbox">
+      <div class="task-inbox-content">
+        <div class="task-inbox-col task-inbox-text">
+          <div class="task-inbox-heading">
+            Task Inbox
+          </div>
+          <div class="task-inbox-title">
+            Get to what's <span class="blue">important</span>
+          </div>
+          <div class="task-inbox-para">
+            View all workspace action items in one place and filter your view by priority, project, critical date, assignee, or status
+          </div>
+          <div class="task-inbox-btns">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="task-inbox-btn">
+              Try it free
+            </a>
+          </div>
+        </div>
+
+        <div class="task-inbox-col task-inbox-animation">
+          <div id="taskinboxanim_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:450px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/task-inbox-anim/task-inbox-anim.hyperesources/taskinboxanim_hype_generated_script.js?12548"></script>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- ----------------------------------------------------------------------- -->

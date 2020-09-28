@@ -1128,9 +1128,6 @@ body {
   }
 }
 
-.value-prop-section {
-  
-}
 .organize-work-section {
   cursor: default;
   min-width: 100vw;
@@ -2401,7 +2398,6 @@ body {
 }
 
 /* ------------------------------ project stats ----------------------------- */
-
 .project-stats-section {
   min-width: 100vw;
   width: 100%;
@@ -2457,7 +2453,6 @@ body {
     }
   }
 }
-
 .cta-section {
   min-width: 100vw;
   width: 100%;
@@ -2609,7 +2604,6 @@ body {
     opacity: 0.06;
   }
 }
-
 .video-container {
   position: relative;
   width: 100%;
@@ -2767,7 +2761,8 @@ body {
   padding-bottom: 300px;
   // background-image: linear-gradient(to top right, $pale-midnight, $midnight);
   @include respond-to(smartphones) {
-    padding-top: 130px;
+    padding-top: 200px;
+    padding-bottom: 130px;
   }
 
   .action-intro-content {
@@ -2842,33 +2837,99 @@ body {
     }
   }
 }
+//secondary navigation
+.secondary-nav-section {
+  min-width: 100%;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+  .secondary-nav-content {
+    width: 800px;
+    margin: auto;
+    .secondary-nav-btns {
+      width: inherit;
+      height: 130px; // adjust responsivity here
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
 
+      @include respond-to(smartphones) {
+        height: 100%;
+      }
+
+      &.one-row {
+        height: 100%;
+      }
+      .secondary-nav-group {
+        width: inherit;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        @include respond-to(smartphones) {
+          flex-flow: column nowrap;
+          margin-left: 40px;
+        }
+        .secondary-nav-btn {
+          text-align: left;
+          padding-left: 30px;
+          display: inline-block;
+          width: 220px; // change this with responsiveness
+          height: 50px;
+          @include caps-heading;
+          line-height: 52px;
+          color: $soot-grey-light;
+          border-left: 5px solid $midnight;
+          &:hover {
+            filter: brightness(1.2);
+          }
+          &:active {
+            box-shadow: none;
+            filter: brightness(0.6);
+          }
+        }
+      }
+    }
+  }
+}
+//synced locations
 .action-item-drawer {
   min-width: 100%;
   position: relative;
   padding-top: 200px;
   padding-bottom: 250px;
-  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
   .action-drawer-content {
-    width: 1100px;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: row;
 
     @include respond-to(notebooks) {
       width: 700px;
+      flex-direction: column;
     }
+
     @include respond-to(smartphones) {
-      width: 100%;
+      width: inherit;
       flex-direction: column;
     }
     .action-drawer-col {
+
       &.action-drawer-text {
-        width: 530px;
+        width: 450px;
+        margin-left: 50px;
         @include respond-to(smartphones) {
           width: 90%;
+          margin-left: 0;
         }
+        @include respond-to(notebooks) {
+          width: 100%;
+          margin-left: 30px;
+        }
+ 
         .action-drawer-heading {
           @include section-caps-heading;
         }
@@ -2878,28 +2939,301 @@ body {
         }
         .action-drawer-paragraph {
           @include section-paragraph;
+          margin-bottom: 30px;
+          @include respond-to(smartphones) {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+          @include respond-to(notebooks) {
+            margin-bottom: 30px;
+          }
+        }
+        .action-drawer-btns {
+          width: inherit;
+
+          @include respond-to(smartphones) {
+            margin-bottom: 40px;
+          }
+          @include respond-to(notebooks) {
+            margin-bottom: 50px;
+          }
+          .action-drawer-btn {
+            display: inline-block;
+            width: 140px;
+            text-align: center;
+            height: 50px;
+            @include caps-heading;
+            line-height: 52px;
+            @include blue-btn;
+          }
+        }
+      }
+
+      &.action-drawer-animation {
+        width: 950px;
+        @include respond-to(notebooks) {
+          width: 100%;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+//multiple assignees
+.multiple-assignees-section {
+  min-width: 100%;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+
+  .multiple-assignees-content {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-to(notebooks) {
+      width: 100%;
+      flex-flow: column nowrap;
+    }
+
+    @include respond-to(smartphones) {
+      width: 100%;
+      flex-flow: column nowrap;
+    }
+    .multiple-assignees-col {
+      &.multiple-assignees-text {
+        width: 400px;
+
+        @include respond-to(notebooks) {
+          width: 80%;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+        .multiple-assignees-heading {
+          @include section-caps-heading;
+        }
+        .multiple-assignees-title {
+          @include section-title;
+          margin-bottom: 40px;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 20px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 20px;
+            width: 80%;
+          }
+        }
+        .multiple-assignees-para {
+          @include section-paragraph;
+          margin-bottom: 30px;
+          @include respond-to(notebooks) {
+            margin-bottom: 20px;
+          }
+          @include respond-to(smartphones) {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+        .multiple-assignees-btns {
+          width: 100%;
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 50px;
+          }
+          .multiple-assignees-btn {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            @include caps-heading;
+            height: 50px;
+            line-height: 50px;
+            @include midnight-btn;
+          }
+        }
+      }
+      &.multiple-assignees-animation {
+        width: 600px;
+        @include respond-to(notebooks) {
+          width: 100%;
+          margin-right: 20px;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+//time tracking
+.time-tracking-section {
+  min-width: 100%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 250px;
+  .time-tracking-content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .time-tracking-col {
+      &.time-tracking-text {
+        width: 550px;
+        margin-left: 50px;
+        @include respond-to(smartphones) {
+          width: 90%;
+          margin-left: 0;
+        }
+        .time-tracking-heading {
+          @include section-caps-heading;
+        }
+        .time-tracking-title {
+          @include section-title;
+          margin-bottom: 20px;
+        }
+        .time-tracking-para {
+          @include section-paragraph;
+          margin-bottom: 30px;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
           @include respond-to(smartphones) {
             font-size: 20px;
             line-height: 30px;
             margin-bottom: 40px;
           }
         }
+        .time-tracking-btns {
+          width: 100%;
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 40px;
+          }
+          .time-tracking-btn {
+            display: inline-block;
+            height: 50px;
+            border: 2px solid $bondi-blue-darkest;
+            border-radius: 6px;
+            @include caps-heading;
+            line-height: 52px;
+            width: 130px;
+            text-align: center;
+            color: $bondi-blue-dark;
+          }
+        }
       }
 
-      &.action-drawer-animation {
-        width: 600px;
-
+      &.time-tracking-animation {
+        min-width: 800px;
+        @include respond-to(notebooks) {
+          min-width: 100%;
+        }
         @include respond-to(smartphones) {
-          width: 100%;
-          display: flex;
-          flex-direction: row reverse;
+          min-width: 100%;
         }
       }
     }
   }
 }
+//resource linking
+.resource-linking-section {
+  min-width: 100%;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+  .resource-linking-content {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
 
-/* ---------------------------- Subtasks Section ---------------------------- */
+    @include respond-to(notebooks) {
+      width: 100%;
+    }
+    @include respond-to(smartphones) {
+      width: 100%;
+    }
+
+    .resource-linking-col {
+      &.resource-linking-text {
+        @include respond-to(notebooks) {
+          width: 700px;
+          margin: auto;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+          margin: auto;
+        }
+        .resource-linking-heading {
+          @include section-caps-heading;
+        }
+        .resource-linking-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+        .resource-linking-para {
+          @include section-paragraph;
+          width: 600px;
+          margin-bottom: 30px;
+          @include respond-to(notebooks) {
+            width: 100%;
+          }
+          @include respond-to(smartphones) {
+            width: 100%;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+        .resource-linking-btns {
+          width: 100%;
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 50px;
+          }
+          .resource-linking-btn {
+            display: inline-block;
+            width: 140px;
+            @include caps-heading;
+            text-align: center;
+            @include midnight-btn;
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+      }
+      &.resource-linking-animation {}
+    }
+  }
+}
+//subtasks
 .subtasks-section {
   min-width: 100%;
   position: relative;
@@ -2948,14 +3282,121 @@ body {
         }
         .subtasks-paragraph {
           @include section-paragraph;
-
+          margin-bottom: 40px;
           @include respond-to(notebooks) {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
           }
 
           @include respond-to(smartphones) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .subtasks-btns {
+          width: 100%;
+          @include respond-to(notebooks) {
             margin-bottom: 50px;
           }
+          @include respond-to(smartphones) {
+            margin-bottom: 50px;
+          }
+          .subtasks-btn {
+            display: inline-block;
+            width: 130px;
+            @include caps-heading;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            border: 2px solid $bondi-blue-darkest;
+            color: $bondi-blue-dark;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+//task inbox
+.task-inbox-section {
+  min-width: 100%;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+  .task-inbox-content {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+
+    .task-inbox-col {
+      &.task-inbox-text {
+        margin-left: 20px;
+        margin-right: 20px;
+        @include respond-to(notebooks) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+        .task-inbox-heading {
+          @include section-caps-heading;
+        }
+        .task-inbox-title {
+          @include section-title;
+          margin-bottom: 30px;
+        }
+        .task-inbox-para {
+          @include section-paragraph;
+          margin-bottom: 50px;
+          @include respond-to(notebooks) {
+            margin-bottom: 20px;
+          }
+          @include respond-to(smartphones) {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+
+        .task-inbox-btns {
+          width: 100%;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 60px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 50px;
+          }
+          .task-inbox-btn {
+            display: inline-block;
+            width: 140px;
+            text-align: center;
+            @include caps-heading;
+            height: 50px;
+            line-height: 50px;
+            @include midnight-btn;
+          }
+        }
+      }
+      &.task-inbox-animation {
+        min-width: 700px;
+        @include respond-to(notebooks) {
+          min-width: 100%;
+          margin: auto;
+        }
+        @include respond-to(smartphones) {
+          min-width: 100%;
+          margin: auto;
         }
       }
     }
