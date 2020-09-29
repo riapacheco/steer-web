@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" >
+    <link rel="icon" href="src/img/steer-logo-canary.svg">
+    <title>Steer | Team Management App | Virtual & Remote Team Management</title>
+  </head>
+  <body>
+    
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Navigation Begins                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="navigation-section">
+      <div class="nav-content-group">
+        <div class="nav-content">
+          <div class="logo-container">
+            <a href="index.html">
+              <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=70 />
+            </a>
+          </div>
+          <div class="nav-items-group">
+            <div class="dropdown-structure-container">
+              <div class="nav-item active-nav-item">
+                  Product
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Steer
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../priority-management.html" class="dropdown-item">Overview</a>
+                      <a href="../pricing.html" class="dropdown-item">Pricing</a>
+                      <a href="#" class="dropdown-item disabled">Desktop App</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-structure-container">
+              <div class="nav-item">
+                  Solutions
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Manage
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
+                      <a href="../tasks-management.html" class="dropdown-item">Tasks</a>
+                      <a href="#" class="dropdown-item disabled">Virtual Teams</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Learn
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="dropdown-item" target="_blank" download>Case Study</a>
+                      <a href="../videos.html" class="dropdown-item">Demo Videos</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/pricing.html" class="nav-item">Pricing</a>
+          </div>
+        </div>
+  
+        <div class="nav-cta-btns">
+          <a href="https://app.steer.software/login" class="cta-btn login-cta-btn" target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------- Mobile Navigation -------------------------- -->
+    <div class="mobile-nav-div">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo-container">
+          <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=60 />
+        </a>
+        <a onclick="showVirtualNav();removeVirtualHam()" class="mobile-menu-btn">
+          <div id="virtualCloseIcon" class="ion-ios-menu mobile-menu-icon"></div>
+        </a>
+      </div>
+    </div>
+    <div id="virtualMenu" class="mobile-menu-div steer-mobile-menu">
+      <div class="mobile-menu">
+        <div class="mobile-content">
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Product <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../priority-management.html" class="submenu-item">Overview</a>
+            <a href="/pricing.html" class="submenu-item">Pricing</a>
+            <a href="#" class="submenu-item disabled">Desktop App</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Manage <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../priority-management.html" class="submenu-item">Priorities</a>
+            <a href="../tasks-management.html" class="submenu-item">Tasks</a>
+            <a href="#" class="submenu-item disabled">Virtual Teams</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Learn <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="submenu-item" download>Case Study</a>
+            <a href="../videos.html" class="submenu-item">Demo Videos</a>
+          </div>
+        </div>
+
+        <div class="mobile-cta-btns">
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <div class="mobile-user-notes">
+            Note: Steer's app is not yet mobile optimized
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                Page Body                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="virtual-team-intro">
+      <div class="virtual-team-content">
+        <div class="virtual-team-col virtual-team-text">
+          <div class="virtual-team-title">
+            <span class="blue">Virtual & Remote</span><br> Team Management
+          </div>
+          <div class="virtual-team-para">
+            Steer is the virtual office that you don't need to manage
+          </div>
+        </div>
+        <div class="virtual-team-col virtual-team-media">
+          <img class="isometric-gears" src="https://ik.imagekit.io/enhvtyz2ze/Isometric-images/isometric-gear-runners_noXa_3seh.svg" width=600>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Value Prop Break                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="value-prop-break">
+      <div class="value-prop-content">
+        <div class="value-prop-col">
+          <i class="ion-ios-compass icon"></i>
+          <div class="value-prop-title">
+            Improve Team <span class="white">Understanding</span>
+          </div>
+          <div class="value-prop-para">
+            Describe what success looks like with milestones, or target it with a goal metric. Every project can over-clarify your expectations.
+          </div>
+        </div>
+
+        <div class="value-prop-col">
+          <i class="ion-md-gift icon"></i>
+          <div class="value-prop-title">
+            Enable Extreme <span class="white">Convenience</span>
+          </div>
+          <div class="value-prop-para">
+            Centralize every required resource alongside each project's desired outcomes, and enable collaboration with items that can live in multiple places at once.
+          </div>
+        </div>
+        <div class="value-prop-col">
+          <i class="ion-md-fitness icon"></i>
+          <div class="value-prop-title">
+            Encourage a <span class="white">Sense of Urgency</span>
+          </div>
+          <div class="value-prop-para">
+            Make accountability intuitive with dashboard summaries that weigh time, achieved progress, and budgets without thinking twice about it. 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Secondary Nav                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="secondary-nav-section">
+      <div class="secondary-nav-content">
+        <div class="secondary-nav-btns">
+          <div class="secondary-nav-group">
+            <a href="#how-it-works" class="secondary-nav-btn">Priority & Project Cards</a>
+            <a href="#goals-milestones" class="secondary-nav-btn">Metrics & Milestones</a>
+            <a href="#resource-lists" class="secondary-nav-btn">Project Resource Lists</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------- Priority and Project Cards ---------------------- -->
+    <div id="how-it-works"class="pp-cards-section">
+      <div class="pp-cards-content">
+        <div class="pp-cards-col pp-cards-text">
+          <div class="pp-cards-heading">
+            Priority & Project Cards
+          </div>
+          <div class="pp-cards-title">
+            Avoid confusion with a simple<span class="blue"> two card structure</span>
+          </div>
+          <div class="pp-cards-para">
+            <ul>
+              <li>
+                <i class="ion-md-checkmark icon"></i>Priorities focus the big picture
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>Projects get the results
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pp-cards-col pp-cards-animation">
+          <div id="cardstruct_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:230px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/card-struct/card-struct.hyperesources/cardstruct_hype_generated_script.js?73902"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------- Goal Metrics & Milestones ---------------------- -->
+    <div class="goal-metrics-section" id="goals-milestones">
+      <div class="goal-metrics-content">
+        <div class="goal-metrics-col goal-metrics-row">
+          <div class="goal-metrics-text">
+            <div class="goal-metrics-heading">
+              Metrics & Milestones
+            </div>
+            <div class="goal-metrics-title">
+              <span class="blue">Define</span> the work <span class="blue">and over-clarify</span> expectations
+            </div>
+            <div class="goal-metrics-para">
+            </div>
+          </div>
+          <div class="goal-metrics-blurb">
+            Set your objectives with goal metrics to align the team. And if metrics don't match your style, you can describe what success looks like to <i>you</i> with milestones.
+          </div>
+        </div>
+        <div class="goal-metrics-col goal-metrics-animation">
+          <div id="milestonestype_hype_container" class="HYPE_document milestones-animation" style="margin:auto;position:relative;width:370px;height:140px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/milestones-type/milestones-type.hyperesources/milestonestype_hype_generated_script.js?34886"></script>
+          </div>
+          <div class="goal-metrics-buttons">
+            <a href="../priority-management.html" class="goal-metrics-button learn-more">Learn more</a>
+            <a href="https://app.steer.software/login?register=true" class="goal-metrics-button sign-up">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------- resource lists ---------------------------- -->
+    <div id="resource-lists" class="resource-lists-section">
+      <div class="resource-lists-content">
+        <div class="resource-lists-col resource-lists-text">
+          <div class="resource-lists-heading">
+            Project Resource Lists
+          </div>
+          <div class="resource-lists-title">
+            Stay <span class="blue">relentlessly organized</span>
+          </div>
+          <div class="resource-lists-para">
+            Empower your team with accessibility, by neatly packaging the resources they need:
+            <ul>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                In Projects, next to desired outcomes
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                Linked to action items for synced access
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resource-lists-col resource-lists-animation">
+          <div id="resourcesanime_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:250px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/resources-anime/resources-anime.hyperesources/resourcesanime_hype_generated_script.js?66108"></script>
+          </div>
+          <div class="resource-lists-buttons">
+            <a href="../tasks-management.html" class="resource-lists-button learn-more">Learn more</a>
+            <a href="https://app.steer.software/login?register=true" class="resource-lists-button sign-up">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Footer Begins                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <footer>
+      <div class="footer-div">
+        <div class="footer-col">
+          <div class="footer-col-heading">
+          </div>
+          <div class="footer-col-options">
+            <a href="#" class="footer-option"></a>
+            <a href="#" class="footer-option"></a>
+            <a href="#" class="footer-option"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            Contact Us
+          </div>
+          <div class="footer-col-options">
+            <a href="mailto:support@steer.software" class="footer-option">
+             Tech Support
+            </a>
+            <a href="mailto:contact@steer.software" class="footer-option">
+              General Inquiries
+            </a>
+            <a href="mailto:jobs@steer.software" class="footer-option">
+              Careers
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            About
+          </div>
+          <div class="footer-col-options">
+            <a href="#" class="footer-option soon-tooltip">
+              Team
+              <i class="ion-ios-moon coming-soon-moon"></i>
+              <div class="soon-tooltip-txt">
+                Coming soon!
+              </div>
+            </a>
+            <a href="#" class="footer-option soon-tooltip">
+              Customers
+              <i class="ion-ios-moon coming-soon-moon"></i>
+              <div class="soon-tooltip-txt">
+                Coming soon!
+              </div>
+            </a>
+            <a href="#" class="footer-option"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            Steer HQ
+          </div>
+          <div class="footer-col-options">
+            <div class="bottom-txt">
+              10th Floor,<br>
+              900 6th ave sw,<br>
+              Calgary, Alberta <br>
+              T2P 3K2
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col founder-cred">
+          <div class="footer-col-heading">
+            Website Design/Code
+          </div>
+          <div class="footer-col-options">
+            <div class="bottom-txt">
+              Ria Pacheco<br>
+              Founder & CEO @ Steer
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/path/to/viewport-trigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164071/Drift.min.js"></script>
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/blowup.js"></script>
+    <script>
+      function showVirtualNav() {
+        let x = document.getElementById('virtualMenu');
+        if (x.style.display === "block") {
+          x.style.display = "none"; 
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      function removeVirtualHam() {
+        let y = document.getElementById('virtualMenu');
+        let z = document.getElementById('virtualCloseIcon');
+        if (y.style.display === "block") {
+          z.classList = 'ion-md-close mobile-menu-icon';
+        } else {
+          z.classList = 'ion-ios-menu mobile-menu-icon';
+        }
+      }
+    </script>
+  </body>
+</html>
