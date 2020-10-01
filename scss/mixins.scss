@@ -239,6 +239,16 @@
   color: $steel-grey-medium;
   cursor: default;
 }
+@mixin detailed-para {
+  padding-left: 5px;
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: $steel-grey-medium;
+  cursor: default;
+}
 @mixin blue-btn {
   background-image: linear-gradient(to bottom right, $bondi-blue-light, $bondi-blue-darkest);
   box-shadow: $standard-shadow;
@@ -246,6 +256,8 @@
   box-sizing: border-box;
   color: $steel-grey-light;
   filter: brightness(.9);
+  white-space: nowrap;
+
   &:hover {
     filter: brightness(1.15);
   }
@@ -256,6 +268,8 @@
   border-radius: 6px;
   box-sizing: border-box;
   color: $steel-grey-light;
+  white-space: nowrap;
+
   &:hover {
     filter: brightness(1.15);
   }
@@ -266,9 +280,24 @@
   box-shadow: $standard-shadow;
   border-radius: 6px;
   box-sizing: border-box;
+  white-space: nowrap;
+
   &:hover {
     filter: brightness(1.15);
   }
+}
+
+@mixin outline-btn {
+  display: inline-block;
+  color: $bondi-blue-dark;
+  border: 2px solid $bondi-blue-darkest;
+  height: 55px;
+  line-height: 54px;
+  border-radius: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 /* ---------------------------- Responsive Sizing --------------------------- */
 
