@@ -70,6 +70,7 @@ body {
   Nav items: .active-nav-item
   Dropdown-item: .active-dropdown-item
 */
+
 .disabled {
   opacity: 0.3;
   pointer-events: none;
@@ -500,6 +501,38 @@ body {
     }
   }  
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               SECTION LAYOUTS                              */
+/* -------------------------------------------------------------------------- */
+.section-div {
+  min-width: 100%;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  .section-content {
+    .section-col {
+      .section-heading {
+        @include section-caps-heading;
+      }
+      .section-title {
+        @include section-title;
+      }
+      .section-para {
+        @include section-paragraph;
+      }
+
+      &.extra-metrics-col {
+        padding-top: 50px;
+      }
+    }
+  }
+}
+//section background midnight
+.midnight-gradient-bg {
+  background-image: linear-gradient(to top right, $pale-midnight, $midnight);
+}
+
 //* ------------------------------ CONTENT BELOW ----------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                                 Home > Hero                                */
@@ -1916,6 +1949,8 @@ body {
   padding-top: 200px;
   padding-bottom: 150px;
 
+
+
   @include respond-to(smartphones) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2040,6 +2075,10 @@ body {
   display: flex;
   flex-flow: column nowrap;
 
+  &.product-overview-metrics {
+    padding-bottom: 0px;
+  }
+
   .goals-focused-content {
     width: inherit;
     width: 100%;
@@ -2074,10 +2113,18 @@ body {
           @include section-paragraph;
 
           @include respond-to(notebooks) {
-            margin-bottom: 50px;
+            width: 500px;
+            margin-bottom: 30px;
           }
           @include respond-to(smartphones) {
-            margin-bottom: 50px;
+            
+            margin-bottom: 20px;
+          }
+
+          &.goals-product-overview {
+            @include respond-to(smartphones) {
+              margin-bottom: 0;
+            }
           }
         }
         @include respond-to(notebooks) {
@@ -2085,6 +2132,27 @@ body {
         }
         @include respond-to(smartphones) {
           width: 80%;
+        }
+        .goal-focused-btns {
+          width: 100%;
+          padding-top: 50px;
+          @include respond-to(notebooks) {
+            padding-top: 0;
+            margin-bottom: 80px;
+          }
+          .goal-focused-btn {
+            display: inline-block;
+            @include caps-heading;
+            @include outline-btn;
+          }
+          &:hover {
+            filter: brightness(1.15);
+          }
+          &.goals-btns-overview {
+            @include respond-to(smartphones) {
+              margin-bottom: 40px;
+            }
+          }
         }
       }
 
@@ -2103,6 +2171,8 @@ body {
   .metric-section {
     width: inherit;
     display: block;
+
+    padding-bottom: 100x;
     .metric-ribbon-section {
       display: block;
       width: 100%;
@@ -2282,7 +2352,24 @@ body {
     }
   }
 }
+.extra-metrics-section {
+  min-width: 100vw;
+  padding-bottom: 400px;
 
+  .extra-metrics-content {
+    .extra-metrics-col {
+      .extra-metrics-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      &.extra-metrics-animation {
+        filter: brightness(0.8);
+      }
+    }
+
+  }
+}
 /* --------------------------- Describe Milestones -------------------------- */
 .milestone-container {
   min-width: 100vw;
@@ -2430,6 +2517,13 @@ body {
           .project-stats-title {
             @include section-title;
             margin-bottom: 30px;
+
+            &.stats-title-product-over {
+              width: 600px;
+              @include respond-to(smartphones) {
+                width: 100%;
+              }
+            }
           }
           .project-stats-para {
             @include section-paragraph;
@@ -2442,6 +2536,18 @@ body {
             @include respond-to(smartphones) {
               width: 90%;
               margin-bottom: 40px;
+            }
+
+            &.stats-para-product-over {
+              width: 500px;
+              margin-bottom: 300px;
+              @include respond-to(notebooks) {
+                margin-bottom: 50px;
+              }
+              @include respond-to(smartphones) {
+                width: 100%;
+                margin-bottom: 40px;
+              }
             }
           }
         }
@@ -2483,9 +2589,12 @@ body {
         .cta-title {
           @include section-title;
           margin-bottom: 40px;
+          white-space: nowrap;
 
           @include respond-to(smartphones) {
             width: 80%;
+            font-size: 40px;
+            margin-bottom: 20px;
           }
         }
         .cta-para {
@@ -2843,11 +2952,13 @@ body {
   background-image: linear-gradient(to top right, $pale-midnight, $midnight);
 
   .secondary-nav-content {
-    width: 80%;
+    text-align: center;
+    width: 1200px;
     margin: auto;
+
     .secondary-nav-btns {
       width: inherit;
-      height: 130px; // adjust responsivity here
+      height: 170px; // adjust responsivity here
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
@@ -2855,14 +2966,15 @@ body {
       @include respond-to(smartphones) {
         height: 100%;
       }
-      &.one-row {
-        height: 100%;
-      }
       .secondary-nav-group {
-        width: inherit;
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        margin: auto;
+        &.one-row {
+          height: 100%;
+        }
 
         @include respond-to(smartphones) {
           flex-flow: column nowrap;
@@ -2889,6 +3001,18 @@ body {
           &:active {
             box-shadow: none;
             filter: brightness(0.6);
+          }
+        }
+        .placeholder-block {
+          display: inline-block;
+          width: 305px;
+          height: 50px;
+          padding-left: 30px;
+          @include respond-to(notebooks) {
+            display: none;
+          }
+          @include respond-to(smartphones) {
+            display: none;
           }
         }
       }
@@ -3044,6 +3168,12 @@ body {
             line-height: 30px;
             margin-bottom: 30px;
           }
+
+          &.product-overview-assignees {
+            @include respond-to(notebooks) {
+              margin-bottom: 50px;
+            }
+          }
         }
         .multiple-assignees-btns {
           width: 100%;
@@ -3061,6 +3191,12 @@ body {
             height: 50px;
             line-height: 50px;
             @include midnight-btn;
+          }
+
+          &.assignees-product-overview {
+            @include respond-to(notebooks) {
+              margin-bottom: 100px;
+            }
           }
         }
       }
@@ -3313,6 +3449,9 @@ body {
             color: $bondi-blue-dark;
             border-radius: 6px;
           }
+          &:hover {
+            filter: brightness(1.15);
+          }
         }
       }
     }
@@ -3445,9 +3584,9 @@ body {
         .virtual-team-title {
           @include section-title;
           width: 400px;
-          padding-bottom: 40px;
-          border-bottom: 3px solid $pale-midnight-medium;
-          margin-bottom: 30px;
+          padding-bottom: 30px;
+          border-bottom: 3px solid $pale-midnight-dark;
+          margin-bottom: 50px;
           @include respond-to(smartphones) {
             font-size: 42px;
             border-bottom: none;
@@ -3457,9 +3596,9 @@ body {
         }
         .virtual-team-para {
           @include section-paragraph;
-          width: 400px;
-          font-size: 28px;
-          line-height: 38px;
+          width: 300px;
+          font-size: 22px;
+          line-height: 32px;
           color: $steel-grey-dark;
 
           @include respond-to(notebooks) {
@@ -3493,10 +3632,14 @@ body {
   position: relative;
   padding-top: 250px;
   padding-bottom: 250px;
-  background-image: linear-gradient(to bottom right, $pale-midnight, $midnight);
+
+  &.midnight-bg {
+    background-image: linear-gradient(to bottom right, $pale-midnight, $midnight);
+  }
   .value-prop-content {
-    width: 80%;
     margin: auto;
+    margin-left: 40px;
+    margin-right: 40px;
     display: flex;
     align-items: flex-start;
     flex-flow: row nowrap;
@@ -3506,7 +3649,9 @@ body {
     }
     @include respond-to(smartphones) {
       flex-flow: column nowrap;
-      width: 100%;
+      width: 90%;
+      margin-left: 0px;
+      margin: auto;
     }
     .value-prop-col {
       display: flex;
@@ -3531,14 +3676,24 @@ body {
         color: $pale-midnight-medium;
       }
       .value-prop-title {
-        width: 290px;
+        width: 300px;
         @include section-title;
         font-size: 38px;
         line-height: 46px;
         margin-bottom: 20px;
         color: $steel-grey-dark;
+
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
         .emph-light {
           color: $steel-grey-light;
+        }
+        &.longer-title {
+          width: 350px;
+          @include respond-to(smartphones) {
+            width: 100%;
+          }
         }
 
       }
@@ -3549,8 +3704,19 @@ body {
         line-height: 30px;
         letter-spacing: 0.6px;
         @include respond-to(smartphones) {
-          width: 80%;
+          width: 100%;
 
+        }
+      }
+      .value-prop-link {
+        @include caps-heading;
+        color: $soot-grey-light;
+        margin: 5px;
+        margin-top: 40px;
+
+        @include respond-to(smartphones) {
+          margin-bottom: 50px;
+          width: 100%;
         }
       }
     }
@@ -3563,6 +3729,9 @@ body {
   position: relative;
   padding-top: 300px;
   padding-bottom: 300px;
+  &.product-overview {
+    padding-top: 200px;
+  }
   .pp-cards-content {
     width: 100%;
     margin: auto;
@@ -3614,6 +3783,35 @@ body {
           }
           @include respond-to(smartphones) {
             margin-bottom: 50px;
+          }
+
+          &.pp-product-overview {
+            @include respond-to(smartphones) {
+              margin-bottom: 0px;
+            }
+          }
+        }
+        .pp-cards-btns {
+          width: 100%;
+          padding-top: 40px;
+
+          @include respond-to(notebooks) {
+            padding-top: 0px;
+            margin-bottom: 60px;
+          }
+          .pp-cards-btn {
+            display:  inline-block;
+            @include caps-heading;
+            @include outline-btn;
+
+            &:hover {
+              filter: brightness(1.15);
+            }
+          }
+          &.pp-product-overview {
+            @include respond-to(smartphones) {
+              margin-bottom: 40px;
+            }
           }
         }
       }
@@ -3775,12 +3973,30 @@ body {
   .resource-lists-content {
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+
+    }
 
     .resource-lists-col {
       &.resource-lists-text {
-        margin-bottom: 100px;
+        width: 400px;
+        margin-left: 30px;
+        margin-right: 30px;
+        @include respond-to(notebooks) {
+          width: 650px;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
 
         .resource-lists-heading {
           @include section-caps-heading;
@@ -3815,20 +4031,18 @@ body {
             }
           }
         }
-      }
-      &.resource-lists-animation {
-        width: 1000px;
-
-        @include respond-to(notebooks) {
-          width: 100%;
-        }
-        @include respond-to(smartphones) {
-          width: 100%;
-        }
         .resource-lists-buttons {
           width: 100%;
           text-align: center;
           margin-top: 100px;
+          @include respond-to(notebooks) {
+            margin-top: 40px;
+            margin-bottom: 50px;
+          }
+          @include respond-to(smartphones) {
+            margin-top: 30px;
+            margin-bottom: 40px;
+          }
           .resource-lists-button {
             display: inline-block;
             text-align: center;
@@ -3843,6 +4057,385 @@ body {
             &.sign-up {
               @include midnight-btn;
               width: 140px;
+            }
+          }
+        }
+      }
+      &.resource-lists-animation {
+        width: 800px;
+
+        @include respond-to(notebooks) {
+          width: 100%;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* ------------------------------ Project Roles ----------------------------- */
+.project-roles-section {
+  .project-roles-content {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    @include respond-to(notebooks){
+      width: 100%;
+    }
+    @include respond-to(smartphones) {
+      width: 100%;
+    }
+    
+    .project-roles-col {
+      &.project-roles-text {
+        width: 550px;
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+        .project-roles-title {
+          margin-bottom: 30px;
+        }
+        .project-roles-para {
+          width: 100%;
+          margin-bottom: 80px;
+          @include respond-to(smartphones) {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+      }
+      &.project-roles-animation {
+        min-width: 100%;
+      }
+      &.project-roles-btns {
+        width: 100%;
+        text-align: center;
+        padding-top: 100px;
+        .project-roles-btn {
+          display: inline-block;
+          @include caps-heading;
+          @include midnight-btn;
+          height: 55px;
+          line-height: 55px;
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------ Action Items ------------------------------ */
+.action-items-section {
+  min-width: 100vw;
+  .action-items-content {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .action-item-col {
+      &.action-item-text {
+        width: 600px;
+        @include respond-to(notebooks) {
+          width: 600px;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+        .action-item-title {
+          margin-bottom: 30px;
+        }
+        .action-item-para {
+          margin-bottom: 30px;
+
+          @include respond-to(smartphones) {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+        .action-item-list {
+          margin-bottom: 80px;
+          ul > li {
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 300;
+            .icon {
+              color: $bondi-blue-dark;
+              padding-right: 10px;
+            }
+            @include respond-to(smartphones) {
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      .action-item-animation {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+/* -------------------------- Opportunity Statuses -------------------------- */
+.opportunity-status-section {
+  .opportunity-status-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+    }
+
+    .opportunity-status-col {
+      &.opportunity-status-text {
+        width: 700px;
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+
+        .opportunity-status-title {
+          margin-bottom: 40px;
+        }
+        .opportunity-status-para {
+          width: 500px;
+          margin-bottom: 50px;
+          @include respond-to(notebooks) {
+            margin-bottom: 30px;
+            width: 650px;
+          }
+          @include respond-to(smartphones) {
+            width: 100%;
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+        .opportunity-status-btn { 
+          @include caps-heading;
+          @include outline-btn;
+
+          @include respond-to(notebooks) {
+            margin-bottom: 40px;
+          }
+          @include respond-to(smartphones) {
+            margin-bottom: 40px;
+          }
+          &:hover {
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ----------------------------- Project Linking ---------------------------- */
+.project-linking-section {
+  .project-linking-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include respond-to(notebooks) {
+      flex-flow: column nowrap;
+    }
+    @include respond-to(smartphones) {
+      flex-flow: column nowrap;
+
+    }
+
+    .project-linking-col {
+
+      &.project-linking-text {
+        width: 400px;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
+
+        .project-linking-title {
+          margin-bottom: 40px;
+        }
+        .project-linking-para {
+          margin-bottom: 50px;
+          @include respond-to(smartphones) {
+            margin-bottom: 40px;
+          }
+        }
+        .project-linking-btns {
+          width: 100%;
+          @include respond-to(notebooks) {
+            margin-bottom: 80px;
+          }
+          .project-linking-btn {
+            display: inline-block;
+            @include caps-heading;
+            @include outline-btn;
+            margin-top: 50px;
+
+            &:hover {
+              filter: brightness(1.15);
+            }
+            &.project-btn-overview {
+              margin-top: 0px;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+      &.project-linking-animation {
+        width: 1000px;
+        @include respond-to(notebooks) {
+          width: 100%;
+        }
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Desktop App Page                              */
+/* -------------------------------------------------------------------------- */
+
+.desktop-app-page {
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 200px;
+  
+  @include respond-to(smartphones) {
+    padding-bottom: 50px;
+  }
+  .desktop-app-content {
+    width: inherit;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    
+
+    .desktop-col {
+      &.desktop-text {
+        margin: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 70px;
+        justify-content: center;
+
+        @include respond-to(notebooks) {
+          margin-bottom: 0px;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          text-align: left;
+          margin: auto;
+        }
+
+        .desktop-badge {
+          width: 100px;
+          filter: brightness(0.7);
+          margin-right: 40px;
+          @include respond-to(notebooks) {
+            margin-right: 20px;
+          }
+          @include respond-to(smartphones) {
+            margin-right: 0;
+            margin-bottom: 20px;
+
+          }
+        }
+        .desktop-title {
+          @include section-title;
+          color: $steel-grey-dark;
+          @include respond-to(smartphones) {
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 40px;
+          }
+        } 
+      }
+
+      &.desktop-media {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+        @include respond-to(notebooks) {
+          flex-flow: column-reverse nowrap;
+        }
+        @include respond-to(smartphones) {
+          flex-flow: column nowrap;
+        }
+
+        .hype-animation {
+          width: 800px;
+          @include respond-to(notebooks) {
+            width: 100%;
+          }
+          @include respond-to(smartphones) {
+            width: 100%;
+
+          }
+        }
+        .download-options {
+          width: 580px;
+          margin-top: 100px;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          margin-left: 50px;
+          @include respond-to(notebooks) {
+            margin-top: 50px;
+            margin-bottom: 80px;
+          }
+          @include respond-to(smartphones) {
+            margin-top: 40px;
+          }
+          .download-btn {
+            width: 295px;
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            height: 50px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: $midnight;
+            margin-bottom: 20px;
+
+            .download-btn-logo {
+              height: 18px;
+              margin: 10px;
+              padding-left: 10px;
+              padding-right: 10px;
+              opacity: 0.35;
+            }
+            .download-btn-text {
+              padding-top: 2px;
+              white-space: nowrap;
             }
           }
         }

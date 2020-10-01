@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" >
+    <link rel="icon" href="src/img/steer-logo-canary.svg">
+    <title>Steer | Team Management App</title>
+  </head>
+  <body>
+    
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Navigation Begins                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="navigation-section">
+      <div class="nav-content-group">
+        <div class="nav-content">
+          <div class="logo-container">
+            <a href="index.html">
+              <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=70 />
+            </a>
+          </div>
+          <div class="nav-items-group">
+            <div class="dropdown-structure-container">
+              <div class="nav-item active-nav-item">
+                  Product
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Steer
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../priority-management.html" class="dropdown-item active-dropdown-item">Overview</a>
+                      <a href="../pricing.html" class="dropdown-item">Pricing</a>
+                      <a href="../desktop-app.html" class="dropdown-item">Desktop App</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-structure-container">
+              <div class="nav-item">
+                  Solutions
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Manage
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
+                      <a href="../tasks-management.html" class="dropdown-item">Tasks</a>
+                      <a href="../virtual-teams.html" class="dropdown-item">Virtual Teams</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Learn
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="dropdown-item" target="_blank" download>Case Study</a>
+                      <a href="../videos.html" class="dropdown-item">Demo Videos</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/pricing.html" class="nav-item">Pricing</a>
+          </div>
+        </div>
+  
+        <div class="nav-cta-btns">
+          <a href="https://app.steer.software/login" class="cta-btn login-cta-btn" target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------- Mobile Navigation -------------------------- -->
+    <div class="mobile-nav-div">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo-container">
+          <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=60 />
+        </a>
+        <a onclick="revealProductNav();hideProductHam()" class="mobile-menu-btn">
+          <div id="productHam" class="ion-ios-menu mobile-menu-icon"></div>
+        </a>
+      </div>
+    </div>
+
+    <div id="productNav" class="mobile-menu-div steer-mobile-menu">
+      <div class="mobile-menu">
+        <div class="mobile-content">
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Product <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../priority-management.html" class="submenu-item">Overview</a>
+            <a href="/pricing.html" class="submenu-item">Pricing</a>
+            <a href="../desktop-app.html" class="submenu-item">Desktop App</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Manage <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../priority-management.html" class="submenu-item">Priorities</a>
+            <a href="../tasks-management.html" class="submenu-item">Tasks</a>
+            <a href="../virtual-teams.html" class="submenu-item">Virtual Teams</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Learn <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="submenu-item" download>Case Study</a>
+            <a href="../videos.html" class="submenu-item">Demo Videos</a>
+          </div>
+        </div>
+
+        <div class="mobile-cta-btns">
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <div class="mobile-user-notes">
+            Note: Steer's app is not yet mobile optimized
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------- Priority and Project Cards ---------------------- -->
+    <div class="pp-cards-section product-overview">
+      <div class="pp-cards-content">
+        <div class="pp-cards-col pp-cards-text">
+          <div class="pp-cards-heading">
+            Priority & Project Cards
+          </div>
+          <div class="pp-cards-title">
+            Avoid confusion with a simple<span class="blue"> two card structure</span>
+          </div>
+          <div class="pp-cards-para pp-product-overview">
+            <ul>
+              <li>
+                <i class="ion-md-checkmark icon"></i>Priorities focus the big picture
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>Projects get the results
+              </li>
+            </ul>
+          </div>
+          <div class="pp-cards-btns pp-product-overview">
+            <a class="pp-cards-btn" href="https://app.steer.software/login?register=true" target="_blank">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+        <div class="pp-cards-col pp-cards-animation">
+          <div id="cardstruct_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:230px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/card-struct/card-struct.hyperesources/cardstruct_hype_generated_script.js?73902"></script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ---------------------- Goals Focused Foundation ----------------------- -->
+    <div class="goals-focused-section product-overview-metrics">
+      <div class="goals-focused-content">
+        <div class="goals-focused-col goals-focused-text">
+          <div class="goals-focused-heading">Goal Metrics & Milestones</div>
+          <div class="goals-focused-title">
+            Define the <span class="blue">results</span>
+          </div>
+          <div class="goals-focused-para goals-product-overview">
+            Track metrics-based targets, or describe what success should look like 
+
+          </div>
+          <div class="goal-focused-btns goals-btns-overview">
+            <a class="goal-focused-btn" href="https://app.steer.software/login?register=true" target="_blank">Sign up</a>
+          </div>
+        </div>
+        <div class="goals-focused-col goals-focused-animation">
+          <div id="objmodal_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:370px;height:200px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/obj-modal/obj-modal.hyperesources/objmodal_hype_generated_script.js?35127"></script>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="section-div extra-metrics-section">
+      <div class="section-content extra-metrics-content">
+        <div class="section-col extra-metrics-col">
+          <div class="section-title extra-metrics-title" style="">
+            ... or <span class="blue">define the work</span>
+          </div>
+        </div>
+        <div class="extra-metrics-col extra-metrics-animation">
+          <div id="milestonestype_hype_container" class="HYPE_document metric-secondary" style="margin:auto;position:relative;width:370px;height:140px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/milestones-type/milestones-type.hyperesources/milestonestype_hype_generated_script.js?34886"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------- Project Roles ---------------------------- -->
+    <div class="section-div project-roles-section midnight-gradient-bg">
+      <div class="section-content project-roles-content">
+        <div class="section-col project-roles-col project-roles-text">
+          <div class="section-heading project-roles-heading">
+            Project-Specific Roles
+          </div>
+          <div class="section-title project-roles-title">
+            Keep team member roles clear <span class="blue">yet flexible</span>
+          </div>
+          <div class="section-para project-roles-para">
+            Assign role labels to team members that are specific to each project card, to avoid re-hashing and work overlaps
+          </div>
+        </div>
+        <div class="project-roles-col project-roles-animation">
+          <div id="projectroles_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:650px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/project-roles/project-roles.hyperesources/projectroles_hype_generated_script.js?1563"></script>
+          </div>
+        </div>
+
+        <div class="project-roles-col project-roles-btns">
+          <div class="project-roles-btn">
+            <a href="https://app.steer.software/login?register=true" target="_blank">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------- resource lists ---------------------------- -->
+    <div id="resource-lists" class="resource-lists-section">
+      <div class="resource-lists-content">
+        <div class="resource-lists-col resource-lists-text">
+          <div class="resource-lists-heading">
+            Project Resource Lists
+          </div>
+          <div class="resource-lists-title">
+            Stay <span class="blue">relentlessly organized</span>
+          </div>
+          <div class="resource-lists-para">
+            Empower your team with accessibility, by neatly packaging the resources they need:
+            <ul>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                In Projects, next to desired outcomes
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                Linked to action items for synced access
+              </li>
+            </ul>
+          </div>
+          <div class="resource-lists-buttons">
+            <a href="../tasks-management.html" class="resource-lists-button learn-more">Learn more</a>
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="resource-lists-button sign-up">Sign up</a>
+          </div>
+        </div>
+
+        <div class="resource-lists-col resource-lists-animation">
+          <div id="resourceslist_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:300px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/resources-list/resources-list.hyperesources/resourceslist_hype_generated_script.js?38546"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------ Opportunity Statuses ------------------------- -->
+    <div class="section-div opportunity-status-section midnight-gradient-bg">
+      <div class="section-content opportunity-status-content">
+        <div class="section-col opportunity-status-col opportunity-status-text">
+          <div class="section-heading opportunity-status-heading">
+            Opportunity Statuses
+          </div>
+          <div class="section-title opportunity-status-title">
+            Make <span class="blue">uncomfortable conversations</span> comfortable again
+          </div>
+          <div class="section-para opportunity-status-para">
+            Coach where projects stand with your team, using statuses that review if (and why) it's experiencing a barrier, a challenge, or an opportunity.
+          </div>
+          <div class="opportunity-status-btns">
+            <a href="https://app.steer.software/login?register=true" class="opportunity-status-btn" target="_blank">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+        <div class="section-col opportunity-status-col opportunity-status-animation">
+          <div id="oppstatus_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:460px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/opp-status/opp-status.hyperesources/oppstatus_hype_generated_script.js?16367"></script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ------------------------- multiple assignees -------------------------- -->
+    <div class="multiple-assignees-section">
+      <div class="multiple-assignees-content">
+        <div class="multiple-assignees-col multiple-assignees-text">
+          <div class="multiple-assignees-heading">
+            Multiple Assignees
+          </div>
+          <div class="multiple-assignees-title ">
+            Team up with <span class="blue">multi-user action items</span>
+          </div>
+          <div class="multiple-assignees-para product-overview-assignees">
+            Smooth out collaboration by assigning multiple workspace (and guest) team members to a single action item
+          </div>
+          <div class="multiple-assignees-btns assignees-product-overview">
+            <div class="multiple-assignees-btn">
+              <a href="https://app.steer.software/login?register=true" target="_blank">Try it today</a>
+            </div>
+          </div>
+        </div>
+        <div class="multiple-assignees-col multiple-assignees-animation">
+          <div id="assigneeslide_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:470px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/assignee-slide/assignee-slide.hyperesources/assigneeslide_hype_generated_script.js?74759"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------------ subtasks ------------------------------- -->
+    <div class="subtasks-section" >
+      <div class="subtasks-content">
+        <div class="subtasks-col subtasks-animation">
+          <div id="subtasks_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:300px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="/hype/subtasks/subtasks.hyperesources/subtasks_hype_generated_script.js?80092"></script>
+          </div>
+        </div>
+        
+        <div class="subtasks-col subtasks-text">
+          <div class="subtasks-heading">Subtasks</div>
+          <div class="subtasks-title">Break them into <span class="blue">subtasks</span></div>
+          <div class="subtasks-paragraph">
+            Cascade execution down to subtasks that can be assigned to users with their own due dates
+          </div>
+          <div class="subtasks-btns">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="subtasks-btn">
+              Sign up
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------- task inbox ------------------------------ -->
+    <div class="task-inbox-section" >
+      <div class="task-inbox-content">
+        <div class="task-inbox-col task-inbox-text">
+          <div class="task-inbox-heading">
+            Task Inbox
+          </div>
+          <div class="task-inbox-title">
+            Get to what's <span class="blue">important</span>
+          </div>
+          <div class="task-inbox-para">
+            View all workspace action items in one place and filter your view by priority, project, critical date, assignee, or status
+          </div>
+          <div class="task-inbox-btns">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="task-inbox-btn">
+              Try it free
+            </a>
+          </div>
+        </div>
+
+        <div class="task-inbox-col task-inbox-animation">
+          <div id="taskinboxanim_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:450px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/task-inbox-anim/task-inbox-anim.hyperesources/taskinboxanim_hype_generated_script.js?12548"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- --------------------------- Project Linking --------------------------- -->
+    <div class="section-div project-linking-section midnight-gradient-bg" >
+      <div class="section-content project-linking-content project-linking-overview">
+        <div class="section-col project-linking-col project-linking-text">
+          <div class="section-heading project-linking-heading">
+            Project Linking
+          </div>
+          <div class="section-title project-linking-title">
+            <span class="blue">Never re-shuffle</span> projects again 
+          </div>
+          <div class="section-para project-linking-para">
+            Link projects to other priorities so that they exist in other project card lists at the same time
+          </div>
+          <div class="project-linking-btns">
+            <a class="project-linking-btn project-btn-overview" href="https://app.steer.software/login?register=true" target="_blank">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+        <div class="project-linking-col project-linking-animation">
+          <div id="projectlinking_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:235px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/project-linking/project-linking.hyperesources/projectlinking_hype_generated_script.js?66179"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------- Project Stats ---------------------------- -->
+    <div class="project-stats-section">
+      <div class="project-stats-content">
+        <div class="project-stats-row project-stats-boiler">
+          <div class="project-stats-text stats-text-product-over">
+            <div class="project-stats-heading">
+              Project Stats
+            </div>
+            <div class="project-stats-title stats-title-product-over">
+              Review a dashboard that <span class="blue">finally makes sense</span>
+            </div>
+            <div class="project-stats-para stats-para-product-over">
+              Quickly compare the results of your high-level priorities to their project cards' progress, in a way that's finally useful
+            </div>
+          </div>
+        </div>
+        <div class="project-stats-row project-stats-animation">
+          <div id="projectdash_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:370px;height:310px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/project-dash/project-dash.hyperesources/projectdash_hype_generated_script.js?70728"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                   CTA                                   -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <div class="cta-col">
+          <div class="cta-text">
+            <div class="cta-heading"></div>
+            <div class="cta-title">
+              It's time to <span class="blue">level up</span>
+            </div>
+            <div class="cta-para">
+              You weren't made to manage spreadsheets.
+              You were born to lead your team.
+            </div>
+          </div>
+        </div>
+        <div class="cta-col">
+          <div class="cta-btn">
+            <a href="https://app.steer.software/login?register=true" target="_blank" class="pm-cta-btn">Sign Up Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Footer Begins                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <footer>
+      <div class="footer-div">
+        <div class="footer-col">
+          <div class="footer-col-heading">
+          </div>
+          <div class="footer-col-options">
+            <a href="#" class="footer-option"></a>
+            <a href="#" class="footer-option"></a>
+            <a href="#" class="footer-option"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            Contact Us
+          </div>
+          <div class="footer-col-options">
+            <a href="mailto:support@steer.software" class="footer-option">
+             Tech Support
+            </a>
+            <a href="mailto:contact@steer.software" class="footer-option">
+              General Inquiries
+            </a>
+            <a href="mailto:jobs@steer.software" class="footer-option">
+              Careers
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            About
+          </div>
+          <div class="footer-col-options">
+            <a href="#" class="footer-option soon-tooltip">
+              Team
+              <i class="ion-ios-moon coming-soon-moon"></i>
+              <div class="soon-tooltip-txt">
+                Coming soon!
+              </div>
+            </a>
+            <a href="#" class="footer-option soon-tooltip">
+              Customers
+              <i class="ion-ios-moon coming-soon-moon"></i>
+              <div class="soon-tooltip-txt">
+                Coming soon!
+              </div>
+            </a>
+            <a href="#" class="footer-option"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-heading">
+            Steer HQ
+          </div>
+          <div class="footer-col-options">
+            <div class="bottom-txt">
+              10th Floor,<br>
+              900 6th ave sw,<br>
+              Calgary, Alberta <br>
+              T2P 3K2
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col founder-cred">
+          <div class="footer-col-heading">
+            Website Design/Code
+          </div>
+          <div class="footer-col-options">
+            <div class="bottom-txt">
+              Ria Pacheco<br>
+              Founder & CEO @ Steer
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/path/to/viewport-trigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164071/Drift.min.js"></script>
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/blowup.js"></script>
+    <script>
+      function revealProductNav() {
+        let x = document.getElementById("productNav");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      function hideProductHam() {
+        let y = document.getElementById("productNav");
+        let z = document.getElementById("productHam");
+        if (y.style.display === "block") {
+          z.classList = 'ion-md-close mobile-menu-icon';
+        } else {
+          z.classList = 'ion-ios-menu mobile-menu-icon';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -31,7 +31,7 @@
           </div>
           <div class="nav-items-group">
             <div class="dropdown-structure-container">
-              <div class="nav-item active-nav-item">
+              <div class="nav-item">
                   Product
                 <i class="ion-ios-arrow-down dropdown-icon"></i>
               </div>
@@ -44,7 +44,7 @@
                     <div class="dropdown-section-items">
                       <a href="../priority-management.html" class="dropdown-item">Overview</a>
                       <a href="../pricing.html" class="dropdown-item">Pricing</a>
-                      <a href="#" class="dropdown-item disabled">Desktop App</a>
+                      <a href="#" class="dropdown-item">Desktop App</a>
                     </div>
                   </div>
                 </div>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="dropdown-structure-container">
-              <div class="nav-item">
+              <div class="nav-item active-nav-item">
                   Solutions
                 <i class="ion-ios-arrow-down dropdown-icon"></i>
               </div>
@@ -63,9 +63,9 @@
                       Manage
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
+                      <a href="../product-overview.html" class="dropdown-item">Priorities</a>
                       <a href="../tasks-management.html" class="dropdown-item">Tasks</a>
-                      <a href="#" class="dropdown-item disabled">Virtual Teams</a>
+                      <a href="../virtual-teams.html" class="dropdown-item active-dropdown-item">Virtual Teams</a>
                     </div>
                   </div>
 
@@ -113,9 +113,9 @@
             <div class="mobile-menu-item">
               Product <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
             </div>
-            <a href="../priority-management.html" class="submenu-item">Overview</a>
+            <a href="../product-overview.html" class="submenu-item">Overview</a>
             <a href="/pricing.html" class="submenu-item">Pricing</a>
-            <a href="#" class="submenu-item disabled">Desktop App</a>
+            <a href="../desktop-app.html" class="submenu-item">Desktop App</a>
           </div>
           <div class="mobile-sub-list">
             <div class="mobile-menu-item">
@@ -123,7 +123,7 @@
             </div>
             <a href="../priority-management.html" class="submenu-item">Priorities</a>
             <a href="../tasks-management.html" class="submenu-item">Tasks</a>
-            <a href="#" class="submenu-item disabled">Virtual Teams</a>
+            <a href="../virtual-teams.html" class="submenu-item">Virtual Teams</a>
           </div>
           <div class="mobile-sub-list">
             <div class="mobile-menu-item">
@@ -174,20 +174,25 @@
         <div class="value-prop-col">
           <i class="ion-ios-compass icon"></i>
           <div class="value-prop-title">
-            Improve Team <span class="white">Understanding</span>
+            Improve team <span class="white">Understanding</span>
           </div>
           <div class="value-prop-para">
             Describe what success looks like with milestones, or target it with a goal metric. Every project can over-clarify your expectations.
           </div>
+          <div class="value-prop-link">
+            <a class="value-prop-anchor" href="../product-overview.html">Learn More</a>
+          </div>
         </div>
-
         <div class="value-prop-col">
           <i class="ion-md-gift icon"></i>
-          <div class="value-prop-title">
-            Enable Extreme <span class="white">Convenience</span>
+          <div class="value-prop-title longer-title">
+            Get team members<br> <span class="white">Over-Prepared</span>
           </div>
           <div class="value-prop-para">
             Centralize every required resource alongside each project's desired outcomes, and enable collaboration with items that can live in multiple places at once.
+          </div>
+          <div class="value-prop-link">
+            <a class="value-prop-anchor" href="../product-overview.html">Learn More</a>
           </div>
         </div>
         <div class="value-prop-col">
@@ -196,7 +201,10 @@
             Encourage a <span class="white">Sense of Urgency</span>
           </div>
           <div class="value-prop-para">
-            Make accountability intuitive with dashboard summaries that weigh time, achieved progress, and budgets without thinking twice about it. 
+            Make accountability intuitive with dashboard summaries that weigh time, achieved progress, and budgets in a way that finally makes sense. 
+          </div>
+          <div class="value-prop-link">
+            <a class="value-prop-anchor" href="../product-overview.html">Learn More</a>
           </div>
         </div>
       </div>
@@ -208,10 +216,18 @@
     <div class="secondary-nav-section">
       <div class="secondary-nav-content">
         <div class="secondary-nav-btns">
-          <div class="secondary-nav-group">
+          <div class="secondary-nav-group one-row">
             <a href="#how-it-works" class="secondary-nav-btn">Priority & Project Cards</a>
             <a href="#goals-milestones" class="secondary-nav-btn">Metrics & Milestones</a>
+            <a href="#project-roles" class="secondary-nav-btn">Project-Specific Roles</a>
             <a href="#resource-lists" class="secondary-nav-btn">Project Resource Lists</a>
+          </div>
+
+          <div class="secondary-nav-group one-row">
+            <a href="#action-items" class="secondary-nav-btn">Action Items & Subtasks</a>
+            <a href="#opportunity-statuses" class="secondary-nav-btn">Opportunity Statuses</a>
+            <a href="#project-linking" class="secondary-nav-btn">Project Linking</a>
+            <div class="placeholder-block"></div>
           </div>
         </div>
       </div>
@@ -274,8 +290,31 @@
         </div>
       </div>
     </div>
+
+    <!-- ---------------------------- Project Roles ---------------------------- -->
+    <div class="section-div project-roles-section " id="project-roles">
+      <div class="section-content project-roles-content">
+        <div class="section-col project-roles-col project-roles-text">
+          <div class="section-heading project-roles-heading">
+            Project-Specific Roles
+          </div>
+          <div class="section-title project-roles-title">
+            Keep team member roles clear and <span class="blue">always flexible</span>
+          </div>
+          <div class="section-para project-roles-para">
+            Assign role labels to team members that are specific to each project card, to avoid re-hashing and work overlaps
+          </div>
+        </div>
+        <div class="project-roles-col project-roles-animation">
+          <div id="projectroles_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:650px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/project-roles/project-roles.hyperesources/projectroles_hype_generated_script.js?1563"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- --------------------------- resource lists ---------------------------- -->
-    <div id="resource-lists" class="resource-lists-section">
+    <div id="resource-lists" class="resource-lists-section midnight-gradient-bg">
       <div class="resource-lists-content">
         <div class="resource-lists-col resource-lists-text">
           <div class="resource-lists-heading">
@@ -297,19 +336,107 @@
               </li>
             </ul>
           </div>
-        </div>
-
-        <div class="resource-lists-col resource-lists-animation">
-          <div id="resourcesanime_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:250px;overflow:hidden;">
-            <script type="text/javascript" charset="utf-8" src="hype/resources-anime/resources-anime.hyperesources/resourcesanime_hype_generated_script.js?66108"></script>
-          </div>
           <div class="resource-lists-buttons">
             <a href="../tasks-management.html" class="resource-lists-button learn-more">Learn more</a>
             <a href="https://app.steer.software/login?register=true" class="resource-lists-button sign-up">Sign up</a>
           </div>
         </div>
+
+        <div class="resource-lists-col resource-lists-animation">
+          <div id="resourceslist_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:300px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/resources-list/resources-list.hyperesources/resourceslist_hype_generated_script.js?38546"></script>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- ---------------------------- Action Items ----------------------------- -->
+    <div class="section-div action-items-section " id="action-items">
+      <div class="section-content action-items-content">
+        <div class="section-col action-item-col action-item-text">
+          <div class="section-heading action-item-heading">
+            Action Items & Subtasks
+          </div>
+          <div class="section-title action-item-title">
+            Get things <span class="blue">done</span>
+          </div>
+          <div class="section-para action-item-para">
+            Streamline collaboration by assigning multiple workspace (and guest) team members to a single action item
+          </div>
+          <div class="action-item-list">
+            <ul>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                Break into subtasks
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                Estimate and log hours
+              </li>
+              <li>
+                <i class="ion-md-checkmark icon"></i>
+                Add to multiple places at once
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="action-item-col action-item-animation">
+        <div id="assigneeslide_hype_container" class="HYPE_document" style="margin:auto;position:relative;overflow:hidden;">
+          <script type="text/javascript" charset="utf-8" src="hype/assignee-slide/assignee-slide.hyperesources/assigneeslide_hype_generated_script.js?74759"></script>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------ Opportunity Statuses ------------------------- -->
+    <div class="section-div opportunity-status-section midnight-gradient-bg" id="opportunity-statuses">
+      <div class="section-content opportunity-status-content">
+        <div class="section-col opportunity-status-col opportunity-status-text">
+          <div class="section-heading opportunity-status-heading">
+            Opportunity Statuses
+          </div>
+          <div class="section-title opportunity-status-title">
+            Make <span class="blue">uncomfortable conversations</span> comfortable again
+          </div>
+          <div class="section-para opportunity-status-para">
+            Coach where projects stand with your team, using statuses that review if (and why) it's experiencing a barrier, a challenge, or an opportunity.
+          </div>
+          <div class="opportunity-status-btns">
+            <a href="https://app.steer.software/login?register=true" class="opportunity-status-btn" target="_blank">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+        <div class="section-col opportunity-status-col opportunity-status-animation">
+          <div id="oppstatus_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:460px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/opp-status/opp-status.hyperesources/oppstatus_hype_generated_script.js?16367"></script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- --------------------------- Project Linking --------------------------- -->
+    <div class="section-div project-linking-section" id="project-linking">
+      <div class="section-content project-linking-content">
+        <div class="section-col project-linking-col project-linking-text">
+          <div class="section-heading project-linking-heading">
+            Project Linking
+          </div>
+          <div class="section-title project-linking-title">
+            <span class="blue">Never re-shuffle</span> projects again 
+          </div>
+          <div class="section-para project-linking-para">
+            Link projects to other priorities so that they exist in other project card lists at the same time.
+          </div>
+        </div>
+
+        <div class="project-linking-col project-linking-animation">
+          <div id="projectlinking_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:360px;height:235px;overflow:hidden;">
+            <script type="text/javascript" charset="utf-8" src="hype/project-linking/project-linking.hyperesources/projectlinking_hype_generated_script.js?66179"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 
