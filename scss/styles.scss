@@ -4453,11 +4453,12 @@ body {
 .sausage-div {
   @include smooth-text;
   &.first-div {
-    padding-top: 200px;
+    padding-top: 160px;
   }
   .sausage-content {
     .sausage-col {
       &.sausage-text {
+        @include smooth-text;
         width: 1000px;
         margin: auto;
         .sausage-title {
@@ -4470,15 +4471,16 @@ body {
           flex-flow: row nowrap;
           align-items: flex-start;
           justify-content: flex-start;
-          margin-bottom: 80px;
+          margin-bottom: 30px;
 
           .double-sausage-para {
+            @include smooth-text;
             display: inline-block;
             font-size: 19px;
             line-height: 29px;
             font-weight: 300;
-            letter-spacing: 0.6px;
-            width: 380px;
+            letter-spacing: 0.7px;
+            width: 500px;
             margin-right: 40px;
 
             .icon {
@@ -4511,8 +4513,8 @@ body {
           display: inline-block;
           @include caps-heading;
           @include outline-btn;
-          margin-left: 20px;
-          margin-right: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
 
           &:hover {
             filter: brightness(1.15);
