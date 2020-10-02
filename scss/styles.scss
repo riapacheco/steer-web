@@ -4447,9 +4447,6 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                              home-page-sausage                             */
 /* -------------------------------------------------------------------------- */
-.top-logo-container {
-  margin: 80px;
-}
 .sausage-div {
   @include smooth-text;
   &.first-div {
@@ -4461,8 +4458,22 @@ body {
         @include smooth-text;
         width: 1000px;
         margin: auto;
+        @include respond-to(notebooks) {
+          width: 90%;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
         .sausage-title {
           margin-bottom: 40px;
+
+          @include respond-to(notebooks) {
+            width: 500px;
+          }
+          @include respond-to(smartphones) {
+            font-size: 40px;
+            line-height: 50px;
+          }
         }
 
         .double-sausage-paragraphs {
@@ -4473,6 +4484,15 @@ body {
           justify-content: flex-start;
           margin-bottom: 30px;
 
+          @include respond-to(notebooks) {
+            flex-flow: column nowrap;
+            margin-bottom: 50px;
+          }
+          @include respond-to(smartphones) {
+            flex-flow: column nowrap;
+            margin-bottom: 40px;
+          }
+
           .double-sausage-para {
             @include smooth-text;
             display: inline-block;
@@ -4482,6 +4502,23 @@ body {
             letter-spacing: 0.7px;
             width: 500px;
             margin-right: 40px;
+
+            @include respond-to(notebooks) {
+              margin-bottom: 30px;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
+
+            @include respond-to(smartphones) {
+              font-size: 17px;
+              line-height: 27px;
+              margin-bottom: 30px;
+              width: 100%;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
 
             .icon {
               color: $bondi-blue-dark;
@@ -4495,6 +4532,12 @@ body {
               margin-right: 0;
             }
 
+            ul {
+              li {
+                white-space: nowrap;
+              }
+            }
+
           }
         }
       }
@@ -4505,16 +4548,41 @@ body {
           width: 800px;
           margin: auto;
           margin-bottom: 80px;
+
+          @include respond-to(smartphones) {
+            width: 100%;
+          }
+        }
+
+        @include respond-to(smartphones) {
+          width: 100%;
         }
       }
       &.sausage-btns {
-        text-align: center;
+        width:1000px;
+        margin: auto;
+
+        @include respond-to(notebooks) {
+          width: 90%;
+        }
+        @include respond-to(smartphones) {
+          width: 90%;
+        }
         .sausage-btn {
+          text-align: center;
           display: inline-block;
           @include caps-heading;
           @include outline-btn;
           margin-left: 10px;
           margin-right: 10px;
+
+          @include respond-to(smartphones) {
+            margin-bottom: 30px;
+
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
 
           &:hover {
             filter: brightness(1.15);
