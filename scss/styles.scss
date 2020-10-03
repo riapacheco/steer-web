@@ -4489,8 +4489,8 @@ body {
             margin-bottom: 50px;
           }
           @include respond-to(smartphones) {
-            flex-flow: column nowrap;
             margin-bottom: 40px;
+            flex-flow: column nowrap !important;
           }
 
           .double-sausage-para {
