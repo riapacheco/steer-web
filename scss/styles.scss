@@ -4445,170 +4445,127 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                              home-page-sausage                             */
+/*                             Full Overview Page                             */
 /* -------------------------------------------------------------------------- */
-.sausage-div {
-  @include smooth-text;
-  &.first-div {
-    padding-top: 160px;
-  }
-  .sausage-content {
-    .sausage-col {
-      &.sausage-text {
-        @include smooth-text;
-        width: 1000px;
+
+$section-text-width: 900px; //makes so the remainer is section-col-para width
+$section-col-list: 500px;
+
+.full-overview-div {
+  width: 100%;
+  .full-overview-content {
+    width: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    .full-overview-col {
+      &.full-overview-text {
+        width: $section-text-width;
         margin: auto;
-        @include respond-to(notebooks) {
-          width: 90%;
-        }
+
         @include respond-to(smartphones) {
           width: 90%;
         }
-        .sausage-title {
-          margin-bottom: 40px;
-
-          @include respond-to(notebooks) {
-            width: 500px;
-          }
-          @include respond-to(smartphones) {
-            font-size: 40px;
-            line-height: 50px;
-          }
+        .full-overview-title {
+          padding-bottom: 30px;
         }
-
-        .double-sausage-paragraphs {
+        .full-overview-paras {
+          @include smooth-text;
           width: inherit;
           display: flex;
           flex-flow: row nowrap;
           align-items: flex-start;
-          justify-content: flex-start;
-          margin-bottom: 30px;
+          justify-content: space-between;
+          margin-bottom: 40px;
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 300;
+          letter-spacing: 0.4px;
 
-          @include respond-to(notebooks) {
-            flex-flow: column nowrap;
-            margin-bottom: 50px;
-          }
           @include respond-to(smartphones) {
-            margin-bottom: 40px;
-            flex-flow: column nowrap !important;
+            flex-flow: column nowrap;
+            font-size: 19px;
           }
 
-          .double-sausage-para {
-            @include smooth-text;
-            display: inline-block;
-            font-size: 19px;
-            line-height: 29px;
-            font-weight: 300;
-            letter-spacing: 0.7px;
-            width: 500px;
-            margin-right: 40px;
-
-            @include respond-to(notebooks) {
-              margin-bottom: 30px;
-              &:last-child {
-                margin-bottom: 0px;
-              }
-            }
+          .full-overview-para {
+            width: $section-text-width - $section-col-list;
+            margin-right: 30px;
 
             @include respond-to(smartphones) {
-              font-size: 17px;
-              line-height: 27px;
-              margin-bottom: 30px;
+              margin-bottom: 20px;
               width: 100%;
-              &:last-child {
-                margin-bottom: 0px;
-              }
             }
-
-            .icon {
-              color: $bondi-blue-dark;
-              width: 20px;
-              height: 20px;
-              display: inline-block;
-              margin-right:5px;
-            }
-
-            .bullet-icon {
-              color: $bondi-blue-dark;
-              font-size: 18px;
-              line-height: 28px;
-              width: 20px;
-              height: 20px;
-              display: inline-block;
-              margin-right:5px;
-              opacity: 0.6;
-            }
-
             &:last-child {
-              margin-right: 0;
+              margin-right: 0px;
             }
+            &.full-overview-list {
+              width: $section-col-list;
 
-            ul {
-              li {
-                white-space: nowrap;
+              .icon {
+                color: $bondi-blue-dark;
+                height: 20px;
+                width: 20px;
+                margin-right: 5px;
+
+                @include respond-to(smartphones) {
+                  margin-right: 2px;
+                }
               }
             }
-
           }
         }
       }
-      &.sausage-animation {
-        margin-bottom: 100px;
-
-        &.system-growth {
-          width: 800px;
-          margin: auto;
-          margin-bottom: 80px;
-
-          @include respond-to(smartphones) {
-            width: 100%;
-          }
-        }
-
+      &.full-overview-animation {
+        padding-bottom: 20px;
         @include respond-to(smartphones) {
-          width: 100%;
+          padding-bottom: 50px;
         }
       }
-      &.sausage-btns {
-        width:1000px;
+      &.full-overview-btns {
+        width: $section-text-width;
         margin: auto;
+        height: 55px;
+        align-items: center;
 
-        @include respond-to(notebooks) {
-          width: 90%;
-        }
         @include respond-to(smartphones) {
           width: 90%;
         }
-        .sausage-btn {
-          text-align: center;
+
+        .full-overview-btn {
           display: inline-block;
           @include caps-heading;
           @include outline-btn;
-          margin-left: 10px;
-          margin-right: 10px;
-
-          @include respond-to(smartphones) {
-            margin-bottom: 30px;
-
-            &:last-child {
-              margin-bottom: 0px;
-            }
+          box-sizing: border-box;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0px;
           }
-
-          &:hover {
-            filter: brightness(1.15);
-          }
-          &.sausage-btn-signup {
+          &.sign-up {
             @include midnight-btn;
             border: none;
-            height: 57px;
-            line-height: 58px;
+            box-sizing: border-box;
+          }
+          &.learn-more {}
+          &:hover {
+            transform: 200ms;
+            filter: brightness(1.15);
+            cursor: pointer;
+          }
+
+          @include respond-to(smartphones) {
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
-
       }
     }
-  } 
+  }
+  &.first-overview-div {
+    padding-top: 180px; 
+  }
 }
 
 
