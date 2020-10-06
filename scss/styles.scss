@@ -4511,6 +4511,10 @@ $section-col-list: 500px;
                 @include respond-to(smartphones) {
                   margin-right: 2px;
                 }
+
+                &.plus-icon {
+                  opacity: 0.7;
+                }
               }
             }
           }
