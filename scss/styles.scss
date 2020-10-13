@@ -49,6 +49,7 @@ body {
   padding: none;
   outline: 0;
   overflow-x: hidden;
+  font-size: 16px;
 }
 #element
 {
@@ -4625,89 +4626,95 @@ $section-col-list: 500px;
 /* -------------------------------------------------------------------------- */
 /*                                  Tutorial                                  */
 /* -------------------------------------------------------------------------- */
-
-.full-page-flex {
+.tutorial-page-container {
   @include smooth-text;
+  height: 100vh;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
-  margin-top: 200px;
+  overflow-y: scroll;
+  width: 85%;
+  margin: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+  }
 
-  .progress-steps-sticky-div {
-    display: inline-block;
-    position: fixed;
-    min-height: 50vh;
 
+  .sticky-chapter-div {
+    padding-top: 200px;
+    margin: 30px;
+    flex: 0 1 240px;
+    position: sticky;
+    top: 0;
+    left: 0;
 
-    .progress-steps-content {
-      .list-title {
-        margin-left: 50px;
-        margin-bottom: 50px;
+    .sticky-chapter-content {
+      position: relative;
+      .progress-line-ab {
+        position: absolute;
+        border-right: 2px solid $midnight;
+        display: inline-block;
+        height: 98%;
+        margin-top: 1%;
+        padding-right: 5px;
       }
-      .progress-steps-list {
-        ul {
-          position: relative;
-          margin-left: 400px;
+      .sticky-chapter-items {
 
-          .progress-line {
-            height: 94%;
-            border-right: 2px solid $midnight;
-            position: absolute;
-            padding-right: 5px;
-            margin-top: 12px;
-            opacity: 0.5;
-          }
-        }
-        ul > .tutorial-list-item {
-          height: 20px;
-          margin-bottom: 40px;
-          &:hover {
-            filter: brightness(1.3);
-          }
-          &:last-child {
-            margin-bottom: 0px;
-          }
-          .icon {
-            font-size: 14px;
-            width: 14px;
-            height: 14px;
-            color: $midnight;
-            z-index: 1;
-            position: absolute;
-            margin-top: 5px;
-          }
-          .label {
-            font-size: 16px;
-            font-weight: 400;
-            padding: 10px;
+        .sticky-unordered-list {
+
+          .sticky-list-item {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            height: 16px;
+            margin-bottom: 30px;
             color: $steel-grey-dark;
-            margin-left: 15px;
-            letter-spacing: 0.4px;
-            cursor: pointer;
-          }
 
-          &.active {
-            .icon {
-              color: $bondi-blue-dark;
+
+
+            .list-item-ball {
+              display: inline-block;
+              width: 12px;
+              height: 12px;
+              background-color: $midnight;
+              border-radius: 50%; 
+              position: absolute;
             }
-            .label {
+            .list-item-label {
+              font-size: 16px;
+              line-height: 16px;
+              letter-spacing: 0.5px;
+              margin-left: 20px;
+              cursor: pointer;
+            }
+
+            &.active {
               color: $steel-grey-light;
+
+              .list-item-ball {
+                background-color: $bondi-blue-darkest;
+              }
             }
           }
         }
       }
     }
   }
-  .tutorial-content-div {
-    margin-left: 700px;
-    display: inline-block;
-    height: 200vh;
+  .scroll-content-div {
+    margin-top: 150px;
     width: 100%;
-    .tutorial-content-content {
-      .tutorial-section-row {
-        .tutorial-section-title {
-          @include section-title;
-        }
+    .scroll-content-section {
+      margin-bottom: 700px;
+      .scroll-content-title {
+        @include body-title;
+      }
+      .scroll-content-body {
+        @include body-para;
       }
     }
   }
