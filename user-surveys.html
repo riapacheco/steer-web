@@ -76,13 +76,25 @@
     <div class="user-surveys-superdiv">
       <div class="user-surveys-content">
         <h1 style="text-align: center;">Prioritize our Feature Roadmap</h1>
+        <p>
+          All submission are anonymous
+        </p>
         <br>
         <br>
 
+
+        <form class="roadmap-form" name="roadmap_survey" method="POST" netlify>
         <div class="form-title">
           <h3>Rate each potential feature</h3>
         </div>
-        <form class="roadmap-form" name="roadmap_survey" method="POST" netlify>
+          <div class="add-name-div">
+            <span class="name-input-label">Name:</span>
+            <div class="input-source">
+              <input type="text" name="submitter" placeholder="Optional">
+            </div>
+          </div>
+
+          
           <table>
             <!-- Option category labels (matrix style) -->
             <tr>
@@ -291,8 +303,22 @@
           </table>
           <div class="button-div">
             <button class="submit-btn" name="roadmap_survey" type="submit">Submit Responses</button>
-          </div>
+          </div>       
         </form>
+
+        <div class="comment-form">
+          <div class="form-title">
+            <h3>General comments</h3>
+          </div>
+
+          <form class="general-comments" name="general_comments" method="POST" netlify>
+            <label for="comment-box"></label>
+            <input class="textarea-field-box" type="textarea" name="comment-box" placeholder="Submit your comments and ideas">
+            <div class="button-div">
+              <button class="submit-btn" name="general_comments" type="submit">Submit Comments</button>
+            </div>
+          </form>
+        </div>
 
 
       </div>
