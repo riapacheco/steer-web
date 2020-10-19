@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/a9fc908185.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" >
+    <link rel="icon" href="src/img/steer-logo-canary.svg">
+    <title>Steer | Team Management App</title>
+  </head>
+  <body>
+    
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Navigation Begins                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="navigation-section">
+      <div class="nav-content-group">
+        <div class="nav-content">
+          <div class="logo-container">
+            <a href="index.html">
+              <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=70 />
+            </a>
+          </div>
+          <div class="nav-items-group">
+            <div class="dropdown-structure-container">
+              <div class="nav-item active-nav-item">
+                  Product
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Steer
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../product-overview.html" class="dropdown-item">Overview</a>
+                      <a href="../pricing.html" class="dropdown-item">Pricing</a>
+                      <a href="../desktop-app.html" class="dropdown-item">Desktop App</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-structure-container">
+              <div class="nav-item">
+                  Solutions
+                <i class="ion-ios-arrow-down dropdown-icon"></i>
+              </div>
+              <div class="dropdown-div">
+                <div class="dropdown-menu">
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Manage
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
+                      <a href="../tasks-management.html" class="dropdown-item">Tasks</a>
+                      <a href="../virtual-teams.html" class="dropdown-item">Virtual Teams</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-section">
+                    <div class="dropdown-section-heading">
+                      Learn
+                    </div>
+                    <div class="dropdown-section-items">
+                      <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="dropdown-item" target="_blank" download>Case Study</a>
+                      <a href="../videos.html" class="dropdown-item">Demo Videos</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/pricing.html" class="nav-item">Pricing</a>
+          </div>
+        </div>
+  
+        <div class="nav-cta-btns">
+          <div class="social-links-div nav-cta-btns-block">
+            <a href="https://www.twitter.com/SteerSoft" class="social-btn" target="_blank">
+              <i class="fa fa-twitter icon"></i>
+            </a>
+            <a href="https://www.facebook.com/steer.software" class="social-btn" target="_blank">
+              <i class="fa fa-facebook icon"></i>
+            </a>
+          </div>
+          <a href="https://app.steer.software/login" class="nav-cta-btns-block cta-btn login-cta-btn " target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="nav-cta-btns-block cta-btn signup-cta-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------- Mobile Navigation -------------------------- -->
+    <div class="mobile-nav-div">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo-container">
+          <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=60 />
+        </a>
+        <a onclick="showMobileNav();removeHam()" class="mobile-menu-btn">
+          <div id="mobileIcon" class="ion-ios-menu mobile-menu-icon"></div>
+        </a>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu-div steer-mobile-menu">
+      <div class="mobile-menu">
+        <div class="mobile-content">
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Product <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../product-overview.html" class="submenu-item">Overview</a>
+            <a href="/pricing.html" class="submenu-item">Pricing</a>
+            <a href="../desktop-app.html" class="submenu-item">Desktop App</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Manage <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="../priority-management.html" class="submenu-item">Priorities</a>
+            <a href="../tasks-management.html" class="submenu-item">Tasks</a>
+            <a href="../virtual-teams.html" class="submenu-item">Virtual Teams</a>
+          </div>
+          <div class="mobile-sub-list">
+            <div class="mobile-menu-item">
+              Learn <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
+            </div>
+            <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="submenu-item" download>Case Study</a>
+            <a href="../videos.html" class="submenu-item">Demo Videos</a>
+          </div>
+        </div>
+
+        <div class="mobile-cta-btns">
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
+            <div class="btn-label">Sign Up</div>
+          </a>
+          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
+            <div class="btn-label">Login</div>
+          </a>
+          <div class="mobile-user-notes">
+            Note: Steer's app is not yet mobile optimized
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                  Body                                   -->
+    <!-- ----------------------------------------------------------------------- -->
+
+
+    <div class="tutorial-page-container">
+      <div class="sticky-chapter-div">
+        <div class="sticky-chapter-content">
+          <div class="progress-line-ab"></div>
+          <div class="sticky-chapter-items">
+            <ul class="sticky-unordered-list">
+              <li id="selectOne" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionOne" class="list-item-label">
+                  Getting Started
+                </a>
+              </li>
+              <li id="selectTwo"  class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionTwo" class="list-item-label">
+                  Workspace Users
+                </a>
+              </li>
+              <li id="selectThree" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionThree" class="list-item-label">
+                  Creating Cards
+                </a>
+              </li>
+              <li id="selectFour" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionFour" class="list-item-label">
+                  Priority Setup
+                </a>
+              </li>
+              <li id="selectFive" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionFive" href="#sectionFive" class="list-item-label">
+                  Project Setup
+                </a>
+              </li>
+              <li id="selectSix" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionSix" href="#sectionFive" class="list-item-label">
+                  Guests Projects
+                </a>
+              </li>
+              <li id="selectSeven" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <a href="#sectionSeven" href="#sectionFive" class="list-item-label">
+                  Other Fun Stuff!
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-content-div">
+
+
+        <div class="scroll-content-section" id="sectionOne">
+          <h1>Getting Started</h1>
+          <div class="scroll-columns-body body-bottom-80">
+            <div class="block-div with-text with-left-spacing margin-bottom-50 width-900">
+              <h2>Introduction</h2>
+              <p>
+                Steer is a tool for business and team management. It simplifies work by making business goals (at all levels) easier to understand and thus easier to achieve. This allows you to focus your time on results and pull your team away from distraction. You can build goals at a high "priority management" level for a full top-down approach, or you can choose to include goals at the project level to practically manage your commitments, costs, and time.
+              </p>
+            </div>
+            <div class="block-div margin-bottom-50">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/populated-priority-card_RowITVKog.png" 
+                    width=70%
+                    style="border-radius: 6px;
+                          box-shadow: 5px 5px 16px #00000070;
+                    ">
+            </div>
+            <div class="block-div with-text with-left-spacing margin-bottom-50 width-900">
+              <p>
+                Use Steer for handling those big business unknowns, for getting clarity for your remote team, and to handle the messy changes that comes with "being in this industry". If it's a challenge, Steer was built to overcome it.
+              </p>
+            </div>
+          </div>
+          <div id="settings-menu" class="scroll-rows-body align-items-center body-bottom-80">
+            <div class="block-div with-text with-left-spacing margin-bottom-50 width-900">
+              <h2>Settings Menu</h2>
+              <p>
+                After you register your account and access the workspace, you'll immediately be given the option to follow a step-by-step tour of the product. 
+              </p>
+              <p>
+                If you'd like to complete this tour later, you can access it by clicking your account photo or username in the bottom left corner, and selecting the <span class="blue">Quick Tutorial</span> option in your <span class="blue">settings menu</span>.
+              </p>
+            </div>
+            <div class="block-div margin-bottom-50">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/settings-menu_0zKziqOgr.png"
+                    style="opacity:0.8;
+                          width: 200px;">
+            </div>
+          </div>
+          <div class="scroll-columns-body">
+            <div class="block-div with-text with-left-spacing width-750 margin-bottom-50">
+              <h2>Workspace & Account Profile</h2>
+              <p>
+                To change the title that appears at the top left of your workspace screen, select <span class="blue">Profile</span> from that same settings menu and apply this change to the <span class="blue">Workspace Name</span> field. 
+              </p>
+            </div>
+            <div class="block-div">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/MyProfile-Dialog_pcNON6XSC.png"
+                    width=500
+                    style="border-radius: 6px;
+                            box-shadow: 6px 6px 12px #00000060;">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="scroll-content-section" id="sectionTwo">
+          <h1>Workspace Users</h1>
+          <div class="scroll-columns-body margin-bottom-50 with-text with-left-spacing">
+            <div class="block-div with-text with-left-spacing width-750 margin-bottom-20">
+              <h2>Navigate to User Settings</h2>
+              <p>
+                To add and manage your workspace team members, navigate to your <span id="settingsMenuPopover" class="blue" style="text-decoration: underline; cursor: help;">settings menu</span> and select <span class="blue">Users</span>
+              </p>
+            </div>
+            <div class="block-div with-left-spacing margin-bottom-80">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/User_Settings_Page_lCOMgrO6Z.png"
+                    width=800
+                    style=" border-radius: 6px;
+                            box-shadow: 6px 6px 12px #00000060;"
+                    >
+            </div>
+            <div class="block-div with-text with-left-spacing width-750 margin-bottom-20">
+              <h2>Add New Users</h2>
+              <p>
+                In the top-right corner, press the <span class="blue">Add New</span> button. An <span class="blue">Add New User</span> dialog will appear. All you need to add is their email, but you can also add their full name and professional title. 
+              </p>
+            </div>
+            <div class="block-div with-left-spacing margin-bottom-50">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-150/add-user-window-guests_C5nDMU6dj.png"
+                    width=600
+                    style=" border-radius: 6px;
+                    box-shadow: 6px 6px 12px #00000060;"
+                    >
+            </div>
+            <div class="block-div with-text with-left-spacing width-750 margin-bottom-80">
+              <h3>Guest Access</h3>
+              <p>
+                To make this a <strong class="blue">Guest User</strong>, switch the <span class="blue">Enable Guest Access to Select Projects</span> toggle to the <i>ON</i> position. A new field will appear directly under it. Begin typing the name of the project card you wish to give this user access to, and select it from the dropdown menu. 
+              </p>
+              <div class="special-info-box">
+                <div class="ion-ios-information-circle-outline icon"></div>
+                <p>
+                  Guest users gain access to as many project cards as you allow them to, and will never have access to your priority cards <i>unless</i> you make them a workspace user. To make a guest user into a workspace user, simply switch this same toggle to the <i>OFF</i> position.
+
+                  <br><br>
+
+                  Learn more about Guest Projects, and other ways to grant access to them, in the <i>Guest Projects</i> section.
+                </p>
+              </div>
+            </div>
+            
+            <div class="block-div with-text with-left-spacing margin-bottom-50 width-750">
+              <h2>Archive Users</h2>
+              <p>
+                To archive a user, select their name from the <span class="blue">User List</span> from the main <span class="blue">User Settings</span> page. Click the settings menu button (...) in their profile window's top-right corner. Select the <strong class="blue">Archive Member</strong> option. 
+              </p>
+              <br>
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/archive-user-menu_VAVJgMgtZ.png"
+                    width=600
+                    style=" border-radius: 6px;
+                    box-shadow: 6px 6px 12px #00000060;"
+                    >
+              <br>
+              <br>
+              <p>
+                To <span class="blue">unarchive</span> users, switch the <strong class="blue">Archived List</strong> toggle in the top right of the <span class="blue">User Settings</span> page to the <i>ON</i> position. You can either click on the user's name to trigger an option window for unarchiving them, or right-click their name and select the <strong class="blue">Unarchive user</strong> option from the menu that appears.
+              </p>
+            </div>
+
+            
+
+          </div>
+        </div>
+
+
+
+        <div class="scroll-content-section" id="sectionThree">
+          <h1>Creating Cards</h1>
+          <div class="block-div with-text with-left-spacing margin-bottom-50 width-900">
+            In Steer, you can create two types of cards: Priority Cards and Project Cards. Both have similar features with some key differences -- most notable difference being that Project Cards <i>come from</i> Priority Cards.
+          </div>
+          <div class="scroll-rows-body margin-bottom-50 with-text with-left-spacing justify-content-start width-100">
+            <div class="block-div with-text margin-bottom-35 width-48-point">
+              <h3>
+                Priority Cards
+              </h3>
+              <p>
+                Priority cards are the high-level <i>bigger</i> projects in your workspace. You can think of them like the <i>initiatives</i> for your business, quarterly targets for the year, or like the projects that have far too many moving pieces (of which need to be managed in one place).
+              </p>
+            </div>
+            <div class="block-div with-text with-left-spacing margin-bottom-50 width-48-point">
+              <h3>Project Cards</h3>
+              <p>
+                By contrast, Project Cards are lower-level. They are the the projects or ongoing programs that have a small (and in most cases dedicated) team. In many cases, they may have a unique start and end date. In other cases they may be cyclical activities that are repeated year after year.
+              </p>
+            </div>
+          </div>
+          <div class="scroll-rows-body margin-bottom-50 align-items-center body-bottom-80">
+            <div class="block-div with-text margin-bottom-80 width-48-point padding-right-50 ">
+              <h2>Adding Priority Cards</h2>
+              <p>
+                To create a priority card, select the <strong class="blue">Add priority card</strong> option at the bottom of your left navigation menu. 
+                <br><br>
+                A window will appear that will allow you to name and describe your priority card.
+              </p>
+            </div>
+            <div class="block-div">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/Screen_Shot_2020-10-14_at_11.11.14_PM_-ewoeI5fK.png"
+                    width=250
+                    style=" border-radius: 6px;
+                            justify-self: flex-end;
+                    "
+                    >
+            </div>
+          </div>
+          <div class="scroll-rows-body justify-content-center">
+            <div class="block-div with-text padding-right-50">
+              <h3>
+                Private Priority Cards
+              </h3>
+              <p>
+                To make the priority card private, simply toggle the <span class="blue">Make this card private</span> toggle to the <i>ON</i> position. This makes it so that no one else in the workspace can see this priority card or the items you create within it.
+              </p>
+              <p>
+                You can make this card public later by switching this toggle to the <i>ON</i> position within the created priority card's <span id="cardMenuPopover" class="blue" style="text-decoration: underline; cursor: help;">main menu</span>.
+              </p>
+            </div>
+            <div class="block-div">
+              <img  src="https://ik.imagekit.io/enhvtyz2ze/screenshots/tutorial/tr:q-120/add-priority-card-window_eKRiBKnbC.png"
+                    width=350
+                    style=" border-radius: 6px;
+                            box-shadow: 6px 6px 12px #00000060;"
+                    >
+            </div>
+          </div>
+          <div class="scroll-columns-body">
+            
+          </div>
+        </div>
+
+
+
+
+        <div class="scroll-content-section" id="sectionFour">
+          <div class="scroll-content-title">
+            Setting Goals
+          </div>
+          <div class="scroll-content-body">
+            Exegisti a me, Nouate, ut scriberem quemadmodum posset ira leniri, nec inmerito mihi uideris hunc praecipue adfectum pertimuisse maxime ex omnibus taetrum ac rabidum. Ceteris enim aliquid quieti placidique inest, hic totus concitatus et in impetu est, doloris armorum, sanguinis suppliciorum minime humana furens cupiditate, dum alteri noceat sui neglegens, in ipsa inruens tela et ultionis secum ultorem tracturae auidus.
+          </div>
+        </div>
+        <div class="scroll-content-section" id="sectionFive">
+          <div class="scroll-content-title">
+            Managing Projects
+          </div>
+          <div class="scroll-content-body">
+            Exegisti a me, Nouate, ut scriberem quemadmodum posset ira leniri, nec inmerito mihi uideris hunc praecipue adfectum pertimuisse maxime ex omnibus taetrum ac rabidum. Ceteris enim aliquid quieti placidique inest, hic totus concitatus et in impetu est, doloris armorum, sanguinis suppliciorum minime humana furens cupiditate, dum alteri noceat sui neglegens, in ipsa inruens tela et ultionis secum ultorem tracturae auidus.
+          </div>
+        </div>
+        <div class="scroll-content-section" id="sectionSix">
+          <div class="scroll-content-title">
+            Managing Projects
+          </div>
+          <div class="scroll-content-body">
+            Exegisti a me, Nouate, ut scriberem quemadmodum posset ira leniri, nec inmerito mihi uideris hunc praecipue adfectum pertimuisse maxime ex omnibus taetrum ac rabidum. Ceteris enim aliquid quieti placidique inest, hic totus concitatus et in impetu est, doloris armorum, sanguinis suppliciorum minime humana furens cupiditate, dum alteri noceat sui neglegens, in ipsa inruens tela et ultionis secum ultorem tracturae auidus.
+          </div>
+        </div>
+        <div class="scroll-content-section" id="sectionSeven">
+          <div class="scroll-content-title">
+            Managing Projects
+          </div>
+          <div class="scroll-content-body">
+            Exegisti a me, Nouate, ut scriberem quemadmodum posset ira leniri, nec inmerito mihi uideris hunc praecipue adfectum pertimuisse maxime ex omnibus taetrum ac rabidum. Ceteris enim aliquid quieti placidique inest, hic totus concitatus et in impetu est, doloris armorum, sanguinis suppliciorum minime humana furens cupiditate, dum alteri noceat sui neglegens, in ipsa inruens tela et ultionis secum ultorem tracturae auidus.
+          </div>
+        </div>
+      </div>
+    </div>  
+
+
+
+    <script type="text/javascript" src="/path/to/viewport-trigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164071/Drift.min.js"></script>
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/blowup.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      var controller = new ScrollMagic.Controller();
+
+      new ScrollMagic.Scene({triggerElement: "#sectionOne", duration: "300%"})
+                      .setClassToggle("#selectOne", "active")
+                      .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#sectionTwo", duration: "350%"})
+                      .setClassToggle("#selectTwo", "active")
+                      .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#sectionThree", duration: "200%"})
+                      .setClassToggle("#selectThree", "active")
+                      .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#sectionFour", duration: "200%"})
+                      .setClassToggle("#selectFour", "active")
+                      .addTo(controller);
+                      
+      new ScrollMagic.Scene({triggerElement: "#sectionFive", duration: "200%"})
+                      .setClassToggle("#selectFive", "active")
+                      .addTo(controller);
+      
+      new ScrollMagic.Scene({triggerElement: "#sectionSix", duration: "200%"})
+                      .setClassToggle("#selectSix", "active")
+                      .addTo(controller);
+                      
+      new ScrollMagic.Scene({triggerElement: "#sectionSeven", duration: "200%"})
+                      .setClassToggle("#selectSeven", "active")
+                      .addTo(controller);
+    </script>
+    <script>
+      tippy('#settingsMenuPopover', {
+        content: 'Click your profile photo or username in the bottom-left corner of your workspace to access this',
+      });
+      tippy('#cardMenuPopover', {
+        content: 'The card menu button is found next to the created priority (or project) card title',
+      });
+    </script>
+  </body>
+</html>

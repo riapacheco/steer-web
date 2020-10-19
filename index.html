@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/a9fc908185.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" >
     <link rel="icon" href="src/img/steer-logo-canary.svg">
     <title>Steer | Team Management App</title>
@@ -86,10 +87,18 @@
         </div>
   
         <div class="nav-cta-btns">
-          <a href="https://app.steer.software/login" class="cta-btn login-cta-btn" target=_blank>
+          <div class="social-links-div nav-cta-btns-block">
+            <a href="https://www.twitter.com/SteerSoft" class="social-btn" target="_blank">
+              <i class="fa fa-twitter icon"></i>
+            </a>
+            <a href="https://www.facebook.com/steer.software" class="social-btn" target="_blank">
+              <i class="fa fa-facebook icon"></i>
+            </a>
+          </div>
+          <a href="https://app.steer.software/login" class="nav-cta-btns-block cta-btn login-cta-btn " target=_blank>
             <div class="btn-label">Login</div>
           </a>
-          <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+          <a href="https://app.steer.software/login?register=true" class="nav-cta-btns-block cta-btn signup-cta-btn" target=_blank>
             <div class="btn-label">Sign Up</div>
           </a>
         </div>
@@ -315,7 +324,7 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-heading">
-            Contact Us
+            Resources
           </div>
           <div class="footer-col-options">
             <a href="mailto:support@steer.software" class="footer-option">
@@ -324,8 +333,8 @@
             <a href="mailto:contact@steer.software" class="footer-option">
               General Inquiries
             </a>
-            <a href="mailto:jobs@steer.software" class="footer-option">
-              Careers
+            <a href="../user-surveys.html" class="footer-option">
+              User Surveys
             </a>
           </div>
         </div>
@@ -390,19 +399,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
     <script type="text/javascript" src="scripts/lib/blowup.js"></script>
-    <script>
-      // zooms
-      new Drift(document.querySelector('.zoom-shot'), {
-        paneContainer: document.querySelector('.zoom-area'),
-        hoverBoundingBox: true,
-        zoomFactor: 2.5,
-        inlineOffsetX: 85,
-        inlineOffsetY: 0,
-        hoverDelay: 0,
-        touchDelay: 0,
-        inlinePane: 999,
-      });
-    </script>
+
     <script>
       // Accordion
       $('.toggle').click(function(e) {

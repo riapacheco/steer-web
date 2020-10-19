@@ -229,6 +229,15 @@
   color: $steel-grey-medium;
   cursor: default;
 }
+
+@mixin body-title {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 300;
+  color: $steel-grey-medium;
+  cursor: default;
+  margin-bottom: 30px;
+}
 @mixin section-paragraph {
   padding-left: 5px;
   display: block;
@@ -246,6 +255,16 @@
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.5px;
+  color: $steel-grey-medium;
+  cursor: default;
+}
+
+@mixin body-para {
+  padding-left: 5px;
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.4px;
   color: $steel-grey-medium;
   cursor: default;
 }
