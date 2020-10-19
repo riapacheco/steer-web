@@ -23,15 +23,9 @@ html {
   @include smooth-text;
 
   &::-webkit-scrollbar {
-    width: 6px;
+    display: none;
   }
-  &::-webkit-scrollbar-track {
-    background-color: $pale-midnight;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: $midnight;
-    border-radius: 3px;
-  }
+
 }
 input:focus,
 textarea:focus,
@@ -56,6 +50,9 @@ a, body a, a:-webkit-any-link, :any-link {
 }
 * {
   @include smooth-text;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 ul {
   list-style-type: none;
@@ -5414,6 +5411,7 @@ $section-col-list: 500px;
 .user-surveys-superdiv {
   width: 100vw;
   padding-top: 80px;
+  padding-bottom: 55px;
   .user-surveys-content {
     width: 80%;
     padding-top: 100px;
@@ -5421,10 +5419,16 @@ $section-col-list: 500px;
     @include respond-to(smartphones) {
       width: 100%;
     }
+    > p {
+      text-align: center;
+      color: $soot-grey-dark;
+      letter-spacing: 0.3px;
+      @extend %font-optimized;
+    }
 
     .form-title {
       width: 100%;
-      border-bottom: 2px solid $pale-midnight-dark;
+      border-top: 2px solid $pale-midnight-dark;
 
       h3 {
         margin-bottom: 10px;
@@ -5437,6 +5441,36 @@ $section-col-list: 500px;
 
     .roadmap-form {
       display: block;
+      margin-bottom: 100px;
+
+      .add-name-div {
+        text-align: right;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+
+        .name-input-label {
+          color: $soot-grey-light;
+          margin-right: 10px;
+        }
+        .input-source {
+          input {
+            color: $steel-grey-dark;
+            background-color: $midnight;
+            padding-left: 5px;
+            padding-right: 5px;
+            height: 30px;
+            border-radius: 6px;
+
+            &::placeholder {
+              color: $soot-grey-dark;
+            }
+          }
+        }
+      }
       
       table {
         width: 100%;
@@ -5472,6 +5506,7 @@ $section-col-list: 500px;
             }
 
             &:hover {
+              cursor: help;
               .right-help-icon {
                 color: $bondi-blue-medium;
                 opacity: 1;
@@ -5516,6 +5551,73 @@ $section-col-list: 500px;
 
         .submit-btn {
 
+          width: 200px;
+          display: inline-block;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: bold;
+          background-image: linear-gradient(to bottom right, $midnight, $pale-midnight);
+          text-align: center;
+          height: 50px;
+          line-height: 52px;
+          border-radius: 6px;
+          color: $steel-grey-dark;
+          box-shadow: -5px 6px 8px #00000040;
+          margin:15px;
+
+          &:hover {
+            filter: brightness(1.15);
+          }
+        }
+      }
+    }
+
+    .comment-form {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      width: 100%;
+      padding-bottom: 100px;
+      text-align: center;
+      @include respond-to(smartphones) {
+        flex-flow: column nowrap;
+      }
+      .form-title {
+        width: 100%;
+        white-space: nowrap;
+        margin-right: 55px;
+        @include respond-to(smartphones) {
+          width: 100%;
+        }
+      }
+      .general-comments {
+        margin-top: 20px;
+        width: 100%;
+        input {
+          -webkit-appearance: none;
+          display: inline-block;
+          border-radius: 6px;
+          width: 500px;
+          max-width: 500px;
+          background-color: $midnight;
+          padding: 20px;
+          color: $steel-grey-dark;
+          word-break: break-word;
+
+          @include respond-to(smartphones) {
+            width: 100%;
+            margin: 0px 15px 15px 15px;
+            max-width: 300px;
+          }
+          &::placeholder {
+            color: $soot-grey-dark;
+          }
+        }
+      }
+
+      .button-div {
+        .submit-btn {
           width: 200px;
           display: inline-block;
           font-size: 12px;
