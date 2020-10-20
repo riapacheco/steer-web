@@ -224,7 +224,7 @@
             </ul>
           </div>
         </div>
-        <a class="doc-nav-next">
+        <a href="../documentation/using-cards" class="doc-nav-next">
           Next
           <i class="fa fa-arrow-right"></i>
         </a>
@@ -426,6 +426,127 @@
           <div class="chapter-sub-section">
             <h1>User Admin</h1>
             <div class="sub-section-body">
+              <div class="sub-section-block">
+                <h2>User Roles</h2>
+                <p>
+                  There are 3 types of users that maintain different levels of access in Steer: <br>
+                  Workspace Owner, Workspace User, and Workspace Guest
+                </p>
+                <br>
+                <br>
+
+                <p>
+                  <h3>Role Descriptions</h3>
+                </p>
+                <p>
+                  <h4>Workspace Owner</h4>
+                  <p>The user that created the workspace in the first place is the workspace owner. They act as the primary administrator of the workspace and have all administrative privileges.</p>
+                </p>
+                <p>
+                  <h4>Workspace User</h4>
+                  <p>A workspace user is any user that accepts an invitation to an existing workspace. They have the freedom to create and edit priorities and projects with limited workspace admin privileges.</p>
+                </p>
+                <p>
+                  <h4>Workspace Guest</h4>
+                  <p>A workspace guest is any user that accepts an invitation to a shared project. They access any shared projects from their own Partner Workspace, where they can toggle between different outside workspaces.</p>
+                </p>
+                <br>
+                <br>
+                <p>
+                  <h3>Role Privileges</h3>
+                  <p>
+                    <table id="userRoleMatrix">
+                      <tr>
+                        <th></th>
+                        <th>Owner</th>
+                        <th>User</th>
+                        <th>Guest</th>
+                      </tr>
+                      <tr>
+                        <td class="privilege">
+                          Can change workspace
+                          <br>
+                          associated email
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="privilege">
+                          Can change profile details of
+                          <br>
+                          any workspace or guest user
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="privilege">
+                          Can create, update, and
+                          <br>
+                          view priority cards
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="privilege">
+                          Can create, update, and
+                          <br>
+                          view project cards
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                        <td class="red">
+                          <i class="ion-md-close icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="privilege">
+                          Can access and partially
+                          <br>
+                          update limited project cards
+                        </td>
+                        <td style="color:#5b5d6a;">
+                          --
+                        </td>
+                        <td style="color:#5b5d6a;">
+                          --
+                        </td>
+                        <td class="green">
+                          <i class="ion-md-checkmark icon"></i>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </p>
+                </p>
+              </div>
               <div class="sub-section-block">
                 <h2>User Settings Page</h2>
                 <p>
@@ -859,6 +980,19 @@
                     </li>
                   </ol>
                 </p>
+                <br>
+                <br>
+
+                <div class="browser-block">
+                  <div class="browser-btn left"></div>
+                  <div class="browser-btn middle"></div>
+                  <div class="browser-btn right"></div>
+                </div>
+                <img src="../src/img/project-creation.gif"
+                      width="100%"
+                      style="border-radius: 0px 0px 6px 6px;
+                        box-shadow: -6px 5px 12px #00000060;">
+
               </div>
             </div>
           </div>
@@ -891,7 +1025,7 @@
                       .setClassToggle("#selectTwo", "active")
                       .addTo(controller);
 
-      new ScrollMagic.Scene({triggerElement: "#sectionThree", duration: "350%"})
+      new ScrollMagic.Scene({triggerElement: "#sectionThree", duration: "600%"})
                       .setClassToggle("#selectThree", "active")
                       .addTo(controller);
 

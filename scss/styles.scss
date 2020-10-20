@@ -5390,6 +5390,36 @@ $section-col-list: 500px;
   }
 }
 
+#userRoleMatrix {
+  text-align: center;
+  white-space: nowrap;
+  tr {
+    height: 40px;
+  }
+  tr > .privilege {
+    text-align: right;
+    height: 54px;
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+  }
+  tr > th {
+    min-width: 100px;
+    max-width: 100px;
+    border-bottom: 2px solid $pale-midnight-dark;
+    letter-spacing: 0.4px;
+  }
+  tr > td {
+    &.green {
+      color: $color-opportunity;
+    }
+    &.red {
+      color: $color-barrier;
+      opacity: 0.65;
+    }
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                User Surveys                                */
 /* -------------------------------------------------------------------------- */
