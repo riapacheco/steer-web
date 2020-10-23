@@ -1994,7 +1994,7 @@ h3 {
               }
             }
             .price-variables {
-              font-size: 1rem;
+              font-size: 16px;
               letter-spacing: 0.3px;
               .plan-checkmark-icon {
                 color: $bondi-blue-darkest;
@@ -5386,6 +5386,36 @@ $section-col-list: 500px;
         padding-left: 0px;
         margin: 50px;
       }
+    }
+  }
+}
+
+#userRoleMatrix {
+  text-align: center;
+  white-space: nowrap;
+  tr {
+    height: 40px;
+  }
+  tr > .privilege {
+    text-align: right;
+    height: 54px;
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+  }
+  tr > th {
+    min-width: 100px;
+    max-width: 100px;
+    border-bottom: 2px solid $pale-midnight-dark;
+    letter-spacing: 0.4px;
+  }
+  tr > td {
+    &.green {
+      color: $color-opportunity;
+    }
+    &.red {
+      color: $color-barrier;
+      opacity: 0.65;
     }
   }
 }
