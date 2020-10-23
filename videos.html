@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-015YR7PJG1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-015YR7PJG1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -42,9 +49,9 @@
                       Steer
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="../product-overview.html" class="dropdown-item">Overview</a>
-                      <a href="../pricing.html" class="dropdown-item">Pricing</a>
-                      <a href="../desktop-app.html" class="dropdown-item">Desktop App</a>
+                      <a href="../product-overview" class="dropdown-item">Overview</a>
+                      <a href="../pricing" class="dropdown-item">Pricing</a>
+                      <a href="../desktop-app" class="dropdown-item">Desktop App</a>
                     </div>
                   </div>
                 </div>
@@ -63,9 +70,10 @@
                       Manage
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
-                      <a href="../task-management.html" class="dropdown-item ">Tasks</a>
-                      <a href="../virtual-teams.html" class="dropdown-item">Virtual Teams</a>
+                      <a href="../virtual-teams" class="dropdown-item">Virtual Teams</a>
+                      <a href="../priority-management" class="dropdown-item">Priorities</a>
+                      <a href="../task-management" class="dropdown-item ">Tasks</a>
+                      
                     </div>
                   </div>
 
@@ -177,51 +185,7 @@
           <div class="player-menu-title">
             3 Minute Product Demo
           </div>
-          <div class="skip-to-btn" onclick="showSkips()">
-            Skip to <i class="ion-ios-arrow-down icon"></i>
 
-            <div id="skipsMenu" class="skip-to-dropdown">
-              <button class="vid-btn" id="btnSeek" data-seek="23">
-                <i class="ion-md-folder option-icon"></i>
-                Adding Projects
-              </button>
-
-              <button class="vid-btn" id="btnSeek" data-seek="33">
-                <i class="ion-ios-trending-up option-icon"></i>
-                Objectives
-              </button>
-
-              <button class="vid-btn" id="btnSeek" data-seek="63">
-                <i class="ion-ios-ribbon option-icon"></i>
-                Milestones
-              </button>
-
-              <button class="vid-btn" id="btnSeek" data-seek="100">
-                <i class="ion-ios-attach option-icon"></i>
-                Project Resources
-              </button>
-              <button class="vid-btn" id="btnSeek" data-seek="116">
-                <i class="ion-ios-contacts option-icon"></i>
-                Project Roles
-              </button>
-              <button class="vid-btn" id="btnSeek" data-seek="125">
-                <i class="ion-ios-checkbox option-icon"></i>
-                Action Items
-              </button>
-              <button class="vid-btn" id="btnSeek" data-seek="150">
-                <i class="ion-ios-link option-icon"></i>
-                Resource Linking
-              </button>
-              <button class="vid-btn" id="btnSeek" data-seek="158">
-                <i class="ion-ios-link option-icon"></i>
-                Action Item Linking
-              </button>
-              <button class="vid-btn" id="btnSeek" data-seek="167">
-                <i class="ion-ios-link option-icon"></i>
-                Project Linking
-              </button>
-            </div>
-          </div>
         </div>
         <div id="player" class="vid-player"></div>
       </div>
