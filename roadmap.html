@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-015YR7PJG1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-015YR7PJG1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -12,6 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/a9fc908185.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" >
     <link rel="icon" href="src/img/steer-logo-canary.svg">
     <title>Steer | Team Management App</title>
@@ -42,9 +50,9 @@
                       Steer
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="../product-overview.html" class="dropdown-item">Overview</a>
-                      <a href="../pricing.html" class="dropdown-item">Pricing</a>
-                      <a href="../desktop-app.html" class="dropdown-item">Desktop App</a>
+                      <a href="../product-overview" class="dropdown-item">Overview</a>
+                      <a href="../pricing" class="dropdown-item">Pricing</a>
+                      <a href="../desktop-app" class="dropdown-item">Desktop App</a>
                     </div>
                   </div>
                 </div>
@@ -63,9 +71,9 @@
                       Manage
                     </div>
                     <div class="dropdown-section-items">
-                      <a href="../priority-management.html" class="dropdown-item">Priorities</a>
-                      <a href="../tasks-management.html" class="dropdown-item">Tasks</a>
-                      <a href="../virtual-teams.html" class="dropdown-item">Virtual Teams</a>
+                      <a href="../virtual-teams" class="dropdown-item">Virtual Teams</a>
+                      <a href="../priority-management" class="dropdown-item">Priorities</a>
+                      <a href="../tasks-management" class="dropdown-item">Tasks</a>
                     </div>
                   </div>
 
@@ -75,21 +83,29 @@
                     </div>
                     <div class="dropdown-section-items">
                       <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="dropdown-item" target="_blank" download>Case Study</a>
-                      <a href="../videos.html" class="dropdown-item">Demo Videos</a>
+                      <a href="../videos" class="dropdown-item">Demo Videos</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="/pricing.html" class="nav-item">Pricing</a>
+            <a href="/pricing" class="nav-item">Pricing</a>
           </div>
         </div>
   
         <div class="nav-cta-btns">
-          <a href="https://app.steer.software/login" class="cta-btn login-cta-btn" target=_blank>
+          <div class="social-links-div nav-cta-btns-block">
+            <a href="https://www.twitter.com/SteerSoft" class="social-btn" target="_blank">
+              <i class="fa fa-twitter icon"></i>
+            </a>
+            <a href="https://www.facebook.com/steer.software" class="social-btn" target="_blank">
+              <i class="fa fa-facebook icon"></i>
+            </a>
+          </div>
+          <a href="https://app.steer.software/login" class="nav-cta-btns-block cta-btn login-cta-btn " target=_blank>
             <div class="btn-label">Login</div>
           </a>
-          <a href="https://app.steer.software/login?register=true" class="cta-btn signup-cta-btn" target=_blank>
+          <a href="https://app.steer.software/login?register=true" class="nav-cta-btns-block cta-btn signup-cta-btn" target=_blank>
             <div class="btn-label">Sign Up</div>
           </a>
         </div>
@@ -102,116 +118,72 @@
         <a href="index.html" class="mobile-logo-container">
           <img style="opacity:0.1" src="https://ik.imagekit.io/enhvtyz2ze/Logos/whitesteerlogo_NQU_Sgl9h.svg" width=60 />
         </a>
-        <a onclick="showSteerFeaturesNav();hideSteerFeaturesNav()" class="mobile-menu-btn">
-          <div id="steerFeaturesCloseIcon" class="ion-ios-menu mobile-menu-icon"></div>
+        <a onclick="showMobileNav();removeHam()" class="mobile-menu-btn">
+          <div id="mobileIcon" class="ion-ios-menu mobile-menu-icon"></div>
         </a>
       </div>
     </div>
 
-    <div id="steerFeaturesMobileMenu" class="mobile-menu-div steer-mobile-menu">
-      <div class="mobile-menu">
-        <div class="mobile-content">
-          <div class="mobile-sub-list">
-            <div class="mobile-menu-item">
-              Product <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
-            </div>
-            <a href="../product-overview.html" class="submenu-item">Overview</a>
-            <a href="/pricing.html" class="submenu-item">Pricing</a>
-            <a href="../desktop-app.html" class="submenu-item">Desktop App</a>
-          </div>
-          <div class="mobile-sub-list">
-            <div class="mobile-menu-item">
-              Manage <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
-            </div>
-            <a href="../priority-management.html" class="submenu-item">Priorities</a>
-            <a href="../tasks-management.html" class="submenu-item">Tasks</a>
-            <a href="../virtual-teams.html" class="submenu-item">Virtual Teams</a>
-          </div>
-          <div class="mobile-sub-list">
-            <div class="mobile-menu-item">
-              Learn <i class="ion-ios-arrow-down sublist-arrow-icon"></i>
-            </div>
-            <a href="https://ik.imagekit.io/enhvtyz2ze/PDFs/SteerCaseStudy_SolPress_wY4PxUVFy.pdf" class="submenu-item" download>Case Study</a>
-            <a href="../videos.html" class="submenu-item">Demo Videos</a>
-          </div>
-        </div>
-
-        <div class="mobile-cta-btns">
-          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-signup-btn" target=_blank>
-            <div class="btn-label">Sign Up</div>
-          </a>
-          <a href="https://app.steer.software/login?register=true" class="mobile-cta-btn mobile-login-btn" target=_blank>
-            <div class="btn-label">Login</div>
-          </a>
-          <div class="mobile-user-notes">
-            Note: Steer's app is not yet mobile optimized
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                Page Body                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="tutorial-page-container">
+      <div class="sticky-chapter-div">
+        <h3 class="doc-nav-title">Tech Roadmap</h3>
+        <div class="sticky-chapter-content">
+          <div class="progress-line-ab"></div>
+          <div class="sticky-chapter-items">
+            <ul class="sticky-unordered-list">
+              <li id="selectUpNext" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <div class="list-item-label">
+                  Up Next
+                </div>
+              </li>
+              <li id="selectLater"  class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <div class="list-item-label">
+                  Later
+                </div>
+              </li>
+              <li id="selectFuture" class="sticky-list-item">
+                <div class="list-item-ball"></div>
+                <div class="list-item-label">
+                  Future
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
 
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                               Body Begins                               -->
-    <!-- ----------------------------------------------------------------------- -->
-    <div class="section-div steer-features-intro">
-      <div class="section-content steer-features-content">
-        <div class="section-col steer-features-col steer-features-text">
-          <div class="section-title steer-features-title">
-            Features
+      <div class="scroll-content-div">
+        <div class="scroll-subsection" id="upNextSection">
+          <div class="scroll-sub-title">
+            Up Next
+          </div>
+          <div class="scroll-sub-body">
+            <div class="feature-block">
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-subsection" id="laterSection">
+          <div class="scroll-sub-title">
+            Later
+          </div>
+        </div>
+
+        <div class="scroll-subsection" id="futureSection">
+          <div class="scroll-sub-title">
+            Future
           </div>
         </div>
       </div>
-    </div>
+    </div>  
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                         Priority Card Features                          -->
-    <!-- ----------------------------------------------------------------------- -->
-    <div class="section-div priority-card-div midnight-gradient-bg">
-      <div class="section-tabs priority-card-tabs">
-        <div class="section-tabs-header priority-tabs-header">
-          <a class="section-tabs-option tab-option " onclick="showTab(metrics)">
-            <i class="ion-ios-trending-up icon"></i>
-            <span>Goal Metrics</span>
-          </a>
-          <a class="section-tabs-option tab-option" onclick="showTab(milestones)">
-            <i class="ion-ios-ribbon icon"></i>
-            <span>Milestones</span>
-          </a>
-          <a class="section-tabs-option tab-option" onclick="showTab(actionItems)">
-            <i class="ion-ios-checkbox icon"></i>
-            <span>Action Items</span>
-          </a>
-          <a class="section-tabs-option tab-option" onclick="showTab(projectCards)">
-            <i class="ion-ios-folder-open icon"></i>
-            <span>Project Cards List</span>
-          </a>
-          <a class="section-tabs-option tab-option" onclick="showTab(projectStats)">
-            <i class="ion-ios-speedometer icon"></i>
-            <span>Project Stats</span>
-          </a>
-        </div>
-        <div class="priority-content-div">
-          <div class="priority-card-content" id="metricsTab">
-            <h2>This is Metrics</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, enim doloribus. Nam repellendus animi officia accusamus, aliquam dolorem maxime similique culpa beatae facilis mollitia consectetur reiciendis, voluptatum incidunt! Vel, commodi.</p>
-          </div>
-          <div class="priority-card-content" id="milestonesTab">
-            <h2>This is Milestones</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic quae illo mollitia incidunt eos, asperiores harum excepturi voluptatum assumenda numquam. Iusto architecto dolorum dolores reprehenderit a numquam nisi soluta.</p>
-          </div>
-          <div class="priority-card-content" id="actionItemsTab">
-  
-          </div>
-          <div class="priority-card-content" id="projectListTab">
-  
-          </div>
-          <div class="priority-card-content" id="projectStatsTab">
-  
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                              Footer Begins                              -->
@@ -229,7 +201,7 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-heading">
-            Contact Us
+            Resources
           </div>
           <div class="footer-col-options">
             <a href="mailto:support@steer.software" class="footer-option">
@@ -238,8 +210,8 @@
             <a href="mailto:contact@steer.software" class="footer-option">
               General Inquiries
             </a>
-            <a href="mailto:jobs@steer.software" class="footer-option">
-              Careers
+            <a href="../user-surveys.html" class="footer-option">
+              User Surveys
             </a>
           </div>
         </div>
@@ -302,36 +274,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+
     <script>
-      function showSteerFeaturesNav() {
-        let x = document.getElementById("steerFeaturesMobileMenu");
-        if (x.style.display === "block") {
-          x.style.display = 'none';
-        } else {
-          x.style.display = 'block';
-        }
-      }
+      var controller = new ScrollMagic.Controller();
 
-      function hideSteerFeaturesNav() {
-        let y = document.getElementById("steerFeaturesMobileMenu");
-        let z = document.getElementById("steerFeaturesCloseIcon");
-        if (y.style.display === "block") {
-          z.classList = 'ion-md-close mobile-menu-icon';
-        } else {
-          z.classList = 'ion-ios-menu mobile-menu-icon';
-        }
-      }
+      new scrollMagic.Scene({triggerElement: "#upNextSection", duration: "100%"})
+                      .setClassToggle("#selectUpNext", "active");
+                      .addTo(controller);
 
-      function showTab() {
-        const allContent = document.getElementsByClassName('priority-card-content');
-        // all content is 'display: none'
-        // if this is clicked (metrics), 
-        // show this 
-        if ($this.style.display === "block")
-      }
-
+      new scrollMagic.Scene({triggerElement: "#laterSection", duration: "100%"})
+                      .setClassToggle("#selectLater", "active");
+                      .addTo(controller);
       
+      new scrollMagic.Scene({triggerElement: "#futureSection", duration: "100%"})
+                      .setClassToggle("#selectFuture", "active");
+                      .addTo(controller);
     </script>
   </body>
 </html>

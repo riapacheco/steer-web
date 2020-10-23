@@ -668,16 +668,18 @@ h3 {
         .home-title {
           @include section-title;
           margin-bottom: 20px;
-          font-size: 60px;
-          line-height: 68px;
+          font-size: 55px;
+          line-height: 58px;
+          width: 400px;
           @include respond-to(smartphones) {
-            font-size: 55px;
-            line-height: 68px;
+            font-size: 45px;
+            line-height: 48px;
           }
         }
         .home-para {
           @include section-paragraph;
           margin-bottom: 50px;
+
           @include respond-to(smartphones) {
             font-size: 20px;
             margin-bottom: 30px;
@@ -3762,6 +3764,7 @@ h3 {
       }
 
       .icon {
+        display: inline-block;
         font-size: 60px;
         margin-bottom: 30px;
         width: 60px;
@@ -3769,7 +3772,7 @@ h3 {
         color: $pale-midnight-medium;
       }
       .value-prop-title {
-        width: 300px;
+        width: 350px;
         @include section-title;
         font-size: 38px;
         line-height: 46px;
@@ -3781,12 +3784,6 @@ h3 {
         }
         .emph-light {
           color: $steel-grey-light;
-        }
-        &.longer-title {
-          width: 350px;
-          @include respond-to(smartphones) {
-            width: 100%;
-          }
         }
 
       }
@@ -5417,6 +5414,24 @@ $section-col-list: 500px;
       color: $color-barrier;
       opacity: 0.65;
     }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Roadmap Page                                */
+/* -------------------------------------------------------------------------- */
+
+.roadmap-section-one {
+  padding-top: 80px;
+}
+.scroll-subsection {
+  padding-bottom: 300px;
+  padding-top: 200px;
+  padding-left: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  .scroll-sub-title {
+    @include section-title;
   }
 }
 
